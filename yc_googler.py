@@ -38,15 +38,15 @@ class ResultCommand(yc.BaseCommand):
 class GooglerAsyncCommander(yc.BaseAsyncCommander):
     delay = 0.2
 
-    def __init__(self):
-        ...
+    def __init__(self, count=5):
+        self.count = count
 
     async def order(self, keywords, queue):
         await asyncio.sleep(self.delay)
         kw = " ".join(keywords).strip()
         if kw == "":
             return
-        result = await run(f"googler --json '{kw}'")
+        result = await run(f"googler --count {self.count} --json '{kw}'")
         for i, r in enumerate(result):
             queue.put(
                 ResultCommand({str(k): str(v) for k, v in r.items()}, score=30 - i)

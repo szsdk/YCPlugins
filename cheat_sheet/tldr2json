@@ -1,0 +1,83 @@
+#!/usr/bin/env python
+
+from pathlib import Path
+import json
+
+import click
+
+def until_blank(fp):
+    ls = []
+    while True:
+        l = next(fp).strip()
+        if len(l) > 0:
+            ls.append(l)
+            break
+    while True:
+        l = next(fp).strip()
+        if len(l) > 0:
+            ls.append(l)
+        else:
+            break
+    return list(filter(lambda s: len(s) > 0, ls))
+
+def parse(fp):
+    ls = until_blank(fp)
+    a = {}
+    if ls[0][0] == '#':
+        if len(ls) == 1:
+            a['command'] = ls[0][1:].strip()
+        else:
+            raise Exception(f"multiple lines, {ls}")
+        ls = until_blank(fp)
+        a['description'] = '\n'.join(map(lambda x: x[1:].strip(), ls))
+    elif ls[0][0] == '-':
+        a['description'] = '\n'.join(map(lambda x: x[1:].strip(), ls))
+        ls = until_blank(fp)
+        if ls[0][0] == '`':
+            if len(ls) == 1:
+                a['command'] = ls[0][1:-1].strip()
+            else:
+                raise Exception(f"multiple lines, {ls}")
+    else:
+        raise Exception(f"{ls}")
+    return a
+                
+def cmd_list(f: Path):
+    j = []
+    with f.open() as fp:
+        while True:
+            try:
+                j.append(parse(fp))
+            except StopIteration:
+                break
+    return j
+
+def folder_map(func, sdir, tdir):
+    """
+    sdir : Path
+        source dir
+    tdir : Path
+        target dir
+    """
+    for sf in sdir.iterdir():
+        ntdir = tdir / sf.name
+        if sf.is_dir():
+            ntdir.mkdir(parents=True, exist_ok=True)
+            folder_map(func, sf, ntdir)
+        else:
+            func(sf, ntdir)
+
+
+@click.command(help="usage: ./tldr2json tldr/pages --output tldr.json")
+@click.argument("folders", nargs=-1)
+@click.option("--output")
+def cli(folders, output):
+    ans = []
+    for folder in folders:
+        for f in Path(folder).rglob("*.md"):
+            ans.extend(cmd_list(f))
+    with open(output, "w") as fp:
+        json.dump(ans, fp, indent=4)
+
+if __name__ == "__main__":
+    cli()
