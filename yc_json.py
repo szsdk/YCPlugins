@@ -4,11 +4,12 @@ import yescommander as yc
 
 
 class JsonCmdCommander(yc.BaseCommander):
-    def __init__(self, json_file, num_candidates=20, marker = "𝙏𝙇"):
+    def __init__(self, json_file, num_candidates=20, marker = "𝙏𝙇", score_cutoff=50):
         self._cmds = None
         self.num_candidates = num_candidates
         self.marker = marker
         self.json_file = json_file
+        self.score_cutoff = score_cutoff
 
     @property
     def cmds(self):
@@ -29,6 +30,7 @@ class JsonCmdCommander(yc.BaseCommander):
             kw, [c['command'] for c in cmds],
             scorer=fuzz.partial_token_sort_ratio,
             limit=self.num_candidates,
+            score_cutoff=self.score_cutoff
             ):
             ans = yc.Soldier.from_dict(cmds[idx])
             ans.score = score

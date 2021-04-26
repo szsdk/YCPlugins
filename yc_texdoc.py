@@ -45,14 +45,23 @@ class TeXPdfFile(yc.FileSoldier):
 
 
 class TexdocAsyncCommander(yc.BaseAsyncCommander):
-    def __init__(self):
-        self._files = None
+    def __init__(self, num_candidates=10, score_cutoff=50):
+        self._files = []
+        self._for_compare = []
+        self.num_candidates = num_candidates
+        self.score_cutoff = score_cutoff
 
     @property
     def files(self):
-        if self._files is None:
+        if len(self._files) == 0:
             self._files = get_filelist()
         return self._files
+
+    @property
+    def for_compare(self):
+        if len(self._for_compare) == 0:
+            self._for_compare = [f.split('-dist/')[1].replace("/", " ") for f in self.files]
+        return self._for_compare
 
     async def order(self, keywords, queue):
         if keywords[0] != "td":
@@ -60,10 +69,10 @@ class TexdocAsyncCommander(yc.BaseAsyncCommander):
         kw = " ".join(keywords[1:])
         if kw == "":
             return
-        from rapidfuzz import process
+        from rapidfuzz import process, fuzz
 
-        for ans in map(
-            lambda x: TeXPdfFile(x[0], x[1] + 50),
-            process.extract(kw, self.files, limit=10),
-        ):
-            queue.put(ans)
+        for _, score, idx in process.extract(kw, self.for_compare,
+                limit=self.num_candidates,
+                scorer=fuzz.partial_token_sort_ratio,
+                score_cutoff=self.score_cutoff):
+            queue.put(TeXPdfFile(self.files[idx], score+50))
