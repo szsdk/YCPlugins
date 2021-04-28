@@ -1,6 +1,7 @@
+from pathlib import Path
+
 import yescommander as yc
 from aiopath import AsyncPath
-from pathlib import Path
 
 
 class GlobCommander(yc.BaseAsyncCommander):
@@ -12,7 +13,7 @@ class GlobCommander(yc.BaseAsyncCommander):
         self.score_shift = score_shift
 
     def _put_cmd(self, kw, cmds, queue):
-        from rapidfuzz import process, fuzz
+        from rapidfuzz import fuzz, process
 
         for cmd, score, idx in process.extract(
             kw,

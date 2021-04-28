@@ -1,6 +1,7 @@
-import json
-import yescommander as yc
 import asyncio
+import json
+
+import yescommander as yc
 
 
 class ResultCommand(yc.BaseCommand):

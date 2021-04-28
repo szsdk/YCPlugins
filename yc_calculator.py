@@ -1,5 +1,6 @@
-import yescommander as yc
 import math
+
+import yescommander as yc
 
 
 class CalculatorSoldier(yc.BaseCommand, yc.BaseCommander):
@@ -23,7 +24,7 @@ class CalculatorSoldier(yc.BaseCommand, yc.BaseCommander):
         try:
             self.answer = str(eval(formula, self.ns))
             queue.put(self)
-        except:
+        except:  # noqa: E722
             pass
 
     def __str__(self):

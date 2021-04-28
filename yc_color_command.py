@@ -1,7 +1,8 @@
-import yescommander as yc
-import re
-from prompt_toolkit.formatted_text import FormattedText
 import colorsys
+import re
+
+import yescommander as yc
+from prompt_toolkit.formatted_text import FormattedText
 
 
 def hex_to_rgb(h):
@@ -21,9 +22,16 @@ def rgb256_to_hex(r):
     return "#%02x%02x%02x" % r
 
 
-to_256 = lambda c: tuple(int(i * 255) for i in c)
-show_tuple = lambda c: " ".join([f"{i:.5f}" for i in c])
-show_tuple_256 = lambda c: " ".join([str(i) for i in c])
+def to_256(c):
+    return tuple(int(i * 255) for i in c)
+
+
+def show_tuple(c):
+    return " ".join([f"{i:.5f}" for i in c])
+
+
+def show_tuple_256(c):
+    return " ".join([str(i) for i in c])
 
 
 def parse_triple(s):
@@ -33,7 +41,7 @@ def parse_triple(s):
         ans = eval(s)
         if len(ans) != 3:
             return None
-    except:
+    except:  # noqa: E722
         return None
     if all([isinstance(i, int) for i in ans]):
         ans = [i / 255.0 for i in ans]
@@ -71,7 +79,7 @@ class ColorSoldier(yc.BaseCommand, yc.BaseCommander):
             self.color = colorsys.hls_to_rgb(*s)
         queue.put(self)
 
-    def __str__(self):
+    def formatted_str(self):
         if self.color != "":
             fg = "black" if rgb_to_grey(self.color) > 0.5 else "white"
             hex_color = rgb256_to_hex(to_256(self.color))

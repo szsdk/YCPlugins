@@ -1,6 +1,7 @@
 import os
-import yescommander as yc
 from pathlib import Path
+
+import yescommander as yc
 
 cache = Path(__file__).parent / ".cache" / "texdoc.dat"
 
@@ -11,7 +12,7 @@ def make_filelist():
     os.system(f"mkdir {cache.parent}")
     with open("/usr/local/texlive/2021/doc.html") as fp:
         soup = BeautifulSoup(fp, "html.parser")
-    ans = [l.get("href") for l in soup.findAll("a")]
+    ans = [line.get("href") for line in soup.findAll("a")]
     with cache.open("w") as fp:
         for i in filter(lambda x: x[-4:] == ".pdf", ans):
             p = f"/usr/local/texlive/2021/{i}"
@@ -22,7 +23,7 @@ def get_filelist():
     if not cache.exists():
         make_filelist()
     with cache.open() as fp:
-        return [l.strip() for l in fp]
+        return [line.strip() for line in fp]
 
 
 class TeXPdfFile(yc.FileSoldier):
@@ -71,7 +72,7 @@ class TexdocAsyncCommander(yc.BaseAsyncCommander):
         kw = " ".join(keywords[1:])
         if kw == "":
             return
-        from rapidfuzz import process, fuzz
+        from rapidfuzz import fuzz, process
 
         for _, score, idx in process.extract(
             kw,

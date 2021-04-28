@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+
 import yescommander as yc
 
 
@@ -24,7 +25,7 @@ class JsonCmdCommander(yc.BaseCommander):
         if kw == "":
             return
 
-        from rapidfuzz import process, fuzz
+        from rapidfuzz import fuzz, process
 
         cmds = [c for c in self.cmds if keywords[0] in c["command"]]
         for cmd, score, idx in process.extract(

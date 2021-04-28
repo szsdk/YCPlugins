@@ -1,5 +1,6 @@
-import yescommander as yc
 import os
+
+import yescommander as yc
 
 
 class SearchSoldier(yc.BaseCommand, yc.BaseCommander):
