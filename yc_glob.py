@@ -2,8 +2,10 @@ import yescommander as yc
 from aiopath import AsyncPath
 from pathlib import Path
 
+
 class GlobCommander(yc.BaseAsyncCommander):
-    markers = {"pdf": " "} 
+    markers = {"pdf": " "}
+
     def __init__(self, num_candidates, score_cutoff, score_shift=0):
         self.num_candidates = num_candidates
         self.score_cutoff = score_cutoff
@@ -11,12 +13,14 @@ class GlobCommander(yc.BaseAsyncCommander):
 
     def _put_cmd(self, kw, cmds, queue):
         from rapidfuzz import process, fuzz
+
         for cmd, score, idx in process.extract(
-            kw, cmds,
+            kw,
+            cmds,
             scorer=fuzz.partial_token_ratio,
             limit=self.num_candidates,
-            score_cutoff=self.score_cutoff
-            ):
+            score_cutoff=self.score_cutoff,
+        ):
             if not Path(cmd).is_dir():
                 ans = yc.FileSoldier(
                     keywords=[],
@@ -34,7 +38,7 @@ class GlobCommander(yc.BaseAsyncCommander):
         if len(kw) < 3:
             return
         cmds = []
-        async for path in AsyncPath().rglob('*'):
+        async for path in AsyncPath().rglob("*"):
             if keywords[0] in str(path):
                 cmds.append(str(path))
             if len(cmds) > 100:

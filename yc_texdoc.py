@@ -60,7 +60,9 @@ class TexdocAsyncCommander(yc.BaseAsyncCommander):
     @property
     def for_compare(self):
         if len(self._for_compare) == 0:
-            self._for_compare = [f.split('-dist/')[1].replace("/", " ") for f in self.files]
+            self._for_compare = [
+                f.split("-dist/")[1].replace("/", " ") for f in self.files
+            ]
         return self._for_compare
 
     async def order(self, keywords, queue):
@@ -71,8 +73,11 @@ class TexdocAsyncCommander(yc.BaseAsyncCommander):
             return
         from rapidfuzz import process, fuzz
 
-        for _, score, idx in process.extract(kw, self.for_compare,
-                limit=self.num_candidates,
-                scorer=fuzz.partial_token_sort_ratio,
-                score_cutoff=self.score_cutoff):
-            queue.put(TeXPdfFile(self.files[idx], score+50))
+        for _, score, idx in process.extract(
+            kw,
+            self.for_compare,
+            limit=self.num_candidates,
+            scorer=fuzz.partial_token_sort_ratio,
+            score_cutoff=self.score_cutoff,
+        ):
+            queue.put(TeXPdfFile(self.files[idx], score + 50))

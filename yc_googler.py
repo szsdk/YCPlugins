@@ -28,9 +28,6 @@ class ResultCommand(yc.BaseCommand):
     def preview(self):
         return self._preview
 
-    def order(self, _):
-        return True
-
     def copy_clipboard(self):
         return self._preview["url"]
 

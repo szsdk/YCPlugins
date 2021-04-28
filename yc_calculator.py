@@ -1,4 +1,5 @@
 import yescommander as yc
+import math
 
 
 class CalculatorSoldier(yc.BaseCommand, yc.BaseCommander):
@@ -12,17 +13,16 @@ class CalculatorSoldier(yc.BaseCommand, yc.BaseCommander):
     @property
     def ns(self):
         if self._ns is None:
-            import math
             self._ns = vars(math).copy()
             self._ns.update(vars())
         return self._ns
 
-    def order(self, formula):
-        formula = "".join(formula)
+    def order(self, keywords, queue):
+        formula = "".join(keywords)
         self._formula = formula
         try:
             self.answer = str(eval(formula, self.ns))
-            yield self
+            queue.put(self)
         except:
             pass
 

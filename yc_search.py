@@ -9,9 +9,9 @@ class SearchSoldier(yc.BaseCommand, yc.BaseCommander):
         self.keywords = []
         self.score = score
 
-    def order(self, keywords):
+    def order(self, keywords, queue):
         self.keywords = keywords
-        yield self
+        queue.put(self)
 
     def __str__(self):
         return " ".join([f"{self.website}:"] + self.keywords)

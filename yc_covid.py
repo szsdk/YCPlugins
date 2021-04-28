@@ -16,9 +16,6 @@ class ResultCommand(yc.BaseCommand):
     def preview(self):
         return self._preview
 
-    def order(self, _):
-        return True
-
 
 def _get_result_command(result):
     return ResultCommand(

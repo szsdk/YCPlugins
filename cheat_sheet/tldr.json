@@ -2868,6 +2868,26 @@
         "command": "ps -o ppid= -p {{pid}}"
     },
     {
+        "command": "nu",
+        "description": "Nushell (\"a new type of shell\") takes a modern, structured approach to your command-line.\nMore information: <https://www.nushell.sh>."
+    },
+    {
+        "description": "Start an interactive shell session:",
+        "command": "nu"
+    },
+    {
+        "description": "Execute a command and then exit:",
+        "command": "nu --commands \"{{command}}\""
+    },
+    {
+        "description": "Execute a script:",
+        "command": "nu {{path/to/script.nu}}"
+    },
+    {
+        "description": "Execute a script with logging:",
+        "command": "nu --loglevel {{error|warn|info|debug|trace}} {{path/to/script.nu}}"
+    },
+    {
         "command": "stow",
         "description": "Symlink manager.\nOften used to manage dotfiles.\nMore information: <https://www.gnu.org/software/stow>."
     },
@@ -3350,6 +3370,30 @@
     {
         "description": "Probe additional ports with a given protocol:",
         "command": "cat {{input_file}} | httprobe -p {{https:2222}}"
+    },
+    {
+        "command": "qtcreator",
+        "description": "Cross-platform IDE for Qt applications.\nMore information: <https://doc.qt.io/qtcreator/creator-cli.html>."
+    },
+    {
+        "description": "Start Qt Creator:",
+        "command": "qtcreator"
+    },
+    {
+        "description": "Start Qt Creator and restore the last session:",
+        "command": "qtcreator -lastsession"
+    },
+    {
+        "description": "Start Qt Creator but don't load the specified plugin:",
+        "command": "qtcreator -noload {{plugin}}"
+    },
+    {
+        "description": "Start Qt Creator but don't load any plugins:",
+        "command": "qtcreator -noload {{all}}"
+    },
+    {
+        "description": "Start Qt Creator in presentation mode with pop-ups for keyboard shortcuts:",
+        "command": "qtcreator -presentationMode"
     },
     {
         "command": "slimrb",
@@ -4764,12 +4808,8 @@
         "command": "passwd"
     },
     {
-        "description": "Change the password of the current user:",
-        "command": "passwd {{new_password}}"
-    },
-    {
-        "description": "Change the password of the specified user:",
-        "command": "passwd {{username}} {{new_password}}"
+        "description": "Change the password of a specific user:",
+        "command": "passwd {{username}}"
     },
     {
         "description": "Get the current status of the user:",
@@ -6646,6 +6686,14 @@
     {
         "description": "Show status and process IDs of all jobs:",
         "command": "jobs -l"
+    },
+    {
+        "command": "xplr",
+        "description": "Terminal-based file system explorer.\nMore information: <https://github.com/sayanarijit/xplr>."
+    },
+    {
+        "description": "Open a directory:",
+        "command": "xplr {{path/to/directory}}"
     },
     {
         "command": "runsv",
@@ -8588,6 +8636,26 @@
         "description": "A read-only version of `vim`.\nThis is equivalent to `vim -R`."
     },
     {
+        "command": "x11docker",
+        "description": "Securely run GUI applications and desktop UIs in Docker containers.\nSee also `xephyr`.\nMore information: <https://github.com/mviereck/x11docker>."
+    },
+    {
+        "description": "Launch VLC in a container:",
+        "command": "x11docker --pulseaudio --share={{$HOME/Videos}} {{jess/vlc}}"
+    },
+    {
+        "description": "Launch Xfce in a window:",
+        "command": "x11docker --desktop {{x11docker/xfce}}"
+    },
+    {
+        "description": "Launch GNOME in a window:",
+        "command": "x11docker --desktop --gpu --init={{systemd}} {{x11docker/gnome}}"
+    },
+    {
+        "description": "Launch KDE Plasma in a window:",
+        "command": "x11docker --desktop --gpu --init={{systemd}} {{x11docker/kde-plasma}}"
+    },
+    {
         "command": "vladimyr",
         "description": "Dario Vladovi\u0107's personal CLI.\nMore information: <https://github.com/vladimyr/vladimyr-cli>."
     },
@@ -9568,6 +9636,22 @@
         "command": "goimports -w -d {{file}}.go"
     },
     {
+        "command": "virt-sysprep",
+        "description": "Reset, unconfigure, or customize a virtual machine image.\nMore information: <https://manned.org/virt-sysprep>."
+    },
+    {
+        "description": "List all supported operations (enabled operations are indicated with asterisks):",
+        "command": "virt-sysprep --list-operations"
+    },
+    {
+        "description": "Run all enabled operations but don't actually apply the changes:",
+        "command": "virt-sysprep --domain {{vm_name}} --dry-run"
+    },
+    {
+        "description": "Run only the specified operations:",
+        "command": "virt-sysprep --domain {{vm_name}} --operations {{operation1,operation2,...}}"
+    },
+    {
         "command": "progpilot",
         "description": "A PHP static analysis tool for detecting security vulnerabilities.\nMore information: <https://github.com/designsecurity/progpilot>."
     },
@@ -9578,6 +9662,18 @@
     {
         "description": "Analyse a specific file or directory:",
         "command": "progpilot {{path/to/file_or_directory}}"
+    },
+    {
+        "command": "protector",
+        "description": "Protect or unprotect branches on GitHub repositories.\nMore information: <https://github.com/jcgay/protector>."
+    },
+    {
+        "description": "Protect branches of a GitHub repository (create branch protection rules):",
+        "command": "protector {{branches_regex}} -repos {{organization/repository}}"
+    },
+    {
+        "description": "Use the dry run to see what would be protected (can also be used for freeing):",
+        "command": "protector -dry-run {{branches_regex}} -repos {{organization/repository}}"
     },
     {
         "command": "xxd",
@@ -15252,6 +15348,38 @@
         "command": "info {{menu_item}}"
     },
     {
+        "command": "acme.sh",
+        "description": "Shell script implementing ACME client protocol, an alternative to certbot.\nMore information: <https://github.com/acmesh-official/acme.sh>."
+    },
+    {
+        "description": "Issue a certificate using webroot mode:",
+        "command": "acme.sh --issue --domain {{example.com}} --webroot {{/path/to/webroot}}"
+    },
+    {
+        "description": "Issue a certificate using standalone mode using port 80:",
+        "command": "acme.sh --issue --standalone --domain {{example.com}}"
+    },
+    {
+        "description": "Issue a certificate using standalone TLS mode using port 443:",
+        "command": "acme.sh --issue --alpn --domain {{example.com}}"
+    },
+    {
+        "description": "Issue a certificate using a working Nginx configuration:",
+        "command": "acme.sh --issue --nginx --domain {{example.com}}"
+    },
+    {
+        "description": "Issue a certificate using a working Apache configuration:",
+        "command": "acme.sh --issue --apache --domain {{example.com}}"
+    },
+    {
+        "description": "Issue a wildcard (\\*) certificate using a manual DNS mode:",
+        "command": "acme.sh --issue --dns --domain {{example.com}}"
+    },
+    {
+        "description": "Issue a certificate using an automatic DNS API mode:",
+        "command": "acme.sh --issue --dns {{dns_cf}} --domain {{example.com}}"
+    },
+    {
         "command": "ogrinfo",
         "description": "List information about an OGR-supported data source.\nMore information: <https://gdal.org/programs/ogrinfo.html>."
     },
@@ -18594,6 +18722,30 @@
     {
         "description": "Compare 2 files in a case-insensitive manner:",
         "command": "sdiff -i {{path/to/file1}} {{path/to/file2}}"
+    },
+    {
+        "command": "pio run",
+        "description": "Run PlatformIO project targets.\nMore information: <https://docs.platformio.org/en/latest/core/userguide/cmd_run.html>."
+    },
+    {
+        "description": "List all available project targets:",
+        "command": "pio run --list-targets"
+    },
+    {
+        "description": "List all available project targets of a specific environment:",
+        "command": "pio run --list-targets --environment {{environment}}"
+    },
+    {
+        "description": "Run all targets:",
+        "command": "pio run"
+    },
+    {
+        "description": "Run all targets of specified environments:",
+        "command": "pio run --environment {{environment1}} --environment {{environment2}}"
+    },
+    {
+        "description": "Run specified targets:",
+        "command": "pio run --target {{target1}} --target {{target2}}"
     },
     {
         "command": "docker swarm",
@@ -30968,6 +31120,34 @@
         "command": "salt '*.example.com' pkg.upgrade"
     },
     {
+        "command": "kate",
+        "description": "KDE Text Editor.\nMore information: <https://kate-editor.org/>."
+    },
+    {
+        "description": "Launch Kate and open specific files:",
+        "command": "kate {{path/to/file1}} {{path/to/file2}}"
+    },
+    {
+        "description": "Open a remote document in Kate:",
+        "command": "kate {{https://example.com/path/to/file}}"
+    },
+    {
+        "description": "Launch Kate, creating a new instance even if one is already open:",
+        "command": "kate --new"
+    },
+    {
+        "description": "Open a file in Kate with the cursor at the specific line:",
+        "command": "kate --line {{line_number}} {{path/to/file}}"
+    },
+    {
+        "description": "Open a file in Kate with the cursor at the specific line and column:",
+        "command": "kate --line {{line_number}} --column {{column_number}} {{path/to/file}}"
+    },
+    {
+        "description": "Launch Kate, creating a new temporary file with contents read from stdin:",
+        "command": "cat {{path/to/file}} | kate --stdin"
+    },
+    {
         "command": "convert",
         "description": "Imagemagick image conversion tool.\nMore information: <https://imagemagick.org/script/convert.php>."
     },
@@ -32825,7 +33005,7 @@
     },
     {
         "command": "pacman --files",
-        "description": "Arch Linux package manager utility.\nMore information: <https://man.archlinux.org/man/pacman.8>."
+        "description": "Arch Linux package manager utility.\nSee also `pkgfile`.\nMore information: <https://man.archlinux.org/man/pacman.8>."
     },
     {
         "description": "Display help:",
@@ -33234,6 +33414,26 @@
     {
         "description": "Display memory in human readable units:",
         "command": "free -h"
+    },
+    {
+        "command": "ntpq",
+        "description": "Query the Network Time Protocol (NTP) daemon.\nMore information: <https://www.eecis.udel.edu/~mills/ntp/html/ntpq.html>."
+    },
+    {
+        "description": "Start `ntpq` in interactive mode:",
+        "command": "ntpq --interactive"
+    },
+    {
+        "description": "Print a list of NTP peers:",
+        "command": "ntpq --peers"
+    },
+    {
+        "description": "Print a list of NTP peers without resolving hostnames from IP addresses:",
+        "command": "ntpq --numeric --peers"
+    },
+    {
+        "description": "Use `ntpq` in debugging mode:",
+        "command": "ntpq --debug-level"
     },
     {
         "command": "httpie",
@@ -37468,6 +37668,34 @@
         "command": "urxvt --hold -e {{command}}"
     },
     {
+        "command": "dolphin",
+        "description": "KDE file manager.\nMore information: <https://apps.kde.org/dolphin/>."
+    },
+    {
+        "description": "Launch Dolphin:",
+        "command": "dolphin"
+    },
+    {
+        "description": "Launch Dolphin and display a specific directory:",
+        "command": "dolphin {{path/to/directory}}"
+    },
+    {
+        "description": "Launch Dolphin with a specific file or directory selected:",
+        "command": "dolphin --select {{path/to/file_or_directory}}"
+    },
+    {
+        "description": "Launch Dolphin in a separated window:",
+        "command": "dolphin --new-window"
+    },
+    {
+        "description": "Launch Dolphin in split view:",
+        "command": "dolphin --split"
+    },
+    {
+        "description": "Start the Dolphin daemon (only required to use the DBus interface):",
+        "command": "dolphin --daemon"
+    },
+    {
         "command": "zypper",
         "description": "SUSE & openSUSE package management utility."
     },
@@ -38653,7 +38881,7 @@
     },
     {
         "command": "tlp-stat",
-        "description": "A tool to generate TLP status reports. See also `tlp`."
+        "description": "A tool to generate TLP status reports.\nSee also `tlp`.\nMore information: <https://linrunner.de/tlp/usage/tlp-stat>."
     },
     {
         "description": "Generate status report with configuration and all active settings:",
@@ -39849,7 +40077,7 @@
     },
     {
         "command": "tlp",
-        "description": "Advanced power management for Linux. See `tlp-stat` page for additional information."
+        "description": "Advanced power management for Linux.\nSee also `tlp-stat`.\nMore information: <https://linrunner.de/tlp/>."
     },
     {
         "description": "Apply settings (according to the actual power source):",
@@ -40366,6 +40594,30 @@
     {
         "description": "Display the function name, filename and line number:",
         "command": "addr2line --exe={{path/to/executable}} --functions {{address}}"
+    },
+    {
+        "command": "chronyc",
+        "description": "Query the Chrony NTP daemon.\nMore information: <https://chrony.tuxfamily.org/doc/4.0/chronyc.html>."
+    },
+    {
+        "description": "Start chronyc in interactive mode:",
+        "command": "chronyc"
+    },
+    {
+        "description": "Display tracking stats for the Chrony daemon:",
+        "command": "chronyc tracking"
+    },
+    {
+        "description": "Print the time sources that Chrony is currently using:",
+        "command": "chronyc sources"
+    },
+    {
+        "description": "Display stats for sources currently used by chrony daemon as a time source:",
+        "command": "chronyc sourcestats"
+    },
+    {
+        "description": "Step the system clock immediately, bypassing any slewing:",
+        "command": "chronyc makestep"
     },
     {
         "command": "a2enmod",
@@ -40920,7 +41172,7 @@
         "command": "cp -i {{*.txt}} {{path/to/target_directory}}"
     },
     {
-        "description": "Dereference symbolic links before copying:",
+        "description": "Follow symbolic links before copying:",
         "command": "cp -L {{link}} {{path/to/target_directory}}"
     },
     {
@@ -42712,6 +42964,10 @@
         "command": "findstr /n \"{{query}}\" *"
     },
     {
+        "command": "cuninst",
+        "description": "This command is an alias of `choco uninstall`."
+    },
+    {
         "command": "showmount",
         "description": "Display information about NFS filesystems on Windows Server.\nMore information: <https://docs.microsoft.com/windows-server/administration/windows-commands/showmount>."
     },
@@ -43588,6 +43844,10 @@
         "command": "eventcreate /so {{source_name}} /t {{type}} /id {{id}} /d \"{{message}}\""
     },
     {
+        "command": "cinst",
+        "description": "This command is an alias of `choco install`."
+    },
+    {
         "command": "clip",
         "description": "Copy input content to the Windows clipboard.\nMore information: <https://docs.microsoft.com/windows-server/administration/windows-commands/clip>."
     },
@@ -43602,6 +43862,10 @@
     {
         "description": "Copy text with a trailing newline to the Windows clipboard:",
         "command": "echo {{some text}} | clip"
+    },
+    {
+        "command": "clist",
+        "description": "This command is an alias of `choco list`."
     },
     {
         "command": "subst",

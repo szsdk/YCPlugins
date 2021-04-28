@@ -49,14 +49,14 @@ class ColorSoldier(yc.BaseCommand, yc.BaseCommander):
         self._hex_regex = re.compile(r"^#(?:[0-9a-fA-F]{3}){2}$")
         self.score = 200
 
-    def order(self, keywords):
+    def order(self, keywords, queue):
         if len(keywords) == 0:
             return
 
         s = " ".join(keywords)
         if re.search(self._hex_regex, s):
             self.color = hex_to_rgb(s)
-            return
+            queue.put(self)
 
         if keywords[0] not in ["rgb", "RGB", "hsv", "HSV", "hls", "HLS"]:
             return
@@ -69,7 +69,7 @@ class ColorSoldier(yc.BaseCommand, yc.BaseCommander):
             self.color = colorsys.hsv_to_rgb(*s)
         elif keywords[0] in ["hls", "HLS"]:
             self.color = colorsys.hls_to_rgb(*s)
-        yield self
+        queue.put(self)
 
     def __str__(self):
         if self.color != "":

@@ -4,7 +4,7 @@ import yescommander as yc
 
 
 class JsonCmdCommander(yc.BaseCommander):
-    def __init__(self, json_file, num_candidates=20, marker = "𝙏𝙇", score_cutoff=50):
+    def __init__(self, json_file, num_candidates=20, marker="𝙏𝙇", score_cutoff=50):
         self._cmds = None
         self.num_candidates = num_candidates
         self.marker = marker
@@ -19,20 +19,22 @@ class JsonCmdCommander(yc.BaseCommander):
             self._cmds = json.load(fp)
         return self._cmds
 
-    def order(self, keywords):
+    def order(self, keywords, queue):
         kw = " ".join(keywords)
         if kw == "":
             return
+
         from rapidfuzz import process, fuzz
 
-        cmds = [c for c in self.cmds if keywords[0] in c['command']]
+        cmds = [c for c in self.cmds if keywords[0] in c["command"]]
         for cmd, score, idx in process.extract(
-            kw, [c['command'] for c in cmds],
+            kw,
+            [c["command"] for c in cmds],
             scorer=fuzz.partial_token_sort_ratio,
             limit=self.num_candidates,
-            score_cutoff=self.score_cutoff
-            ):
+            score_cutoff=self.score_cutoff,
+        ):
             ans = yc.Soldier.from_dict(cmds[idx])
             ans.score = score
             ans.marker = self.marker
-            yield ans
+            queue.put(ans)
