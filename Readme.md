@@ -1,17 +1,41 @@
 # YesCommander Plugins
 
-## Calculator
+This is the package consists of several `Commander`s used for [`YesCommander`](https://github.com/szsdk/YesCommander)
 
-## Color converter
+## Calculator (`yc_calculator`)
 
-## Covid information
+## Color converter (`yc_color_converter`)
 
-## Currency converter
+## Covid information (`yc_covid`)
 
-## Googler
+## Currency converter (`yc_currency`)
 
-## Search
+## Googler (`yc_googler`)
+### Dependency
+[Googler](https://github.com/jarun/googler)
 
-## TeXDoc
+## Search (`yc_search`)
+```python
+google = SearchSoldier("https://www.google.com/search?q=%s", "Google", score=10)
+google.marker = " "
+```
 
-## TLDR
+## TeXDoc (`yc_texdoc`)
+
+Search documentations of texlive.
+
+The leading keyword, `td`, is mandatory.
+Example keywords: `td ctex`
+
+### Dependency
+[rapidfuzz](https://github.com/maxbachmann/RapidFuzz)
+
+## Fuzzy searching json file (`yc_json`)
+A json file converted from TLDR project, `tldr.json` is in the folder `cheat_sheet`.
+
+```python
+JsonCmdCommander(config_folder / "YCPlugins" / "cheat_sheet" / "tldr.json", num_candidates=20)
+```
+
+### Dependency
+[rapidfuzz](https://github.com/maxbachmann/RapidFuzz)

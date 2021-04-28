@@ -88,7 +88,7 @@ class ColorSoldier(yc.BaseCommand, yc.BaseCommander):
 
     def result(self):
         for k, v in self.preview().items():
-            print("---", k)
+            print("━━━", k)
             print(v)
 
     def preview(self):
