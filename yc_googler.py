@@ -10,7 +10,10 @@ async def run(cmd):
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
     stdout, stderr = await proc.communicate()
-    return json.loads(stdout.decode())
+    try:
+        return json.loads(stdout.decode())
+    except json.JSONDecodeError:
+        return []
 
 
 class ResultCommand(yc.BaseCommand):
