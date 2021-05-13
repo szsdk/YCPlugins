@@ -1,34 +1,40 @@
+"""
+dependency
+xdg
+"""
 import os
 from pathlib import Path
 
 import yescommander as yc
+from xdg import xdg_cache_home
 
-cache = Path(__file__).parent / ".cache" / "texdoc.dat"
+cache = xdg_cache_home() / "yescommander" / "texdoc.dat"
 
 
-def make_filelist():
-    from bs4 import BeautifulSoup
+def make_filelist(doc_folder):
+    # from bs4 import BeautifulSoup
 
     os.system(f"mkdir {cache.parent}")
-    with open("/usr/local/texlive/2021/doc.html") as fp:
-        soup = BeautifulSoup(fp, "html.parser")
-    ans = [line.get("href") for line in soup.findAll("a")]
+    doc_files = [str(f) for f in Path(doc_folder).rglob("*.pdf")]
     with cache.open("w") as fp:
-        for i in filter(lambda x: x[-4:] == ".pdf", ans):
-            p = f"/usr/local/texlive/2021/{i}"
-            print(p, file=fp)
+        print("\n".join(doc_files), file=fp)
+    # with open("/usr/local/texlive/2021/doc.html") as fp:
+    # soup = BeautifulSoup(fp, "html.parser")
+    # ans = [line.get("href") for line in soup.findAll("a")]
+    # with cache.open("w") as fp:
+    # for i in filter(lambda x: x[-4:] == ".pdf", ans):
+    # p = f"/usr/local/texlive/2021/{i}"
+    # print(p, file=fp)
 
 
-def get_filelist():
+def get_filelist(doc_folder):
     if not cache.exists():
-        make_filelist()
+        make_filelist(doc_folder)
     with cache.open() as fp:
         return [line.strip() for line in fp]
 
 
 class TeXPdfFile(yc.FileSoldier):
-    viewer = {"default": "open -a /Applications/Skim.app/ %s"}
-
     def __init__(self, filename, score=200):
         super().__init__([], filename, "", "pdf")
         self.score = score
@@ -46,16 +52,17 @@ class TeXPdfFile(yc.FileSoldier):
 
 
 class TexdocAsyncCommander(yc.BaseAsyncCommander):
-    def __init__(self, num_candidates=10, score_cutoff=50):
+    def __init__(self, doc_folder, num_candidates=10, score_cutoff=50):
         self._files = []
         self._for_compare = []
         self.num_candidates = num_candidates
         self.score_cutoff = score_cutoff
+        self.doc_folder = doc_folder
 
     @property
     def files(self):
         if len(self._files) == 0:
-            self._files = get_filelist()
+            self._files = get_filelist(self.doc_folder)
         return self._files
 
     @property

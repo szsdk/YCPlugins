@@ -5,12 +5,15 @@ import yescommander as yc
 
 
 class JsonCmdCommander(yc.BaseCommander):
-    def __init__(self, json_file, num_candidates=20, marker="𝙏𝙇", score_cutoff=50):
+    def __init__(
+        self, json_file, num_candidates=20, marker="* ", score_cutoff=50, score_shift=0
+    ):
         self._cmds = None
         self.num_candidates = num_candidates
         self.marker = marker
         self.json_file = json_file
         self.score_cutoff = score_cutoff
+        self.score_shift = score_shift
 
     @property
     def cmds(self):
@@ -36,6 +39,6 @@ class JsonCmdCommander(yc.BaseCommander):
             score_cutoff=self.score_cutoff,
         ):
             ans = yc.Soldier.from_dict(cmds[idx])
-            ans.score = score
+            ans.score = score + self.score_shift
             ans.marker = self.marker
             queue.put(ans)
