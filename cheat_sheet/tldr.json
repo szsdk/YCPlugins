@@ -2880,6 +2880,26 @@
         "command": "collectd -P {{path/to/file}}"
     },
     {
+        "command": "genid",
+        "description": "Generate IDs, such as snowflakes, UUIDs, and a new GAID.\nMore information: <https://github.com/bleonard252/genid>."
+    },
+    {
+        "description": "Generate a UUIDv4:",
+        "command": "genid uuid"
+    },
+    {
+        "description": "Generate a UUIDv5 using a namespace UUID and a specific name:",
+        "command": "genid uuidv5 {{{ce598faa-8dd0-49ee-8525-9e24fff71dca}}} {{name}}"
+    },
+    {
+        "description": "Generate a Discord Snowflake, without a trailing newline (useful in shell scripts):",
+        "command": "genid --script snowflake"
+    },
+    {
+        "description": "Generate a Generic Anonymous ID with a specific \"real ID\":",
+        "command": "genid gaid {{real_id}}"
+    },
+    {
         "command": "pamac",
         "description": "A command line utility for the GUI package manager pamac.\nIf you can't see the AUR packages, enable it in `/etc/pamac.conf` or in the GUI.\nMore information: <https://wiki.manjaro.org/index.php/Pamac>."
     },
@@ -5600,6 +5620,26 @@
         "command": "trap 'echo \"Caught signal {{SIGHUP}}\"' {{SIGHUP}}"
     },
     {
+        "command": "upower",
+        "description": "System utility to provide power and battery information and statistics.\nMore information: <https://upower.freedesktop.org/docs/upower.1.html>."
+    },
+    {
+        "description": "Display power and battery information:",
+        "command": "upower --dump"
+    },
+    {
+        "description": "List all power devices:",
+        "command": "upower --enumerate"
+    },
+    {
+        "description": "Watch for and print power status changes:",
+        "command": "upower --monitor"
+    },
+    {
+        "description": "Watch for and print detailed power status changes:",
+        "command": "upower --monitor-detail"
+    },
+    {
         "command": "ncat",
         "description": "Use the normal `cat` functionality over networks."
     },
@@ -7800,6 +7840,30 @@
         "command": "hlint {{path/to/file}} --refactor-options"
     },
     {
+        "command": "boltctl",
+        "description": "Control thunderbolt devices.\nMore information: <https://manned.org/boltctl>."
+    },
+    {
+        "description": "List connected (and authorized) devices:",
+        "command": "boltctl"
+    },
+    {
+        "description": "List connected devices, including unauthorized ones:",
+        "command": "boltctl list"
+    },
+    {
+        "description": "Authorize a device temporarily:",
+        "command": "boltctl authorize {{device_uuid}}"
+    },
+    {
+        "description": "Authorize and remember a device:",
+        "command": "boltctl enroll {{device_uuid}}"
+    },
+    {
+        "description": "Revoke a previously authorized device:",
+        "command": "boltctl forget {{device_uuid}}"
+    },
+    {
         "command": "lrzuntar",
         "description": "A wrapper for `lrunzip` to simplify decompression of directories.\nSee also: `lrztar`, `lrzip`."
     },
@@ -9566,6 +9630,10 @@
     {
         "description": "Find filesystems in specific type:",
         "command": "findmnt -t {{ext4}}"
+    },
+    {
+        "command": "anbox",
+        "description": "Run Android applications on any GNU/Linux operating system.\nMore information: <https://manned.org/anbox>."
     },
     {
         "command": "vgs",
@@ -13436,6 +13504,18 @@
         "command": "pass otp uri --qrcode {{path/to/pass}}"
     },
     {
+        "command": "gnucash",
+        "description": "Personal and small-business financial-accounting software.\nMore information: <https://gnucash.org>."
+    },
+    {
+        "description": "Launch GnuCash and load the previously opened file:",
+        "command": "gnucash"
+    },
+    {
+        "description": "Launch GnuCash and load the specified file:",
+        "command": "gnucash {{path/to/file.gnucash}}"
+    },
+    {
         "command": "git show",
         "description": "Show various types of Git objects (commits, tags, etc.).\nMore information: <https://git-scm.com/docs/git-show>."
     },
@@ -14330,6 +14410,14 @@
     {
         "description": "Print the current directory:",
         "command": "pwd"
+    },
+    {
+        "command": "git cp",
+        "description": "Copy an existing file to a new location, preserving history.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-cp>."
+    },
+    {
+        "description": "Copy an existing file in a Git repo, staying in the same directory:",
+        "command": "git cp {{file}} {{new_file}}"
     },
     {
         "command": "pio access",
@@ -18136,6 +18224,14 @@
         "command": "age --decrypt --output {{path/to/decrypted_file}} {{path/to/encrypted_file}}"
     },
     {
+        "command": "gnucash-cli",
+        "description": "A command-line version of GnuCash.\nMore information: <https://gnucash.org>."
+    },
+    {
+        "description": "Get quotes for currencies and stocks specified in a file and print them:",
+        "command": "gnucash-cli --quotes get {{path/to/file.gnucash}}"
+    },
+    {
         "command": "makebuildserver",
         "description": "Create an F-Droid build server virtual machine.\nMore information: <https://f-droid.org/en/docs/Build_Server_Setup/>."
     },
@@ -18522,6 +18618,30 @@
     {
         "description": "Start an SBCL interactive shell (REPL):",
         "command": "sbcl"
+    },
+    {
+        "command": "ts-node",
+        "description": "Run TypeScript code directly, without any compiling.\nMore information: <https://www.npmjs.com/package/ts-node>."
+    },
+    {
+        "description": "Execute a TypeScript file without compiling (`node` + `tsc`):",
+        "command": "ts-node {{path/to/file.ts}}"
+    },
+    {
+        "description": "Execute a TypeScript file without loading `tsconfig.json`:",
+        "command": "ts-node --skip-project {{path/to/file.ts}}"
+    },
+    {
+        "description": "Evaluate TypeScript code passed as a literal on the command-line:",
+        "command": "ts-node --eval '{{console.log(\"Hello World\")}}'"
+    },
+    {
+        "description": "Execute a TypeScript file in script mode:",
+        "command": "ts-node --script-mode {{path/to/file.ts}}"
+    },
+    {
+        "description": "Transpile a TypeScript file to JavaScript without executing it:",
+        "command": "ts-node --transpile-only {{path/to/file.ts}}"
     },
     {
         "command": "rapper",
@@ -21222,6 +21342,14 @@
     {
         "description": "Display a tree of files, three levels deep:",
         "command": "exa --long --tree --level={{3}}"
+    },
+    {
+        "description": "List files sorted by modification date (oldest first):",
+        "command": "exa --long --sort={{modified}}"
+    },
+    {
+        "description": "List files with their headers, icons, and Git statuses:",
+        "command": "exa --long --header --icons --git"
     },
     {
         "command": "pv",
@@ -24580,6 +24708,18 @@
         "command": "wasm2c {{file.wasm}}"
     },
     {
+        "command": "git whatchanged",
+        "description": "Show what has changed with recent commits or files.\nSee also `git log`.\nMore information: <https://git-scm.com/docs/git-whatchanged>."
+    },
+    {
+        "description": "Display logs and changes for recent commits:",
+        "command": "git whatchanged"
+    },
+    {
+        "description": "Display logs and changes for recent commits within the specified time frame:",
+        "command": "git whatchanged --since=\"{{2 hours ago}}\""
+    },
+    {
         "command": "gitlab",
         "description": "Ruby wrapper and CLI for the GitLab API.\nMore information: <https://narkoz.github.io/gitlab/>."
     },
@@ -24804,20 +24944,24 @@
         "command": "aria2c {{url}}"
     },
     {
-        "description": "Download the contents of an URL to a file:",
-        "command": "aria2c -o {{filename}} {{url}}"
+        "description": "Download the file pointed to by the specified URI with the specified output name:",
+        "command": "aria2c --out={{filename}} {{url}}"
     },
     {
-        "description": "Download from multiple sources:",
+        "description": "Download multiple files in parallel:",
+        "command": "aria2c --force-sequential {{url_1}} {{url_2}}"
+    },
+    {
+        "description": "Download from multiple sources each URI pointing to the same file:",
         "command": "aria2c {{url_1}} {{url_2}}"
     },
     {
-        "description": "Download the URIs listed in a file:",
-        "command": "aria2c -i {{filename}}"
+        "description": "Download the URIs listed in a file with limited parallel downloads:",
+        "command": "aria2c --input-file={{filename}} --max-concurrent-downloads={{number_of_downloads}}"
     },
     {
         "description": "Download with multiple connections:",
-        "command": "aria2c -s {{connections_num}} {{url}}"
+        "command": "aria2c --split={{number_of_connections}} {{url}}"
     },
     {
         "description": "FTP download with username and password:",
@@ -24894,6 +25038,18 @@
     {
         "description": "Load a GeoPackage into a PostGIS database:",
         "command": "ogr2ogr -f \"PostgreSQL\" PG:dbname=\"{{database_name}}\" {{input}}.gpkg"
+    },
+    {
+        "command": "mkvmerge",
+        "description": "Merge and extract multimedia streams.\nMore information: <https://mkvtoolnix.download/doc/mkvmerge.html>."
+    },
+    {
+        "description": "Display information about a Matroska file:",
+        "command": "mkvmerge --identify {{path/to/file.mkv}}"
+    },
+    {
+        "description": "Extract the audio from track 1 of a specific file:",
+        "command": "mkvextract tracks {{path/to/file.mkv}} {{1}}:{{path/to/output.webm}}"
     },
     {
         "command": "openssl x509",
@@ -36736,6 +36892,22 @@
         "command": "gh pr merge --{{merge|squash|rebase}}"
     },
     {
+        "command": "virsh-list",
+        "description": "List the ID, name, and state of virtual machines.\nSee also: `virsh`.\nMore information: <https://manned.org/virsh>."
+    },
+    {
+        "description": "List information about running virtual machines:",
+        "command": "virsh list"
+    },
+    {
+        "description": "List information about virtual machines regardless of state:",
+        "command": "virsh list --all"
+    },
+    {
+        "description": "List information about virtual machines with autostart either enabled or disabled:",
+        "command": "virsh list --all --{{autostart|no-autostart}}"
+    },
+    {
         "command": "pathchk",
         "description": "Check the validity and portability of one or more pathnames.\nMore information: <https://www.gnu.org/software/coreutils/pathchk>."
     },
@@ -41662,6 +41834,22 @@
     {
         "description": "List open files in a directory:",
         "command": "lsof +D {{path/to/directory}}"
+    },
+    {
+        "command": "virsh-help",
+        "description": "Display information about `virsh` commands or command groups.\nSee also: `virsh`.\nMore information: <https://manned.org/virsh>."
+    },
+    {
+        "description": "List the `virsh` commands grouped into related categories:",
+        "command": "virsh help"
+    },
+    {
+        "description": "List the command categories:",
+        "command": "virsh help | grep \"keyword\""
+    },
+    {
+        "description": "List the commands in a category:",
+        "command": "virsh help {{category_keyword}}"
     },
     {
         "command": "logstash",
