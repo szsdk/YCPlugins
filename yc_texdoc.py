@@ -1,30 +1,17 @@
-"""
-dependency
-xdg
-"""
 import os
 from pathlib import Path
 
 import yescommander as yc
-from xdg import xdg_cache_home
+from yescommander.xdg import cache_path
 
-cache = xdg_cache_home() / "yescommander" / "texdoc.dat"
+cache = cache_path / "yescommander" / "texdoc.dat"
 
 
 def make_filelist(doc_folder):
-    # from bs4 import BeautifulSoup
-
     os.system(f"mkdir {cache.parent}")
     doc_files = [str(f) for f in Path(doc_folder).rglob("*.pdf")]
     with cache.open("w") as fp:
         print("\n".join(doc_files), file=fp)
-    # with open("/usr/local/texlive/2021/doc.html") as fp:
-    # soup = BeautifulSoup(fp, "html.parser")
-    # ans = [line.get("href") for line in soup.findAll("a")]
-    # with cache.open("w") as fp:
-    # for i in filter(lambda x: x[-4:] == ".pdf", ans):
-    # p = f"/usr/local/texlive/2021/{i}"
-    # print(p, file=fp)
 
 
 def get_filelist(doc_folder):

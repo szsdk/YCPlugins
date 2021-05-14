@@ -1288,7 +1288,7 @@
         "description": "A file transfer tool for uploading to Azure Cloud Storage Accounts.\nMore information: <https://docs.microsoft.com/azure/storage/common/storage-use-azcopy-v10>."
     },
     {
-        "description": "Login to an Azure Tenant:",
+        "description": "Log in to an Azure Tenant:",
         "command": "azopy login"
     },
     {
@@ -12424,6 +12424,34 @@
         "command": "feh --bg-{{center|fill|max|scale|tile}} {{path/to/image}}"
     },
     {
+        "command": "hashcat",
+        "description": "Fast and advanced password recovery tool.\nMore information: <https://manned.org/hashcat>."
+    },
+    {
+        "description": "Perform a brute-force attack (mode 3) with the default hashcat mask:",
+        "command": "hashcat --hash-type {{hash_type_id}} --attack-mode {{3}} {{hash_value}}"
+    },
+    {
+        "description": "Perform a brute-force attack (mode 3) with a known pattern of 4 digits:",
+        "command": "hashcat --hash-type {{hash_type_id}} --attack-mode {{3}} {{hash_value}} \"{{?d?d?d?d}}\""
+    },
+    {
+        "description": "Perform a brute-force attack (mode 3) using at most 8 of all printable ASCII characters:",
+        "command": "hashcat --hash-type {{hash_type_id}} --attack-mode {{3}} --increment {{hash_value}} \"{{?a?a?a?a?a?a?a?a}}\""
+    },
+    {
+        "description": "Perform a dictionary attack (mode 0) using the RockYou wordlist of a Kali Linux box:",
+        "command": "hashcat --hash-type {{hash_type_id}} --attack-mode {{0}} {{hash_value}} {{/usr/share/wordlists/rockyou.txt}}"
+    },
+    {
+        "description": "Perform a rule based dictionary attack (mode 0) using the RockYou wordlist mutated with common password variations:",
+        "command": "hashcat --hash-type {{hash_type_id}} --attack-mode {{0}} --rules-file {{/usr/share/hashcat/rules/best64.rule}} {{hash_value}} {{/usr/share/wordlists/rockyou.txt}}"
+    },
+    {
+        "description": "Perform a combination attack (mode 1) using the concatenation of words from two different custom dictionaries:",
+        "command": "hashcat --hash-type {{hash_type_id}} --attack-mode {{1}} {{hash_value}} {{/path/to/dictionary1.txt}} {{/path/to/dictionary2.txt}}"
+    },
+    {
         "command": "kpackagetool5",
         "description": "KPackage Manager: Install, list, remove Plasma packages.\nMore information: <https://techbase.kde.org/Development/Tutorials/Plasma5/QML2/GettingStarted#Kpackagetool5>."
     },
@@ -12928,15 +12956,15 @@
         "description": "Initiates a session for a user."
     },
     {
-        "description": "Login as a user:",
+        "description": "Log in as a user:",
         "command": "login {{user}}"
     },
     {
-        "description": "Login as user without authentication if user is preauthenticated:",
+        "description": "Log in as user without authentication if user is preauthenticated:",
         "command": "login -f {{user}}"
     },
     {
-        "description": "Login as user and preserve environment:",
+        "description": "Log in as user and preserve environment:",
         "command": "login -p {{user}}"
     },
     {
@@ -13972,7 +14000,7 @@
         "description": "Upload code to https://gist.github.com.\nMore information: <https://github.com/defunkt/gist>."
     },
     {
-        "description": "Login in gist on this computer:",
+        "description": "Log in in gist on this computer:",
         "command": "gist --login"
     },
     {
@@ -14512,7 +14540,7 @@
         "description": "Command line interface for the LastPass password manager.\nMore information: <https://github.com/lastpass/lastpass-cli>."
     },
     {
-        "description": "Login to your LastPass account, by entering your master password when prompted:",
+        "description": "Log in to your LastPass account, by entering your master password when prompted:",
         "command": "lpass login {{username}}"
     },
     {
@@ -14902,6 +14930,38 @@
     {
         "description": "Scan the open ports of a specified host:",
         "command": "nc -v -z {{ip_address}} {{port}}"
+    },
+    {
+        "command": "kdeconnect-cli",
+        "description": "KDE Connect CLI.\nMore information: <https://kdeconnect.kde.org>."
+    },
+    {
+        "description": "List all devices:",
+        "command": "kdeconnect-cli --list-devices"
+    },
+    {
+        "description": "List all reachable devices:",
+        "command": "kdeconnect-cli --list-available"
+    },
+    {
+        "description": "Request pairing with a specific device, specifying its ID:",
+        "command": "kdeconnect-cli --pair --device {{device_id}}"
+    },
+    {
+        "description": "Request pairing with a specific device, specifying its name:",
+        "command": "kdeconnect-cli --pair --name {{device_name}}"
+    },
+    {
+        "description": "Ring a specific device:",
+        "command": "kdeconnect-cli --ring --name {{device_name}}"
+    },
+    {
+        "description": "Send an SMS with an optional attachment to a specific number:",
+        "command": "kdeconnect-cli --name {{device_name}} --send-sms {{message}} --destination {{phone_number}} --attachment {{path/to/file}}"
+    },
+    {
+        "description": "Unlock a specific device:",
+        "command": "kdeconnect-cli --name {{device_name}} --unlock"
     },
     {
         "command": "mlr",
@@ -19908,6 +19968,38 @@
         "command": "pueue edit {{task_id}} --path"
     },
     {
+        "command": "starship",
+        "description": "The minimal, blazing-fast, and infinitely customizable prompt for any shell.\nMore information: <https://starship.rs>."
+    },
+    {
+        "description": "Print the starship integration code for the specified shell:",
+        "command": "starship init {{bash|elvish|fish|ion|powershell|tcsh|zsh}}"
+    },
+    {
+        "description": "Explain each part of the current prompt and show the time taken to render them:",
+        "command": "starship explain"
+    },
+    {
+        "description": "Print the computed starship configuration (use `--default` to print default configuration instead):",
+        "command": "starship print-config"
+    },
+    {
+        "description": "List supported modules:",
+        "command": "starship module --list"
+    },
+    {
+        "description": "Edit the starship configuration in the default editor:",
+        "command": "starship configure"
+    },
+    {
+        "description": "Create a bug report GitHub issue pre-populated with information about the system and starship configuration:",
+        "command": "starship bug-report"
+    },
+    {
+        "description": "Print the completion script for the specified shell:",
+        "command": "starship completions {{bash|elvish|fish|powershell|zsh}}"
+    },
+    {
         "command": "git revert",
         "description": "Create new commits which reverse the effect of earlier ones.\nMore information: <https://git-scm.com/docs/git-revert>."
     },
@@ -20620,7 +20712,7 @@
         "description": "Interact with the balenaCloud, openBalena and the balena API from the command line.\nMore information: <https://www.balena.io/docs/reference/cli/>."
     },
     {
-        "description": "Login to the balenaCloud account:",
+        "description": "Log in to the balenaCloud account:",
         "command": "balena login"
     },
     {
@@ -22548,11 +22640,11 @@
         "description": "Authenticate with a GitHub host from the command line.\nMore information: <https://cli.github.com/manual/gh_auth>."
     },
     {
-        "description": "Login with interactive prompt:",
+        "description": "Log in with interactive prompt:",
         "command": "gh auth login"
     },
     {
-        "description": "Login with a token from standard input (created in https://github.com/settings/tokens):",
+        "description": "Log in with a token from standard input (created in https://github.com/settings/tokens):",
         "command": "echo {{your_token}} | gh auth login --with-token"
     },
     {
@@ -22564,7 +22656,7 @@
         "command": "gh auth logout"
     },
     {
-        "description": "Login with a specific GitHub Enterprise Server:",
+        "description": "Log in with a specific GitHub Enterprise Server:",
         "command": "gh auth login --hostname {{github.example.com}}"
     },
     {
@@ -22913,15 +23005,15 @@
     },
     {
         "command": "acme.sh",
-        "description": "Shell script implementing ACME client protocol, an alternative to certbot.\nMore information: <https://github.com/acmesh-official/acme.sh>."
+        "description": "Shell script implementing ACME client protocol, an alternative to certbot.\nSee also `acme.sh dns`.\nMore information: <https://github.com/acmesh-official/acme.sh>."
     },
     {
         "description": "Issue a certificate using webroot mode:",
         "command": "acme.sh --issue --domain {{example.com}} --webroot {{/path/to/webroot}}"
     },
     {
-        "description": "Issue a certificate using standalone mode using port 80:",
-        "command": "acme.sh --issue --standalone --domain {{example.com}}"
+        "description": "Issue a certificate for multiple domains using standalone mode using port 80:",
+        "command": "acme.sh --issue --standalone --domain {{example.com}} --domain {{www.example.com}}"
     },
     {
         "description": "Issue a certificate using standalone TLS mode using port 443:",
@@ -22936,12 +23028,8 @@
         "command": "acme.sh --issue --apache --domain {{example.com}}"
     },
     {
-        "description": "Issue a wildcard (\\*) certificate using a manual DNS mode:",
-        "command": "acme.sh --issue --dns --domain {{example.com}}"
-    },
-    {
-        "description": "Issue a certificate using an automatic DNS API mode:",
-        "command": "acme.sh --issue --dns {{dns_cf}} --domain {{example.com}}"
+        "description": "Issue a wildcard (\\*) certificate using an automatic DNS API mode:",
+        "command": "acme.sh --issue --dns {{dns_cf}} --domain {{*.example.com}}"
     },
     {
         "command": "phpunit",
@@ -24248,7 +24336,7 @@
         "command": "k6 run --compatibility-mode=base {{script.js}}"
     },
     {
-        "description": "Login to cloud service using secret token:",
+        "description": "Log in to cloud service using secret token:",
         "command": "k6 login cloud --token {{secret}}"
     },
     {
@@ -25784,7 +25872,7 @@
         "description": "Create and manage Heroku apps from the command line.\nMore information: <https://www.heroku.com/>."
     },
     {
-        "description": "Login to your heroku account:",
+        "description": "Log in to your heroku account:",
         "command": "heroku login"
     },
     {
@@ -28740,7 +28828,7 @@
         "description": "Deploy sites and configure continuous deployment to the Netlify platform.\nMore information: <https://www.netlify.com/docs/cli/>."
     },
     {
-        "description": "Login to the Netlify account:",
+        "description": "Log in to the Netlify account:",
         "command": "netlify login"
     },
     {
@@ -30144,7 +30232,7 @@
         "description": "Test, manage, and deploy Firebase projects from the command line.\nMore information: <https://github.com/firebase/firebase-tools>."
     },
     {
-        "description": "Login to <https://console.firebase.google.com>:",
+        "description": "Log in to <https://console.firebase.google.com>:",
         "command": "firebase login"
     },
     {
@@ -30780,11 +30868,11 @@
         "description": "Command line tool to acquire AWS temporary (STS) credentials using Google Apps as a federated (Single Sign-On) provider.\nMore information: <https://github.com/cevoaustralia/aws-google-auth>."
     },
     {
-        "description": "Login with Google SSO using the IDP and SP identifiers and set the credentials duration to one hour:",
+        "description": "Log in with Google SSO using the IDP and SP identifiers and set the credentials duration to one hour:",
         "command": "aws-google-auth -u {{example@example.com}} -I {{$GOOGLE_IDP_ID}} -S {{$GOOGLE_SP_ID}} -d {{3600}}"
     },
     {
-        "description": "Login [a]sking which role to use (in case of several available SAML roles):",
+        "description": "Log in [a]sking which role to use (in case of several available SAML roles):",
         "command": "aws-google-auth -u {{example@example.com}} -I {{$GOOGLE_IDP_ID}} -S {{$GOOGLE_SP_ID}} -d {{3600}} -a"
     },
     {
@@ -31288,6 +31376,14 @@
         "command": "psalm --stats"
     },
     {
+        "command": "git rename-branch",
+        "description": "Rename a Git branch.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-rename-branch>."
+    },
+    {
+        "description": "Rename the branch you are currently on:",
+        "command": "git rename-branch {{new_branch_name}}"
+    },
+    {
         "command": "runsvdir",
         "description": "Run an entire directory of services.\nMore information: <https://manpages.ubuntu.com/manpages/latest/man8/runsvdir.8.html>."
     },
@@ -31298,6 +31394,10 @@
     {
         "description": "Start and manage all services in a directory as root:",
         "command": "sudo runsvdir {{path/to/services}}"
+    },
+    {
+        "command": "git delete-tag",
+        "description": "Delete existing local and remote tags.\nPart of git-extras.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-delete-tag>."
     },
     {
         "command": "stat",
@@ -33216,6 +33316,10 @@
         "command": "touch -t {{YYYYMMDDHHMM.SS}} {{filename}}"
     },
     {
+        "description": "Use the times from a file to set the times on a second file:",
+        "command": "touch -r {{filename}} {{filename2}}"
+    },
+    {
         "command": "gatsby",
         "description": "Static site generator for React.\nMore information: <https://gatsbyjs.org>."
     },
@@ -33886,6 +33990,10 @@
     {
         "description": "Long format list sorted by size (descending):",
         "command": "ls -lS"
+    },
+    {
+        "description": "Long format list of all files, sorted by modification date (oldest first):",
+        "command": "ls -ltr"
     },
     {
         "command": "git mv",
@@ -35348,7 +35456,7 @@
         "command": "gcloud config list"
     },
     {
-        "description": "Login to Google account:",
+        "description": "Log in to Google account:",
         "command": "gcloud auth login"
     },
     {
@@ -36580,11 +36688,11 @@
         "command": "pio account destroy"
     },
     {
-        "description": "Login to your PlatformIO account:",
+        "description": "Log in to your PlatformIO account:",
         "command": "pio account login --username {{username}} --password {{password}}"
     },
     {
-        "description": "Logout of your PlatformIO account:",
+        "description": "Log out of your PlatformIO account:",
         "command": "pio account logout"
     },
     {
@@ -36690,6 +36798,26 @@
     {
         "description": "Play previous song:",
         "command": "mpc prev"
+    },
+    {
+        "command": "acme.sh --dns",
+        "description": "Use a DNS-01 challenge to issue a TLS certificate.\nMore information: <https://github.com/acmesh-official/acme.sh/wiki>."
+    },
+    {
+        "description": "Issue a certificate using an automatic DNS API mode:",
+        "command": "acme.sh --issue --dns {{gnd_gd}} --domain {{example.com}}"
+    },
+    {
+        "description": "Issue a wildcard certificate (denoted by an asterisk) using an automatic DNS API mode:",
+        "command": "acme.sh --issue --dns {{dns_namesilo}} --domain  {{example.com}} --domain {{*.example.com}}"
+    },
+    {
+        "description": "Issue a certificate using a DNS alias mode:",
+        "command": "acme.sh --issue --dns {{dns_cf}} --domain {{example.com}} --challenge-alias {{alias-for-example-validation.com}}"
+    },
+    {
+        "description": "Issue a certificate while disabling automatic Cloudflare / Google DNS polling after the DNS record is added by specifying a custom wait time in seconds:",
+        "command": "acme.sh --issue --dns {{dns_namecheap}} --domain {{example.com}} --dnssleep {{300}}"
     },
     {
         "command": "qtcreator",
@@ -37156,7 +37284,7 @@
         "description": "Find vulnerabilities in your code and remediate risks.\nMore information: <https://snyk.io>."
     },
     {
-        "description": "Login to your Snyk account:",
+        "description": "Log in to your Snyk account:",
         "command": "snyk auth"
     },
     {
@@ -38544,7 +38672,7 @@
         "command": "youtube-viewer {{search_term}}"
     },
     {
-        "description": "Login to your YouTube account:",
+        "description": "Log in to your YouTube account:",
         "command": "youtube-viewer --login"
     },
     {
@@ -39096,7 +39224,7 @@
         "command": "bosh environments"
     },
     {
-        "description": "Login to the director:",
+        "description": "Log in to the director:",
         "command": "bosh login -e {{environment}}"
     },
     {
@@ -41396,7 +41524,7 @@
         "command": "o"
     },
     {
-        "description": "Login:",
+        "description": "Log in:",
         "command": "u"
     },
     {
@@ -42440,7 +42568,7 @@
         "command": "packtpub login"
     },
     {
-        "description": "Logout from packtpub.com:",
+        "description": "Log out from packtpub.com:",
         "command": "packtpub logout"
     },
     {
