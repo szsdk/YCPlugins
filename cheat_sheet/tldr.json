@@ -320,7 +320,7 @@
         "description": "Copy input content to the Windows clipboard.\nMore information: <https://docs.microsoft.com/windows-server/administration/windows-commands/clip>."
     },
     {
-        "description": "Pipe command line output to the Windows clipboard:",
+        "description": "Pipe command-line output to the Windows clipboard:",
         "command": "{{dir}} | clip"
     },
     {
@@ -469,7 +469,7 @@
     },
     {
         "command": "fondue",
-        "description": "A command line installer for optional Windows features.\nMore information: <https://docs.microsoft.com/windows-server/administration/windows-commands/fondue>."
+        "description": "A command-line installer for optional Windows features.\nMore information: <https://docs.microsoft.com/windows-server/administration/windows-commands/fondue>."
     },
     {
         "description": "Enable a specific Windows feature:",
@@ -521,7 +521,7 @@
     },
     {
         "command": "doskey",
-        "description": "Manage macros, windows commands and command lines.\nMore information: <https://docs.microsoft.com/windows-server/administration/windows-commands/doskey>."
+        "description": "Manage macros, windows commands and command-lines.\nMore information: <https://docs.microsoft.com/windows-server/administration/windows-commands/doskey>."
     },
     {
         "description": "List available macros:",
@@ -793,7 +793,7 @@
     },
     {
         "command": "pwlauncher",
-        "description": "A command line tool for managing the Windows To Go startup options.\nMore information: <https://docs.microsoft.com/windows-server/administration/windows-commands/pwlauncher>."
+        "description": "A command-line tool for managing the Windows To Go startup options.\nMore information: <https://docs.microsoft.com/windows-server/administration/windows-commands/pwlauncher>."
     },
     {
         "description": "Display the current Windows To Go status:",
@@ -869,7 +869,7 @@
     },
     {
         "command": "octo",
-        "description": "Command line tools for Octopus Deploy.\nMore information: <https://octopus.com/docs/octopus-rest-api/octo.exe-command-line>."
+        "description": "Command-line tools for Octopus Deploy.\nMore information: <https://octopus.com/docs/octopus-rest-api/octo.exe-command-line>."
     },
     {
         "description": "Create a package:",
@@ -1049,7 +1049,7 @@
     },
     {
         "command": "wsl",
-        "description": "Manage the Windows Subsystem for Linux from the command line.\nMore information: <https://docs.microsoft.com/windows/wsl/reference>."
+        "description": "Manage the Windows Subsystem for Linux from the command-line.\nMore information: <https://docs.microsoft.com/windows/wsl/reference>."
     },
     {
         "description": "Start a Linux shell (in the default distribution):",
@@ -1600,7 +1600,7 @@
         "command": "virtualboxvm --startvm {{name|uuid}} --dvd {{path/to/image_file}}"
     },
     {
-        "description": "Display a command line window with debug information:",
+        "description": "Display a command-line window with debug information:",
         "command": "virtualboxvm --startvm {{name|uuid}} --debug-command-line"
     },
     {
@@ -1757,7 +1757,7 @@
     },
     {
         "command": "choco",
-        "description": "A command line interface for the Chocolatey package manager.\nSee `choco install`, `choco upgrade` and other pages for additional information.\nMore information: <https://chocolatey.org>."
+        "description": "A command-line interface for the Chocolatey package manager.\nSee `choco install`, `choco upgrade` and other pages for additional information.\nMore information: <https://chocolatey.org>."
     },
     {
         "description": "Execute Chocolatey command:",
@@ -1965,7 +1965,7 @@
     },
     {
         "command": "reg",
-        "description": "A command line interface for managing keys and their values in the Windows registry.\nSee `reg-query`, `reg-add` and other pages for additional information.\nMore information: <https://docs.microsoft.com/windows-server/administration/windows-commands/reg>."
+        "description": "A command-line interface for managing keys and their values in the Windows registry.\nSee `reg-query`, `reg-add` and other pages for additional information.\nMore information: <https://docs.microsoft.com/windows-server/administration/windows-commands/reg>."
     },
     {
         "description": "Execute registry commands:",
@@ -2029,7 +2029,7 @@
     },
     {
         "command": "cmstp",
-        "description": "A command line tool for managing connection service profiles.\nMore information: <https://docs.microsoft.com/windows-server/administration/windows-commands/cmstp>."
+        "description": "A command-line tool for managing connection service profiles.\nMore information: <https://docs.microsoft.com/windows-server/administration/windows-commands/cmstp>."
     },
     {
         "description": "Install a specific profile:",
@@ -2817,7 +2817,7 @@
     },
     {
         "command": "rspamc",
-        "description": "Command line client for rspamd servers."
+        "description": "Command-line client for rspamd servers."
     },
     {
         "description": "Train the bayesian filter to recognise an email as spam:",
@@ -2901,7 +2901,7 @@
     },
     {
         "command": "pamac",
-        "description": "A command line utility for the GUI package manager pamac.\nIf you can't see the AUR packages, enable it in `/etc/pamac.conf` or in the GUI.\nMore information: <https://wiki.manjaro.org/index.php/Pamac>."
+        "description": "A command-line utility for the GUI package manager pamac.\nIf you can't see the AUR packages, enable it in `/etc/pamac.conf` or in the GUI.\nMore information: <https://wiki.manjaro.org/index.php/Pamac>."
     },
     {
         "description": "Install a new package:",
@@ -3589,7 +3589,7 @@
     },
     {
         "command": "calcurse",
-        "description": "A text-based calendar and scheduling application for the command line.\nMore information: <https://calcurse.org>."
+        "description": "A text-based calendar and scheduling application for the command-line.\nMore information: <https://calcurse.org>."
     },
     {
         "description": "Start calcurse on interactive mode:",
@@ -4105,7 +4105,7 @@
     },
     {
         "command": "iwctl",
-        "description": "A command line tool for controlling the iwd network supplicant.\nMore information: <https://iwd.wiki.kernel.org/gettingstarted>."
+        "description": "A command-line tool for controlling the iwd network supplicant.\nMore information: <https://iwd.wiki.kernel.org/gettingstarted>."
     },
     {
         "description": "Start the interactive mode, in this mode you can enter the commands directly, with autocompletion:",
@@ -4420,6 +4420,34 @@
         "command": "vncserver --geometry {{width}}x{{height}}"
     },
     {
+        "command": "uuid",
+        "description": "Generate and decode Universally Unique Identifiers (UUID).\nSee also `uuidgen`.\nMore information: <https://manned.org/uuid>."
+    },
+    {
+        "description": "Generate a UUIDv1 (based on time and system's hardware address, if present):",
+        "command": "uuid"
+    },
+    {
+        "description": "Generate a UUIDv4 (based on random data):",
+        "command": "uuid -v {{4}}"
+    },
+    {
+        "description": "Generate multiple UUIDv4 identifiers at once:",
+        "command": "uuid -v {{4}} -n {{number_of_uuids}}"
+    },
+    {
+        "description": "Generate a UUIDv4 and specify the output format:",
+        "command": "uuid -v {{4}} -F {{BIN|STR|SIV}}"
+    },
+    {
+        "description": "Generate a UUIDv4 and write the output to a file:",
+        "command": "uuid -v {{4}} -o {{path/to/file}}"
+    },
+    {
+        "description": "Generate a UUIDv5 (based on the supplied object name) with a specified namespace prefix:",
+        "command": "uuid -v {{5}} ns:{{DNS|URL|OID|X500}} {{object_name}}"
+    },
+    {
         "command": "watch",
         "description": "Execute a command repeatedly, and monitor the output in full-screen mode."
     },
@@ -4608,7 +4636,7 @@
         "command": "dnsrecon --domain {{example.com}} --name_server {{nameserver.example.com}} --type axfr"
     },
     {
-        "description": "Scan a domain, using a dictionary of subdomains and hostnames for bruteforcing:",
+        "description": "Scan a domain, using a brute-force attack and a dictionary of subdomains and hostnames:",
         "command": "dnsrecon --domain {{example.com}} --dictionary {{path/to/dictionary.txt}} --type brt"
     },
     {
@@ -4874,6 +4902,18 @@
     {
         "description": "Scan an IP network within a custom range:",
         "command": "arp-scan {{127.0.0.0}}-{{127.0.0.31}}"
+    },
+    {
+        "command": "uuidd",
+        "description": "Daemon for generating UUIDs.\nMore information: <https://manned.org/uuidd>."
+    },
+    {
+        "description": "Generate a random UUID:",
+        "command": "uuidd --random"
+    },
+    {
+        "description": "Generate a bulk number of random UUIDs:",
+        "command": "uuidd --random --uuids {{number_of_uuids}}"
     },
     {
         "command": "arch-chroot",
@@ -5184,6 +5224,18 @@
         "command": "scanimage -L"
     },
     {
+        "command": "dconf",
+        "description": "Simple tool for manipulating dconf databases.\nSee also `dconf write`.\nMore information: <https://developer.gnome.org/dconf>."
+    },
+    {
+        "description": "Print the value of a dconf path:",
+        "command": "dconf read {{/example/dconf/path}}"
+    },
+    {
+        "description": "List contents of a dconf path:",
+        "command": "dconf list {{/example/dconf/path}}"
+    },
+    {
         "command": "f5fpc",
         "description": "A proprietry commercial SSL VPN client by BIG-IP Edge."
     },
@@ -5257,7 +5309,7 @@
     },
     {
         "command": "efibootmgr",
-        "description": "Manipulate the UEFI Boot Manager (the Bootoptions).\nMore information: <https://manned.org/efibootmgr>."
+        "description": "Manipulate the UEFI Boot Manager.\nMore information: <https://manned.org/efibootmgr>."
     },
     {
         "description": "List the current settings / bootnums:",
@@ -5908,6 +5960,26 @@
         "command": "modinfo {{kernel_module}}"
     },
     {
+        "command": "dconf write",
+        "description": "Write a value to a dconf database path.\nMore information: <https://developer.gnome.org/dconf>."
+    },
+    {
+        "description": "Write a string to a dconf path (note the nested quotes):",
+        "command": "dconf write {{/example/dconf/path}} \"'{{Example Value}}'\""
+    },
+    {
+        "description": "Write a boolean to a dconf path:",
+        "command": "dconf write {{/example/dconf/path}} {{true|false}}"
+    },
+    {
+        "description": "Write an integer to a dconf path:",
+        "command": "dconf write {{/example/dconf/path}} {{16}}"
+    },
+    {
+        "description": "Write an array to a dconf path:",
+        "command": "dconf write {{/example/dconf/path}} \"[{{'My First Value', 'My Second Value'}}]\""
+    },
+    {
         "command": "ndctl",
         "description": "Utility for managing Non-Volatile DIMMs."
     },
@@ -6192,7 +6264,7 @@
         "command": "gs -dQUIET -dBATCH {{file.pdf}}"
     },
     {
-        "description": "Reduce PDF file size to 150 dpi images for reading on a ebook device:",
+        "description": "Reduce PDF file size to 150 dpi images for reading on a e-book device:",
         "command": "gs -dNOPAUSE -dQUIET -dBATCH -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -sOutputFile={{output.pdf}} {{input.pdf}}"
     },
     {
@@ -6236,7 +6308,7 @@
         "command": "sudo partx --list {{path/to/device_or_disk_image}}"
     },
     {
-        "description": "Add all the paritions found in a given block device to the kernel:",
+        "description": "Add all the partitions found in a given block device to the kernel:",
         "command": "sudo partx --add --verbose {{path/to/device_or_disk_image}}"
     },
     {
@@ -7728,7 +7800,7 @@
         "command": "virt-manager --connect {{hypervisor_uri}}"
     },
     {
-        "description": "Don't fork virt-manager process into backgroun on startup:",
+        "description": "Don't fork virt-manager process into background on startup:",
         "command": "virt-manager --no-fork"
     },
     {
@@ -8281,14 +8353,14 @@
     },
     {
         "command": "uuidgen",
-        "description": "Generate unique identifiers (UUIDs)."
+        "description": "Generate unique identifiers (UUIDs).\nSee also `uuid`.\nMore information: <https://manned.org/uuidgen>."
     },
     {
-        "description": "Create a random UUID:",
+        "description": "Create a random UUIDv4:",
         "command": "uuidgen --random"
     },
     {
-        "description": "Create a UUID based on the current time:",
+        "description": "Create a UUIDv1 based on the current time:",
         "command": "uuidgen --time"
     },
     {
@@ -8405,7 +8477,7 @@
     },
     {
         "command": "firewall-cmd",
-        "description": "The firewalld command line client."
+        "description": "The firewalld command-line client."
     },
     {
         "description": "View the available firewall zones:",
@@ -8449,7 +8521,7 @@
     },
     {
         "command": "imgp",
-        "description": "Command line image resizer and rotator for JPEG and PNG images."
+        "description": "Command-line image resizer and rotator for JPEG and PNG images."
     },
     {
         "description": "Convert single images and/or whole directories containing valid image formats:",
@@ -8557,10 +8629,10 @@
     },
     {
         "command": "vmware-checkvm",
-        "description": "Checks to see if the current host is a VMWare VM or not."
+        "description": "Checks to see if the current host is a VMware VM or not."
     },
     {
-        "description": "Return the current VMWare software version (exit status determines whether the system is a VM or not):",
+        "description": "Return the current VMware software version (exit status determines whether the system is a VM or not):",
         "command": "vmware-checkvm"
     },
     {
@@ -8989,7 +9061,7 @@
     },
     {
         "command": "auracle",
-        "description": "Command line tool used to interact with Arch Linux's User Repository, commonly referred to as the AUR.\nMore information: <https://github.com/falconindy/auracle>."
+        "description": "Command-line tool used to interact with Arch Linux's User Repository, commonly referred to as the AUR.\nMore information: <https://github.com/falconindy/auracle>."
     },
     {
         "description": "Display AUR packages that match a regular expression:",
@@ -9156,11 +9228,11 @@
         "description": "An interactive command-line HTTP client featuring autocomplete and syntax highlighting."
     },
     {
-        "description": "Launch a session targeting the default url of http://localhost:8000 or the previous session:",
+        "description": "Launch a session targeting the default URL of http://localhost:8000 or the previous session:",
         "command": "http-prompt"
     },
     {
-        "description": "Launch a session with a given url:",
+        "description": "Launch a session with a given URL:",
         "command": "http-prompt {{http://example.com}}"
     },
     {
@@ -9729,7 +9801,7 @@
     },
     {
         "command": "nmcli",
-        "description": "A command line tool for controlling NetworkManager.\nMore information: <https://man.archlinux.org/man/nmcli.1>."
+        "description": "A command-line tool for controlling NetworkManager.\nMore information: <https://man.archlinux.org/man/nmcli.1>."
     },
     {
         "description": "Check the nmcli version:",
@@ -9805,7 +9877,7 @@
     },
     {
         "command": "tshark",
-        "description": "Packet analysis tool, CLI version of wireshark."
+        "description": "Packet analysis tool, CLI version of Wireshark."
     },
     {
         "description": "Monitor everything on localhost:",
@@ -9837,7 +9909,7 @@
     },
     {
         "command": "protontricks",
-        "description": "A simple wrapper that does winetricks things for Proton enabled games, requires Winetricks.\nMore information: <https://github.com/Matoking/protontricks>."
+        "description": "A simple wrapper that does Winetricks things for Proton enabled games, requires Winetricks.\nMore information: <https://github.com/Matoking/protontricks>."
     },
     {
         "description": "Show the protontricks help message:",
@@ -9848,7 +9920,7 @@
         "command": "protontricks --gui"
     },
     {
-        "description": "Run winetricks for a specific game:",
+        "description": "Run Winetricks for a specific game:",
         "command": "protontricks {{appid}} {{winetricks_args}}"
     },
     {
@@ -9981,7 +10053,7 @@
     },
     {
         "command": "cmus",
-        "description": "Commandline Music Player.\nUse arrow keys to navigate, `<enter/return>` to select, and numbers 1-8 switch between different views."
+        "description": "Command-line Music Player.\nUse arrow keys to navigate, `<enter/return>` to select, and numbers 1-8 switch between different views."
     },
     {
         "description": "Open cmus into the specified directory (this will become your new working directory):",
@@ -10293,7 +10365,7 @@
     },
     {
         "command": "rtorrent",
-        "description": "Download torrents over the command line."
+        "description": "Download torrents over the command-line."
     },
     {
         "description": "Add a torrent file or magnet to be downloaded:",
@@ -10609,7 +10681,7 @@
     },
     {
         "command": "xdotool",
-        "description": "Command line automation for X11."
+        "description": "Command-line automation for X11."
     },
     {
         "description": "Retrieve the X-Windows window ID of the running Firefox window(s):",
@@ -11324,7 +11396,7 @@
         "command": "winetricks"
     },
     {
-        "description": "Specify a custom Wine directory to run winetricks in:",
+        "description": "Specify a custom Wine directory to run Winetricks in:",
         "command": "WINEPREFIX={{path/to/wine_directory}} winetricks"
     },
     {
@@ -11685,7 +11757,7 @@
     },
     {
         "command": "httpie",
-        "description": "A user friendly command line HTTP tool."
+        "description": "A user friendly command-line HTTP tool."
     },
     {
         "description": "Send a GET request (default method with no request data):",
@@ -11789,7 +11861,7 @@
     },
     {
         "command": "pi",
-        "description": "Compute decimal Archimedes' constant Pi on the command line.\nMore information: <http://manpages.ubuntu.com/manpages/trusty/man1/pi.1.html>."
+        "description": "Compute decimal Archimedes' constant Pi on the command-line.\nMore information: <http://manpages.ubuntu.com/manpages/trusty/man1/pi.1.html>."
     },
     {
         "description": "Display 100 decimal digits of Archimedes' constant Pi:",
@@ -12497,7 +12569,7 @@
     },
     {
         "command": "uvcdynctrl",
-        "description": "A libwebcam command line tool to manage dynamic controls in uvcvideo."
+        "description": "A libwebcam command-line tool to manage dynamic controls in uvcvideo."
     },
     {
         "description": "List all available cameras:",
@@ -12565,7 +12637,7 @@
     },
     {
         "command": "zenity",
-        "description": "Display dialogs from the command line/shell scripts.\nReturn user-inserted values or 1 if error."
+        "description": "Display dialogs from the command-line/shell scripts.\nReturn user-inserted values or 1 if error."
     },
     {
         "description": "Display the default question dialog:",
@@ -12637,7 +12709,7 @@
     },
     {
         "command": "xsetwacom",
-        "description": "Command line tool to change settings for Wacom pen tablets at runtime."
+        "description": "Command-line tool to change settings for Wacom pen tablets at runtime."
     },
     {
         "description": "List all the available wacom devices. The device name is in the first column:",
@@ -12681,10 +12753,10 @@
     },
     {
         "command": "makepkg",
-        "description": "Creates a package installable with the `pacman` package manager.\nRuns the commands from a PKGBUILD file to build the package.\nMore information: <https://wiki.archlinux.org/index.php/Makepkg>."
+        "description": "Creates a package installable with the `pacman` package manager.\nRuns the commands from a `PKGBUILD` file to build the package.\nMore information: <https://wiki.archlinux.org/index.php/Makepkg>."
     },
     {
-        "description": "Make a package (run in the same directory as a PKGBUILD):",
+        "description": "Make a package (run in the same directory as a `PKGBUILD`):",
         "command": "makepkg"
     },
     {
@@ -13221,7 +13293,7 @@
     },
     {
         "command": "ctr",
-        "description": "Manage Containerd containers and images.\nMore information: <https://containerd.io>."
+        "description": "Manage `containerd` containers and images.\nMore information: <https://containerd.io>."
     },
     {
         "description": "List all containers (running and stopped):",
@@ -13717,7 +13789,7 @@
     },
     {
         "command": "geth",
-        "description": "The go-ethereum command line interface.\nMore information: <https://geth.ethereum.org>."
+        "description": "The go-ethereum command-line interface.\nMore information: <https://geth.ethereum.org>."
     },
     {
         "description": "Connect to the main Ethereum network and automatically download the full node:",
@@ -13817,7 +13889,7 @@
     },
     {
         "command": "gh release",
-        "description": "Manage GitHub releases from the command line.\nMore information: <https://cli.github.com/manual/gh_release>."
+        "description": "Manage GitHub releases from the command-line.\nMore information: <https://cli.github.com/manual/gh_release>."
     },
     {
         "description": "List releases in a GitHub repository, limited to 30 items:",
@@ -13841,7 +13913,7 @@
     },
     {
         "command": "ksh",
-        "description": "Korn Shell, a Bash-compatible command line interpreter.\nSee also `histexpand` for history expansion.\nMore information: <http://kornshell.com>."
+        "description": "Korn Shell, a Bash-compatible command-line interpreter.\nSee also `histexpand` for history expansion.\nMore information: <http://kornshell.com>."
     },
     {
         "description": "Start an interactive shell session:",
@@ -14293,7 +14365,7 @@
     },
     {
         "command": "glab",
-        "description": "GitLab CLI tool to help working with GitLab from the command line.\nMore information: <https://clementsam.tech/glab/>."
+        "description": "GitLab CLI tool to help working with GitLab from the command-line.\nMore information: <https://clementsam.tech/glab/>."
     },
     {
         "description": "Create a merge request:",
@@ -14317,7 +14389,7 @@
     },
     {
         "command": "whois",
-        "description": "Commandline client for the WHOIS (RFC 3912) protocol.\nMore information: <https://github.com/rfc1036/whois>."
+        "description": "Command-line client for the WHOIS (RFC 3912) protocol.\nMore information: <https://github.com/rfc1036/whois>."
     },
     {
         "description": "Get information about a domain name:",
@@ -14369,7 +14441,7 @@
     },
     {
         "command": "kubectl",
-        "description": "Command line interface for running commands against Kubernetes clusters.\nSee also `kubectl describe` and other pages for additional information.\nMore information: <https://kubernetes.io/docs/reference/kubectl/>."
+        "description": "Command-line interface for running commands against Kubernetes clusters.\nSee also `kubectl describe` and other pages for additional information.\nMore information: <https://kubernetes.io/docs/reference/kubectl/>."
     },
     {
         "description": "List information about a resource with more details:",
@@ -14469,7 +14541,7 @@
     },
     {
         "command": "convert",
-        "description": "Imagemagick image conversion tool.\nMore information: <https://imagemagick.org/script/convert.php>."
+        "description": "ImageMagick image conversion tool.\nMore information: <https://imagemagick.org/script/convert.php>."
     },
     {
         "description": "Convert an image from JPG to PNG:",
@@ -14537,7 +14609,7 @@
     },
     {
         "command": "lpass",
-        "description": "Command line interface for the LastPass password manager.\nMore information: <https://github.com/lastpass/lastpass-cli>."
+        "description": "Command-line interface for the LastPass password manager.\nMore information: <https://github.com/lastpass/lastpass-cli>."
     },
     {
         "description": "Log in to your LastPass account, by entering your master password when prompted:",
@@ -14593,7 +14665,7 @@
     },
     {
         "command": "identify",
-        "description": "Command line utility of Image Magick project to describe the format and characteristics of one or more image files.\nMore information: <https://imagemagick.org/script/identify.php>."
+        "description": "Command-line utility of Image Magick project to describe the format and characteristics of one or more image files.\nMore information: <https://imagemagick.org/script/identify.php>."
     },
     {
         "command": "fast",
@@ -14641,7 +14713,7 @@
     },
     {
         "command": "nodenv",
-        "description": "A tool to manage NodeJS versions.\nMore information: <https://github.com/nodenv/nodenv>."
+        "description": "A tool to manage Node.js versions.\nMore information: <https://github.com/nodenv/nodenv>."
     },
     {
         "description": "Install a specific version of Node.js:",
@@ -14724,7 +14796,7 @@
         "command": "pio device monitor --baud {{57600}}"
     },
     {
-        "description": "Start an interactive device monitor and set a specific EOL character (defults to `CRLF`):",
+        "description": "Start an interactive device monitor and set a specific EOL character (defaults to `CRLF`):",
         "command": "pio device monitor --eol {{CRLF|CR|LF}}"
     },
     {
@@ -15048,15 +15120,19 @@
         "command": "git status --untracked-files=no"
     },
     {
+        "command": "git local-commits",
+        "description": "Show local commits that haven't been pushed to origin. Any additional arguments will be passed directly to `git log`.\nPart of `git-extras.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-local-commits>."
+    },
+    {
         "command": "hangups",
-        "description": "Third party command line client for Google Hangouts.\nMore information: <https://github.com/tdryer/hangups>."
+        "description": "Third party command-line client for Google Hangouts.\nMore information: <https://github.com/tdryer/hangups>."
     },
     {
         "description": "Start hangups:",
         "command": "hangups"
     },
     {
-        "description": "View troubeshooting information and help:",
+        "description": "View troubleshooting information and help:",
         "command": "hangups -h"
     },
     {
@@ -15124,6 +15200,18 @@
         "command": "convmv -f {{from_encoding}} -t {{to_encoding}} {{input_file}}"
     },
     {
+        "command": "git verify-commit",
+        "description": "Check for GPG verification of commits.\nIf no commits are verified, nothing will be printed, regardless of options specified.\nMore information: <https://git-scm.com/docs/git-verify-commit>."
+    },
+    {
+        "description": "Check commits for a GPG signature:",
+        "command": "git verify-commit {{commit_hash1 optional_commit_hash2 ...}}"
+    },
+    {
+        "description": "Check commits for a GPG signature and show details of each commit:",
+        "command": "git verify-commit {{commit_hash1 optional_commit_hash2 ...}} --verbose"
+    },
+    {
         "command": "testssl",
         "description": "Check SSL/TLS protocols and ciphers supported by a server.\nMore information: <https://testssl.sh/>."
     },
@@ -15182,6 +15270,22 @@
     {
         "description": "Set Python version to be used globally in the current machine:",
         "command": "pyenv global {{2.7.10}}"
+    },
+    {
+        "command": "git commits-since",
+        "description": "Display commits since a specific time or date.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-commits-since>."
+    },
+    {
+        "description": "Display commits since yesterday:",
+        "command": "git commits-since {{yesterday}}"
+    },
+    {
+        "description": "Display commits since last week:",
+        "command": "git commits-since {{last week}}"
+    },
+    {
+        "description": "Display commits since last month:",
+        "command": "git commits-since {{last month}}"
     },
     {
         "command": "p7zip",
@@ -15333,7 +15437,7 @@
     },
     {
         "command": "pup",
-        "description": "Command line HTML parsing tool.\nMore information: <https://github.com/ericchiang/pup>."
+        "description": "Command-line HTML parsing tool.\nMore information: <https://github.com/ericchiang/pup>."
     },
     {
         "description": "Transform a raw HTML file into a cleaned, indented, and colored format:",
@@ -15410,6 +15514,14 @@
     {
         "description": "Output the results to a file instead of stdout:",
         "command": "phpmd {{path/to/file_or_directory}} {{xml|text|html}} {{rulesets}} --reportfile {{path/to/report_file}}"
+    },
+    {
+        "command": "git count",
+        "description": "Print the total number of commits.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-count>."
+    },
+    {
+        "description": "Print the total number of commits:",
+        "command": "git count"
     },
     {
         "command": "git remote",
@@ -15516,7 +15628,7 @@
         "command": "elm make {{source}}"
     },
     {
-        "description": "Compile an Elm file, output the result to a Javascript file:",
+        "description": "Compile an Elm file, output the result to a JavaScript file:",
         "command": "elm make {{source}} --output={{destination}}.js"
     },
     {
@@ -15629,7 +15741,7 @@
     },
     {
         "command": "gh gist",
-        "description": "Work with GitHub Gists on the command line.\nMore information: <https://cli.github.com/manual/gh_gist>."
+        "description": "Work with GitHub Gists on the command-line.\nMore information: <https://cli.github.com/manual/gh_gist>."
     },
     {
         "description": "Create a new Gist from a space-separated list of files:",
@@ -15957,7 +16069,7 @@
     },
     {
         "command": "cabal",
-        "description": "Command line interface to the Haskell package infrastructure (Cabal).\nManage Haskell projects and Cabal packages from the Hackage package repository.\nMore information: <https://cabal.readthedocs.io/en/latest/intro.html>."
+        "description": "Command-line interface to the Haskell package infrastructure (Cabal).\nManage Haskell projects and Cabal packages from the Hackage package repository.\nMore information: <https://cabal.readthedocs.io/en/latest/intro.html>."
     },
     {
         "description": "Search and list packages from Hackage:",
@@ -15993,7 +16105,7 @@
     },
     {
         "command": "arduino-builder",
-        "description": "A command line tool for compiling arduino sketches.\nDEPRECATION WARNING: This tool is being phased out in favor of `arduino`.\nMore information: <https://github.com/arduino/arduino-builder>."
+        "description": "A command-line tool for compiling arduino sketches.\nDEPRECATION WARNING: This tool is being phased out in favor of `arduino`.\nMore information: <https://github.com/arduino/arduino-builder>."
     },
     {
         "description": "Compile a sketch:",
@@ -16213,7 +16325,7 @@
     },
     {
         "command": "buzzphrase",
-        "description": "Node.js command line tool to output a random buzzphrase.\nMore information: <https://github.com/atomantic/buzzphrase>."
+        "description": "Node.js command-line tool to output a random buzzphrase.\nMore information: <https://github.com/atomantic/buzzphrase>."
     },
     {
         "description": "Generate a string of three random phrases containing an adjective, a past tense verb and a plural noun:",
@@ -16241,7 +16353,7 @@
     },
     {
         "command": "deluge",
-        "description": "A command line BitTorrent client.\nMore information: <https://deluge-torrent.org>."
+        "description": "A command-line BitTorrent client.\nMore information: <https://deluge-torrent.org>."
     },
     {
         "description": "Download a torrent:",
@@ -16272,8 +16384,28 @@
         "command": "berks upload {{cookbook}}"
     },
     {
+        "command": "wp",
+        "description": "The official command-line interface to manage WordPress instances.\nMore information: <https://wp-cli.org/>."
+    },
+    {
+        "description": "Print information about the operating system, shell, PHP, and WP-CLI (`wp`) installation:",
+        "command": "wp --info"
+    },
+    {
+        "description": "Update WP-CLI:",
+        "command": "wp cli update"
+    },
+    {
+        "description": "Install and activate a WordPress plugin:",
+        "command": "wp plugin install {{plugin}} --activate"
+    },
+    {
+        "description": "Replace all instances of a string in the database:",
+        "command": "wp search-replace {{old_string}} {{new_string}}"
+    },
+    {
         "command": "ffsend",
-        "description": "Easily and securely share files from command line.\nMore information: <https://gitlab.com/timvisee/ffsend>."
+        "description": "Easily and securely share files from command-line.\nMore information: <https://gitlab.com/timvisee/ffsend>."
     },
     {
         "description": "Upload a file:",
@@ -16457,7 +16589,7 @@
     },
     {
         "command": "k8s-unused-secret-detector",
-        "description": "Command line interface tool for detecting unused Kubernetes secrets.\nMore information: <https://github.com/dtan4/k8s-unused-secret-detector>."
+        "description": "Command-line interface tool for detecting unused Kubernetes secrets.\nMore information: <https://github.com/dtan4/k8s-unused-secret-detector>."
     },
     {
         "description": "Detect unused secrets:",
@@ -16872,7 +17004,7 @@
         "command": "tsc --build {{tsconfig.json}}"
     },
     {
-        "description": "Run the compiler using command line options and arguments fetched from a text file:",
+        "description": "Run the compiler using command-line options and arguments fetched from a text file:",
         "command": "tsc @{{args.txt}}"
     },
     {
@@ -17026,6 +17158,22 @@
     {
         "description": "Build and run Caddy for a development plugin in the current directory:",
         "command": "xcaddy run"
+    },
+    {
+        "command": "starship init",
+        "description": "Print shell integration code for starship.\nMore information: <https://starship.rs>."
+    },
+    {
+        "description": "Display the subcommand help:",
+        "command": "starship init --help"
+    },
+    {
+        "description": "Print the starship integration code for the specified shell:",
+        "command": "starship init {{bash|elvish|fish|ion|powershell|tcsh|zsh}}"
+    },
+    {
+        "description": "Append the `starship` integration code to `~/.bashrc`:",
+        "command": "starship init {{bash}} >> {{~/.bashrc}}"
     },
     {
         "command": "reflac",
@@ -17481,7 +17629,7 @@
     },
     {
         "command": "bash",
-        "description": "Bourne-Again SHell, an `sh`-compatible command line interpreter.\nSee also `histexpand` for history expansion.\nMore information: <https://gnu.org/software/bash/>."
+        "description": "Bourne-Again SHell, an `sh`-compatible command-line interpreter.\nSee also `histexpand` for history expansion.\nMore information: <https://gnu.org/software/bash/>."
     },
     {
         "description": "Start an interactive shell session:",
@@ -17713,7 +17861,7 @@
     },
     {
         "command": "ibmcloud",
-        "description": "A command line tool for managing IBM Cloud apps and services.\nMore information: <https://cloud.ibm.com/docs/cli?topic=cli-ibmcloud_cli>."
+        "description": "A command-line tool for managing IBM Cloud apps and services.\nMore information: <https://cloud.ibm.com/docs/cli?topic=cli-ibmcloud_cli>."
     },
     {
         "description": "Update `ibmcloud` to the latest version:",
@@ -17789,7 +17937,7 @@
     },
     {
         "command": "lmms",
-        "description": "Free, open source, multiplatform digital audio workstation.\nRender a `.mmp` or `.mmpz` project file, dump a `.mmpz` as XML, or start the GUI.\nMore information: <https://lmms.io>."
+        "description": "Free, open source, cross-platform digital audio workstation.\nRender a `.mmp` or `.mmpz` project file, dump a `.mmpz` as XML, or start the GUI.\nMore information: <https://lmms.io>."
     },
     {
         "description": "Start the GUI:",
@@ -18004,7 +18152,7 @@
         "command": "ruby {{script.rb}}"
     },
     {
-        "description": "Execute a single Ruby command in the command line:",
+        "description": "Execute a single Ruby command in the command-line:",
         "command": "ruby -e {{command}}"
     },
     {
@@ -18061,7 +18209,7 @@
     },
     {
         "description": "Display the current date in UTC and ISO 8601 format:",
-        "command": "date -u +\"%Y-%m-%dT%H:%M:%S%Z\""
+        "command": "date -u +\"%Y-%m-%dT%H:%M:%SZ\""
     },
     {
         "description": "Display the current date as a Unix timestamp (seconds since the Unix epoch):",
@@ -18097,7 +18245,7 @@
     },
     {
         "command": "lumen",
-        "description": "A command line installer for the Lumen micro-framework.\nMore information: <https://lumen.laravel.com>."
+        "description": "A command-line installer for the Lumen micro-framework.\nMore information: <https://lumen.laravel.com>."
     },
     {
         "description": "Create a new Lumen application:",
@@ -18585,7 +18733,7 @@
     },
     {
         "command": "sqsc",
-        "description": "A command line AWS Simple Queue Service client.\nMore information: <https://github.com/yongfei25/sqsc>."
+        "description": "A command-line AWS Simple Queue Service client.\nMore information: <https://github.com/yongfei25/sqsc>."
     },
     {
         "description": "List all queues:",
@@ -18793,7 +18941,7 @@
     },
     {
         "command": "gh ssh-key",
-        "description": "Manage GitHub SSH keys from the command line.\nMore information: <https://cli.github.com/manual/gh_ssh-key>."
+        "description": "Manage GitHub SSH keys from the command-line.\nMore information: <https://cli.github.com/manual/gh_ssh-key>."
     },
     {
         "description": "Display help:",
@@ -19076,7 +19224,7 @@
         "command": "perl -p -i'.old' -e 's/{{find}}/{{replace}}/g' {{filename}}"
     },
     {
-        "description": "Run a multi-line find/replace expression on a file, and save the result in another file:",
+        "description": "Run a multiline find/replace expression on a file, and save the result in another file:",
         "command": "perl -p0e 's/{{foo\\nbar}}/{{foobar}}/g' {{input_file}} > {{output_file}}"
     },
     {
@@ -19336,6 +19484,18 @@
         "command": "Spacebar"
     },
     {
+        "command": "git authors",
+        "description": "Display a log or list of committers of a Git repository. Everything except `--list` will create a new file called `AUTHORS`.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-authors>."
+    },
+    {
+        "description": "Create or replace the `AUTHORS` file with a list of committers and open it in the default editor:",
+        "command": "git authors"
+    },
+    {
+        "description": "Print a full list of committers:",
+        "command": "git authors --list"
+    },
+    {
         "command": "axel",
         "description": "Download accelerator.\nSupports HTTP, HTTPS, and FTP.\nMore information: <https://github.com/axel-download-accelerator/axel>."
     },
@@ -19557,7 +19717,7 @@
     },
     {
         "command": "mycli",
-        "description": "A command line client for MySQL that can do auto-completion and syntax highlighting.\nMore information: <https://mycli.net>."
+        "description": "A command-line client for MySQL that can do auto-completion and syntax highlighting.\nMore information: <https://mycli.net>."
     },
     {
         "description": "Connect to a local database on port 3306, using the current user's username:",
@@ -19597,26 +19757,26 @@
     },
     {
         "command": "calibredb",
-        "description": "Tool to manipulate the your ebook database.\nPart of the Calibre ebook library.\nMore information: <https://manual.calibre-ebook.com/generated/en/calibredb.html>."
+        "description": "Tool to manipulate the your e-book database.\nPart of the Calibre e-book library.\nMore information: <https://manual.calibre-ebook.com/generated/en/calibredb.html>."
     },
     {
-        "description": "List ebooks in the library with additional information:",
+        "description": "List e-books in the library with additional information:",
         "command": "calibredb list"
     },
     {
-        "description": "Search for ebooks displaying additional information:",
+        "description": "Search for e-books displaying additional information:",
         "command": "calibredb list --search {{search_term}}"
     },
     {
-        "description": "Search for just ids of ebooks:",
+        "description": "Search for just ids of e-books:",
         "command": "calibredb search {{search_term}}"
     },
     {
-        "description": "Add one or more ebooks to the library:",
+        "description": "Add one or more e-books to the library:",
         "command": "calibredb add {{file1 file2 \u2026}}"
     },
     {
-        "description": "Recursively add all ebooks under a directory to the library:",
+        "description": "Recursively add all e-books under a directory to the library:",
         "command": "calibredb add -r {{path/to/directory}}"
     },
     {
@@ -19705,7 +19865,7 @@
     },
     {
         "command": "hsw-cli",
-        "description": "The command line REST tool for the Handshake wallet.\nMore information: <https://npmjs.com/package/hs-client>."
+        "description": "The command-line REST tool for the Handshake wallet.\nMore information: <https://npmjs.com/package/hs-client>."
     },
     {
         "description": "Unlock the current wallet (timeout in seconds):",
@@ -19757,7 +19917,7 @@
     },
     {
         "command": "jwt",
-        "description": "A command line tool to work with JSON Web Tokens (JWTs).\nEncryption algorithms available are HS256, HS384, HS512, RS256, RS384, RS512, ES256, ES384.\nMore information: <https://github.com/mike-engel/jwt-cli>."
+        "description": "A command-line tool to work with JSON Web Tokens (JWTs).\nEncryption algorithms available are HS256, HS384, HS512, RS256, RS384, RS512, ES256, ES384.\nMore information: <https://github.com/mike-engel/jwt-cli>."
     },
     {
         "description": "Decode a JWT:",
@@ -19812,7 +19972,7 @@
         "command": "meson init --language={{c}} --name={{myproject}} --version={{0.1}}"
     },
     {
-        "description": "Configure builddir with default values:",
+        "description": "Configure the `builddir` with default values:",
         "command": "meson setup {{build_dir}}"
     },
     {
@@ -20014,6 +20174,14 @@
     {
         "description": "Revert multiple commits:",
         "command": "git revert {{branch_name~5..branch_name~2}}"
+    },
+    {
+        "command": "uudecode",
+        "description": "Decode files encoded by `uuencode`.\nMore information: <https://manned.org/uudecode>."
+    },
+    {
+        "description": "Decode a file that was encoded with `uuencode` and print the result to stdout:",
+        "command": "uudecode {{path/to/encoded_file}}"
     },
     {
         "command": "msfvenom",
@@ -20373,7 +20541,7 @@
     },
     {
         "command": "montage",
-        "description": "Imagemagick image montage tool.\nTiles images into a customisable grid.\nMore information: <https://imagemagick.org/script/montage.php>."
+        "description": "ImageMagick image montage tool.\nTiles images into a customisable grid.\nMore information: <https://imagemagick.org/script/montage.php>."
     },
     {
         "description": "Tile images into a grid, automatically resizing images larger than the grid cell size:",
@@ -20709,7 +20877,7 @@
     },
     {
         "command": "balena",
-        "description": "Interact with the balenaCloud, openBalena and the balena API from the command line.\nMore information: <https://www.balena.io/docs/reference/cli/>."
+        "description": "Interact with the balenaCloud, openBalena and the balena API from the command-line.\nMore information: <https://www.balena.io/docs/reference/cli/>."
     },
     {
         "description": "Log in to the balenaCloud account:",
@@ -20729,7 +20897,7 @@
     },
     {
         "command": "grex",
-        "description": "Simple command line tool to generate regular expressions.\nMore information: <https://github.com/pemistahl/grex>."
+        "description": "Simple command-line tool to generate regular expressions.\nMore information: <https://github.com/pemistahl/grex>."
     },
     {
         "description": "Generate a simple regular expression:",
@@ -20744,7 +20912,7 @@
         "command": "grex -d {{space_separated_strings}}"
     },
     {
-        "description": "Replace unicode word character with '\\w':",
+        "description": "Replace Unicode word character with '\\w':",
         "command": "grex -w {{space_separated_strings}}"
     },
     {
@@ -20933,7 +21101,7 @@
     },
     {
         "command": "lein",
-        "description": "Manage clojure projects with declarative configuration.\nMore information: <https://leiningen.org>."
+        "description": "Manage Clojure projects with declarative configuration.\nMore information: <https://leiningen.org>."
     },
     {
         "description": "Generate scaffolding for a new project based on a template:",
@@ -20953,34 +21121,34 @@
     },
     {
         "command": "wpscan",
-        "description": "Wordpress vulnerability scanner.\nMore information: <https://github.com/wpscanteam/wpscan>."
+        "description": "WordPress vulnerability scanner.\nMore information: <https://github.com/wpscanteam/wpscan>."
     },
     {
         "description": "Update the vulnerability database:",
         "command": "wpscan --update"
     },
     {
-        "description": "Scan a Wordpress website:",
+        "description": "Scan a WordPress website:",
         "command": "wpscan --url {{url}}"
     },
     {
-        "description": "Scan a Wordpress website, using random user agents and passive detection:",
+        "description": "Scan a WordPress website, using random user agents and passive detection:",
         "command": "wpscan --url {{url}} --stealthy"
     },
     {
-        "description": "Scan a Wordpress website, checking for vulnerable plugins and specifying the path to the `wp-content` directory:",
+        "description": "Scan a WordPress website, checking for vulnerable plugins and specifying the path to the `wp-content` directory:",
         "command": "wpscan --url {{url}} --enumerate {{vp}} --wp-content-dir {{remote/path/to/wp-content}}"
     },
     {
-        "description": "Scan a Wordpress website through a proxy:",
+        "description": "Scan a WordPress website through a proxy:",
         "command": "wpscan --url {{url}} --proxy {{protocol://ip:port}} --proxy-auth {{username:password}}"
     },
     {
-        "description": "Perform user identifiers enumeration on a Wordpress website:",
+        "description": "Perform user identifiers enumeration on a WordPress website:",
         "command": "wpscan --url {{url}} --enumerate {{u}}"
     },
     {
-        "description": "Execute a password guessing attack on a Wordpress website:",
+        "description": "Execute a password guessing attack on a WordPress website:",
         "command": "wpscan --url {{url}} --usernames {{username|path/to/usernames.txt}} --passwords {{path/to/passwords.txt}} threads {{20}}"
     },
     {
@@ -21052,6 +21220,26 @@
         "command": "if [[ -e \"{{path/to/file_or_directory}}\" ]]; then {{echo \"true\"}}; else {{echo \"false\"}}; fi"
     },
     {
+        "command": "distccd",
+        "description": "Server daemon for the distcc distributed compiler.\nMore information: <https://distcc.github.io>."
+    },
+    {
+        "description": "Start a daemon with the default settings:",
+        "command": "distccd --daemon"
+    },
+    {
+        "description": "Start a daemon, accepting connections from IPv4 private network ranges:",
+        "command": "distccd --daemon --allow-private"
+    },
+    {
+        "description": "Start a daemon, accepting connections from a specific network address or address range:",
+        "command": "distccd --daemon --allow {{ip_address|network_prefix}}"
+    },
+    {
+        "description": "Start a daemon with a lowered priority that can run a maximum of 4 tasks at a time:",
+        "command": "distccd --daemon --jobs {{4}} --nice {{5}}"
+    },
+    {
         "command": "tty",
         "description": "Returns terminal name.\nMore information: <https://www.gnu.org/software/coreutils/tty>."
     },
@@ -21073,7 +21261,7 @@
     },
     {
         "command": "php yii",
-        "description": "Yii Framework's command line interface.\nMore information: <https://yiiframework.com>."
+        "description": "Yii Framework's command-line interface.\nMore information: <https://yiiframework.com>."
     },
     {
         "description": "Display a list of all available commands:",
@@ -21229,7 +21417,7 @@
     },
     {
         "command": "conan",
-        "description": "The open source, decentralized and multi-platform package manager to create and share all your native binaries.\nMore information: <https://conan.io/>."
+        "description": "The open source, decentralized and cross-platform package manager to create and share all your native binaries.\nMore information: <https://conan.io/>."
     },
     {
         "description": "Install packages based on `conanfile.txt`:",
@@ -21957,7 +22145,7 @@
     },
     {
         "command": "travis",
-        "description": "Command line client to interface with Travis CI.\nMore information: <https://github.com/travis-ci/travis.rb>."
+        "description": "Command-line client to interface with Travis CI.\nMore information: <https://github.com/travis-ci/travis.rb>."
     },
     {
         "description": "Display the client version:",
@@ -22592,11 +22780,11 @@
         "description": "The official CLI tool for Amazon Web Services.\nWizard, SSO, Resource Autocompletion, and YAML options are v2 only.\nMore information: <https://aws.amazon.com/cli>."
     },
     {
-        "description": "Configure the AWS Command Line:",
+        "description": "Configure the AWS Command-line:",
         "command": "aws configure wizard"
     },
     {
-        "description": "Configure the AWS Command Line using SSO:",
+        "description": "Configure the AWS Command-line using SSO:",
         "command": "aws configure sso"
     },
     {
@@ -22637,7 +22825,7 @@
     },
     {
         "command": "gh auth",
-        "description": "Authenticate with a GitHub host from the command line.\nMore information: <https://cli.github.com/manual/gh_auth>."
+        "description": "Authenticate with a GitHub host from the command-line.\nMore information: <https://cli.github.com/manual/gh_auth>."
     },
     {
         "description": "Log in with interactive prompt:",
@@ -22729,7 +22917,7 @@
     },
     {
         "command": "gcalcli",
-        "description": "Command line tool to interact with Google Calendar.\nRequests Google API authorization upon first launch.\nMore information: <https://github.com/insanum/gcalcli>."
+        "description": "Command-line tool to interact with Google Calendar.\nRequests Google API authorization upon first launch.\nMore information: <https://github.com/insanum/gcalcli>."
     },
     {
         "description": "List your events for all your calendars over the next 7 days:",
@@ -22988,7 +23176,7 @@
         "command": "pgrep {{process_name}}"
     },
     {
-        "description": "Search for processes including their command line options:",
+        "description": "Search for processes including their command-line options:",
         "command": "pgrep --full \"{{process_name}} {{parameter}}\""
     },
     {
@@ -23002,6 +23190,14 @@
     {
         "description": "Send message to \"testuser\" on terminal `/dev/tty/5`:",
         "command": "write {{testuser}} {{tty/5}}"
+    },
+    {
+        "command": "bfg",
+        "description": "Remove large files or passwords from Git history like git-filter-branch.\nNote: if your repository is connected to a remote, you will need to force push to it.\nMore information: <https://rtyley.github.io/bfg-repo-cleaner/>."
+    },
+    {
+        "description": "Remove a file with sensitive data but leave the latest commit untouched:",
+        "command": "bfg --delete-files {{file_with_sensitive_data}}"
     },
     {
         "command": "acme.sh",
@@ -23220,7 +23416,7 @@
         "description": "Scan networks for NetBIOS name information.\nMore information: <https://github.com/resurrecting-open-source-projects/nbtscan>."
     },
     {
-        "description": "Scan a network for NETBIOS names:",
+        "description": "Scan a network for NetBIOS names:",
         "command": "nbtscan {{192.168.0.1/24}}"
     },
     {
@@ -23441,7 +23637,7 @@
     },
     {
         "command": "php",
-        "description": "PHP command line interface.\nMore information: <https://php.net>."
+        "description": "PHP command-line interface.\nMore information: <https://php.net>."
     },
     {
         "description": "Parse and execute a php script:",
@@ -23545,7 +23741,7 @@
     },
     {
         "command": "podman",
-        "description": "Simple management tool for pods, containers and images.\nPodman provides a Docker-CLI comparable command line. Simply put: `alias docker=podman`.\nMore information: <https://github.com/containers/libpod/blob/master/commands.md>."
+        "description": "Simple management tool for pods, containers and images.\nPodman provides a Docker-CLI comparable command-line. Simply put: `alias docker=podman`.\nMore information: <https://github.com/containers/libpod/blob/master/commands.md>."
     },
     {
         "description": "Print out information about containers:",
@@ -23654,6 +23850,18 @@
     {
         "description": "Use the Cachegrind tool to profile and log CPU cache operations of `program`:",
         "command": "valgrind --tool=cachegrind {{program}}"
+    },
+    {
+        "command": "git alias",
+        "description": "Create shortcuts for Git commands.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-alias>."
+    },
+    {
+        "description": "List all aliases:",
+        "command": "git alias"
+    },
+    {
+        "description": "Create a new alias:",
+        "command": "git alias \"{{name}}\" \"{{command}}\""
     },
     {
         "command": "babel",
@@ -23773,7 +23981,7 @@
     },
     {
         "command": "swig",
-        "description": "Generate bindings between C / C++ code and various high level languages such as Javascript, Python, C#, and more.\nIt uses special .i or .swg files to generate the bindings (C/C++ with SWIG directives, then outputs a C/C++ file that contains all of the wrapper code needed to build an extension module."
+        "description": "Generate bindings between C / C++ code and various high level languages such as JavaScript, Python, C#, and more.\nIt uses special .i or .swg files to generate the bindings (C/C++ with SWIG directives, then outputs a C/C++ file that contains all of the wrapper code needed to build an extension module."
     },
     {
         "description": "Generate a binding between C++ and Python:",
@@ -23925,7 +24133,7 @@
     },
     {
         "command": "ember",
-        "description": "The Ember.js command line utility.\nUsed for creating and maintaining Ember.js applications.\nMore information: <https://cli.emberjs.com>."
+        "description": "The Ember.js command-line utility.\nUsed for creating and maintaining Ember.js applications.\nMore information: <https://cli.emberjs.com>."
     },
     {
         "description": "Create a new Ember application:",
@@ -24109,7 +24317,7 @@
     },
     {
         "command": "emulator",
-        "description": "Manager Android emulators from the command line.\nMore information: <https://developer.android.com/studio/run/emulator-commandline>."
+        "description": "Manager Android emulators from the command-line.\nMore information: <https://developer.android.com/studio/run/emulator-commandline>."
     },
     {
         "description": "Display the help:",
@@ -24209,7 +24417,7 @@
     },
     {
         "command": "clamscan",
-        "description": "A command line virus scanner.\nMore information: <https://www.clamav.net>."
+        "description": "A command-line virus scanner.\nMore information: <https://www.clamav.net>."
     },
     {
         "description": "Scan a file for vulnerabilities:",
@@ -24332,7 +24540,7 @@
         "command": "k6 run --discard-response-bodies {{script.js}}"
     },
     {
-        "description": "Run load test locally using the base javascript compatibility mode (significantly faster):",
+        "description": "Run load test locally using the base JavaScript compatibility mode (significantly faster):",
         "command": "k6 run --compatibility-mode=base {{script.js}}"
     },
     {
@@ -24456,6 +24664,22 @@
         "description": "Change the directory `runsvdir` uses by default.\nMore information: <https://manpages.ubuntu.com/manpages/latest/man8/runsvchdir.8.html>."
     },
     {
+        "command": "git repl",
+        "description": "Git REPL (read-evaluate-print-loop) - an interactive Git shell.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-repl>."
+    },
+    {
+        "description": "Start an interactive Git shell:",
+        "command": "git repl"
+    },
+    {
+        "description": "Run a Git command while in the interactive Git shell:",
+        "command": "{{git_subcommand}} {{command_arguments}}"
+    },
+    {
+        "description": "Run an external (non-Git) command while in the interactive Git shell:",
+        "command": "!{{command}} {{command_arguments}}"
+    },
+    {
         "command": "hostid",
         "description": "Prints the numeric identifier for the current host (not necessarily the IP address).\nMore information: <https://www.gnu.org/software/coreutils/hostid>."
     },
@@ -24513,7 +24737,7 @@
     },
     {
         "command": "httpflow",
-        "description": "A command line utility to capture and dump HTTP streams.\nMore information: <https://github.com/six-ddc/httpflow>."
+        "description": "A command-line utility to capture and dump HTTP streams.\nMore information: <https://github.com/six-ddc/httpflow>."
     },
     {
         "description": "Capture traffic on all interfaces:",
@@ -24524,7 +24748,7 @@
         "command": "httpflow {{host httpbin.org or host baidu.com}}"
     },
     {
-        "description": "Use a regular expression to filter requests by urls:",
+        "description": "Use a regular expression to filter requests by URLs:",
         "command": "httpflow -u '{{regular_expression}}'"
     },
     {
@@ -24625,7 +24849,7 @@
     },
     {
         "command": "cake",
-        "description": "The command line processor for the CakePHP framework.\nMore information: <https://cakephp.org>."
+        "description": "The command-line processor for the CakePHP framework.\nMore information: <https://cakephp.org>."
     },
     {
         "description": "Display basic information about the current app and available commands:",
@@ -24769,7 +24993,7 @@
     },
     {
         "command": "jrnl",
-        "description": "A simple journal application for your command line.\nMore information: <http://jrnl.sh>."
+        "description": "A simple journal application for your command-line.\nMore information: <http://jrnl.sh>."
     },
     {
         "description": "Insert a new entry with your editor:",
@@ -25016,7 +25240,7 @@
         "command": "expose --subdomain={{subdomain}}"
     },
     {
-        "description": "Share a local url:",
+        "description": "Share a local URL:",
         "command": "expose share {{url}}"
     },
     {
@@ -25164,7 +25388,7 @@
         "command": "rg {{regular_expression}}"
     },
     {
-        "description": "Search for regular expressions including all .gitignored and hidden files:",
+        "description": "Search for regular expressions recursively in the current directory, including hidden files and files listed in `.gitignore`:",
         "command": "rg --no-ignore --hidden {{regular_expression}}"
     },
     {
@@ -25292,7 +25516,7 @@
         "command": "finger -s"
     },
     {
-        "description": "Produce multi-line output format displaying same information as `-s` as well as user's home directory, home phone number, login shell, mail status, etc.:",
+        "description": "Produce multiline output format displaying same information as `-s` as well as user's home directory, home phone number, login shell, mail status, etc.:",
         "command": "finger -l"
     },
     {
@@ -25313,7 +25537,7 @@
     },
     {
         "command": "xsv",
-        "description": "A CSV command line toolkit written in Rust.\nMore information: <https://github.com/BurntSushi/xsv>."
+        "description": "A CSV command-line toolkit written in Rust.\nMore information: <https://github.com/BurntSushi/xsv>."
     },
     {
         "description": "Inspect the headers of a file:",
@@ -25437,7 +25661,7 @@
     },
     {
         "command": "wrangler",
-        "description": "Cloudflare Workers command line tool.\nMore information: <https://developers.cloudflare.com/workers/>."
+        "description": "Cloudflare Workers command-line tool.\nMore information: <https://developers.cloudflare.com/workers/>."
     },
     {
         "description": "Initialize a project with a skeleton configuration:",
@@ -25637,10 +25861,10 @@
     },
     {
         "command": "alacritty",
-        "description": "Cross-platform, GPU-accelerated terminal emulator.\nMore information: <https://github.com/jwilm/alacritty>."
+        "description": "Cross-platform, GPU-accelerated terminal emulator.\nMore information: <https://github.com/alacritty/alacritty>."
     },
     {
-        "description": "Open a new alacritty window:",
+        "description": "Open a new Alacritty window:",
         "command": "alacritty"
     },
     {
@@ -25648,11 +25872,11 @@
         "command": "alacritty --working-directory {{path/to/directory}}"
     },
     {
-        "description": "Run a command in a new alacritty window:",
+        "description": "Run a command in a new Alacritty window:",
         "command": "alacritty -e {{command}}"
     },
     {
-        "description": "Specify alternative configuration file (defaults to $XDG_CONFIG_HOME/alacritty/alacritty.yml):",
+        "description": "Specify alternative configuration file (defaults to `$XDG_CONFIG_HOME/alacritty/alacritty.yml`):",
         "command": "alacritty --config-file {{path/to/config.yml}}"
     },
     {
@@ -25869,7 +26093,7 @@
     },
     {
         "command": "heroku",
-        "description": "Create and manage Heroku apps from the command line.\nMore information: <https://www.heroku.com/>."
+        "description": "Create and manage Heroku apps from the command-line.\nMore information: <https://www.heroku.com/>."
     },
     {
         "description": "Log in to your heroku account:",
@@ -26016,7 +26240,7 @@
         "description": "Markdown test specification runner.\nMore information: <https://github.com/chonla/cotton>."
     },
     {
-        "description": "Use a specific base url:",
+        "description": "Use a specific base URL:",
         "command": "cotton -u {{base_url}} {{file}}.md"
     },
     {
@@ -26068,7 +26292,7 @@
         "command": "printf \"{{\\e[1;34m%.3d\\e[0m\\n}}\" {{42}}"
     },
     {
-        "description": "Print a float number with the unicode Euro sign:",
+        "description": "Print a float number with the Unicode Euro sign:",
         "command": "printf \"{{\\u20AC %.2f\\n}}\" {{123.4}}"
     },
     {
@@ -26148,16 +26372,12 @@
         "command": "find {{root_path}} -name '{{*.ext}}'"
     },
     {
-        "description": "Find files by matching multiple patterns:",
-        "command": "find {{root_path}} -name '{{*pattern_1*}}' -or -name '{{*pattern_2*}}'"
+        "description": "Find files matching multiple path/name patterns:",
+        "command": "find {{root_path}} -path '{{**/path/**/*.ext}} -or -name '{{*pattern*}}'"
     },
     {
         "description": "Find directories matching a given name, in case-insensitive mode:",
         "command": "find {{root_path}} -type d -iname '{{*lib*}}'"
-    },
-    {
-        "description": "Find files matching a path pattern:",
-        "command": "find {{root_path}} -path '{{**/lib/**/*.ext}}'"
     },
     {
         "description": "Find files matching a given pattern, excluding specific paths:",
@@ -26170,6 +26390,10 @@
     {
         "description": "Run a command for each file (use `{}` within the command to access the filename):",
         "command": "find {{root_path}} -name '{{*.ext}}' -exec {{wc -l {} }}\\;"
+    },
+    {
+        "description": "Find files modified in the last 7 days and delete them:",
+        "command": "find {{root_path}} -mtime -{{7}} -delete"
     },
     {
         "command": "gocryptfs",
@@ -26628,7 +26852,7 @@
         "description": "Shrink or extend the size of a file to the specified size.\nMore information: <https://www.gnu.org/software/coreutils/truncate>."
     },
     {
-        "description": "Set a size of 10 GB to an exsting file, or create a new file with the specified size:",
+        "description": "Set a size of 10 GB to an existing file, or create a new file with the specified size:",
         "command": "truncate -s {{10G}} {{filename}}"
     },
     {
@@ -26901,10 +27125,10 @@
     },
     {
         "command": "ebook-convert",
-        "description": "Can be used to convert ebooks between common formats, e.g., pdf, epub and mobi.\nPart of the Calibre ebook library tool.\nMore information: <https://manual.calibre-ebook.com/generated/en/ebook-convert.html>."
+        "description": "Can be used to convert e-books between common formats, e.g., pdf, epub and mobi.\nPart of the Calibre e-book library tool.\nMore information: <https://manual.calibre-ebook.com/generated/en/ebook-convert.html>."
     },
     {
-        "description": "Convert an ebook into another format:",
+        "description": "Convert an e-book into another format:",
         "command": "ebook-convert {{source}} {{destination}}"
     },
     {
@@ -27097,7 +27321,7 @@
     },
     {
         "command": "hsd-cli",
-        "description": "The command line REST tool for the Handshake blockchain.\nMore information: <https://handshake.org>."
+        "description": "The command-line REST tool for the Handshake blockchain.\nMore information: <https://handshake.org>."
     },
     {
         "description": "Retrieve information about the current server:",
@@ -27469,7 +27693,7 @@
     },
     {
         "command": "speedtest",
-        "description": "Official command line interface for testing internet bandwidth using https://speedtest.net.\nNote: some platforms link `speedtest` to `speedtest-cli`. If some of the examples in this page don't work, see `speedtest-cli`.\nMore information: <https://www.speedtest.net/apps/cli>."
+        "description": "Official command-line interface for testing internet bandwidth using https://speedtest.net.\nNote: some platforms link `speedtest` to `speedtest-cli`. If some of the examples in this page don't work, see `speedtest-cli`.\nMore information: <https://www.speedtest.net/apps/cli>."
     },
     {
         "description": "Run a speed test:",
@@ -27713,14 +27937,14 @@
     },
     {
         "command": "php artisan",
-        "description": "Laravel's Artisan command line interface.\nMore information: <https://laravel.com/docs/artisan>."
+        "description": "Laravel's Artisan command-line interface.\nMore information: <https://laravel.com/docs/artisan>."
     },
     {
         "description": "Start PHP's built-in web server for the current Laravel application:",
         "command": "php artisan serve"
     },
     {
-        "description": "Start an interactive PHP command line interface:",
+        "description": "Start an interactive PHP command-line interface:",
         "command": "php artisan tinker"
     },
     {
@@ -27801,7 +28025,7 @@
     },
     {
         "command": "clockwork-cli",
-        "description": "A command line interface for the Clockwork PHP debugging framework.\nMore information: <https://github.com/ptrofimov/clockwork-cli>."
+        "description": "A command-line interface for the Clockwork PHP debugging framework.\nMore information: <https://github.com/ptrofimov/clockwork-cli>."
     },
     {
         "description": "Monitor Clockwork logs for the current project:",
@@ -28117,7 +28341,7 @@
     },
     {
         "command": "linkchecker",
-        "description": "Command line client to check HTML documents and websites for broken links.\nMore information: <https://linkchecker.github.io/linkchecker/>."
+        "description": "Command-line client to check HTML documents and websites for broken links.\nMore information: <https://linkchecker.github.io/linkchecker/>."
     },
     {
         "description": "Find broken links on https://example.com/:",
@@ -28181,35 +28405,11 @@
     },
     {
         "command": "aria2",
-        "description": "A lightweight multi-protocol & multi-source command-line download utility.\nSupports HTTP, HTTPS, FTP, SFTP, BitTorrent and Metalink.\nMore information: <https://aria2.github.io/>."
-    },
-    {
-        "description": "Download a web resource:",
-        "command": "aria2c {{http://example.org/myLinux.iso}}"
-    },
-    {
-        "description": "Download a resource from multiple sources:",
-        "command": "aria2c {{http://mirror1.org/myLinux.iso}} {{http://mirror2.org/myLinux.iso}}"
-    },
-    {
-        "description": "Download using 2 connections per host:",
-        "command": "aria2c -x{{2}} {{http://example.org/myLinux.iso}}"
-    },
-    {
-        "description": "Download from a Metalink URI:",
-        "command": "aria2c {{http://example.org/myLinux.metalink}}"
-    },
-    {
-        "description": "Download from a BitTorrent URI:",
-        "command": "aria2c {{http://example.org/myLinux.torrent}}"
-    },
-    {
-        "description": "Download from a BitTorrent Magnet URI:",
-        "command": "aria2c {{'magnet:?xt=urn:btih:248D0A1CD08284299DE78D5C1ED359BB46717D8C'}}"
+        "description": "This command is an alias of `aria2c`."
     },
     {
         "command": "speedtest-cli",
-        "description": "Unofficial command line interface for testing internet bandwidth using https://speedtest.net.\nSee also `speedtest` for the official CLI.\nMore information: <https://github.com/sivel/speedtest-cli>."
+        "description": "Unofficial command-line interface for testing internet bandwidth using https://speedtest.net.\nSee also `speedtest` for the official CLI.\nMore information: <https://github.com/sivel/speedtest-cli>."
     },
     {
         "description": "Run a speed test:",
@@ -28437,7 +28637,7 @@
     },
     {
         "command": "p5",
-        "description": "P5js template builder and sketch manager.\nMore information: <https://www.npmjs.com/package/p5-manager>."
+        "description": "Template builder and sketch manager for p5.js.\nMore information: <https://www.npmjs.com/package/p5-manager>."
     },
     {
         "description": "Create a new p5 collection:",
@@ -28869,7 +29069,7 @@
     },
     {
         "command": "gdrive",
-        "description": "Command line tool to interact with Google Drive.\nFolder/file id can be obtained from the Google Drive folder or id url.\nMore information: <https://github.com/gdrive-org/gdrive>."
+        "description": "Command-line tool to interact with Google Drive.\nFolder/file id can be obtained from the Google Drive folder or id url.\nMore information: <https://github.com/gdrive-org/gdrive>."
     },
     {
         "description": "Upload a local path to the parent folder with the specified id:",
@@ -28977,7 +29177,7 @@
     },
     {
         "command": "jenv",
-        "description": "Command line tool to manage the \"JAVA_HOME\" environment variable.\nMore information: <https://www.jenv.be/>."
+        "description": "Command-line tool to manage the \"JAVA_HOME\" environment variable.\nMore information: <https://www.jenv.be/>."
     },
     {
         "description": "Add a java version to jEnv:",
@@ -29044,7 +29244,7 @@
         "description": "An HTML, XML, SAX and Reader parser.\nMore information: <https://nokogiri.org>."
     },
     {
-        "description": "Parse the contents of a url or file:",
+        "description": "Parse the contents of a URL or file:",
         "command": "nokogiri {{url|path/to/file}}"
     },
     {
@@ -29100,7 +29300,7 @@
         "command": "pio project init"
     },
     {
-        "description": "Initialize a new PlatformIO project in a specific direcdory:",
+        "description": "Initialize a new PlatformIO project in a specific directory:",
         "command": "pio project init --project-dir {{path/to/project_directory}}"
     },
     {
@@ -29133,7 +29333,7 @@
     },
     {
         "command": "rbt",
-        "description": "RBTools is a set of command line tools for working with Review Board and RBCommons.\nMore information: <https://www.reviewboard.org/docs/rbtools/dev/>."
+        "description": "RBTools is a set of command-line tools for working with Review Board and RBCommons.\nMore information: <https://www.reviewboard.org/docs/rbtools/dev/>."
     },
     {
         "description": "Post changes to Review Board:",
@@ -29288,7 +29488,7 @@
         "command": "minifab up -i {{minifab_version}}"
     },
     {
-        "description": "Bring down the Hyperldger Fabric network:",
+        "description": "Bring down the Hyperledger Fabric network:",
         "command": "minifab down"
     },
     {
@@ -29805,7 +30005,7 @@
     },
     {
         "command": "cloudflared",
-        "description": "Command line tool to create a persistent connection to the Cloudflare network.\nMore information: <https://developers.cloudflare.com/argo-tunnel/>."
+        "description": "Command-line tool to create a persistent connection to the Cloudflare network.\nMore information: <https://developers.cloudflare.com/argo-tunnel/>."
     },
     {
         "description": "Authenticate and associate the connection to a domain in the Cloudflare account:",
@@ -29885,7 +30085,7 @@
     },
     {
         "command": "kubeadm",
-        "description": "Command line interface for creating and managing Kubernetes clusters.\nMore information: <https://kubernetes.io/docs/reference/setup-tools/kubeadm>."
+        "description": "Command-line interface for creating and managing Kubernetes clusters.\nMore information: <https://kubernetes.io/docs/reference/setup-tools/kubeadm>."
     },
     {
         "description": "Create a Kubernetes master node:",
@@ -29929,7 +30129,7 @@
     },
     {
         "command": "etcdctl",
-        "description": "CLI interface for interacting with `etcd`, a highly-available key-value pair store.\nEtcd stores data in hierarchically organized directories, as in a standard filesystem.\nMore information: <https://etcd.io/docs/latest/dev-guide/interacting_v3/>."
+        "description": "CLI interface for interacting with etcd, a highly-available key-value pair store.\nMore information: <https://etcd.io/docs/latest/dev-guide/interacting_v3/>."
     },
     {
         "description": "Display the value associated with a specified key:",
@@ -30197,7 +30397,7 @@
     },
     {
         "command": "blackfire",
-        "description": "A command line profiling tool for PHP.\nMore information: <https://blackfire.io>."
+        "description": "A command-line profiling tool for PHP.\nMore information: <https://blackfire.io>."
     },
     {
         "description": "Initialise and configure the Blackfire client:",
@@ -30229,7 +30429,7 @@
     },
     {
         "command": "firebase",
-        "description": "Test, manage, and deploy Firebase projects from the command line.\nMore information: <https://github.com/firebase/firebase-tools>."
+        "description": "Test, manage, and deploy Firebase projects from the command-line.\nMore information: <https://github.com/firebase/firebase-tools>."
     },
     {
         "description": "Log in to <https://console.firebase.google.com>:",
@@ -30445,7 +30645,7 @@
     },
     {
         "command": "history",
-        "description": "Command Line history.\nMore information: <https://www.gnu.org/software/bash/manual/html_node/Bash-History-Builtins.html>."
+        "description": "Command-line history.\nMore information: <https://www.gnu.org/software/bash/manual/html_node/Bash-History-Builtins.html>."
     },
     {
         "description": "Display the commands history list with line numbers:",
@@ -30552,11 +30752,11 @@
         "command": "minikube ip"
     },
     {
-        "description": "Access a service named my_service exposed via a node port and get the url:",
+        "description": "Access a service named my_service exposed via a node port and get the URL:",
         "command": "minikube service {{my_service}} --url"
     },
     {
-        "description": "Open kubernetes dashboard in a browser:",
+        "description": "Open the Kubernetes dashboard in a browser:",
         "command": "minikube dashboard"
     },
     {
@@ -30592,7 +30792,7 @@
         "command": "ansible-playbook {{playbook}} -i {{inventory_file}}"
     },
     {
-        "description": "Run tasks in playbook with extra variables defined via the command line:",
+        "description": "Run tasks in playbook with extra variables defined via the command-line:",
         "command": "ansible-playbook {{playbook}} -e \"{{variable1}}={{value1}} {{variable2}}={{value2}}\""
     },
     {
@@ -30865,7 +31065,7 @@
     },
     {
         "command": "aws-google-auth",
-        "description": "Command line tool to acquire AWS temporary (STS) credentials using Google Apps as a federated (Single Sign-On) provider.\nMore information: <https://github.com/cevoaustralia/aws-google-auth>."
+        "description": "Command-line tool to acquire AWS temporary (STS) credentials using Google Apps as a federated (Single Sign-On) provider.\nMore information: <https://github.com/cevoaustralia/aws-google-auth>."
     },
     {
         "description": "Log in with Google SSO using the IDP and SP identifiers and set the credentials duration to one hour:",
@@ -30881,7 +31081,7 @@
     },
     {
         "command": "k8sec",
-        "description": "Command line interface tool to manage Kubernetes secrets.\nMore information: <https://github.com/dtan4/k8sec>."
+        "description": "Command-line interface tool to manage Kubernetes secrets.\nMore information: <https://github.com/dtan4/k8sec>."
     },
     {
         "description": "List all secrets:",
@@ -31585,7 +31785,7 @@
     },
     {
         "command": "tea",
-        "description": "A command line tool to interact with Gitea servers.\nMore information: <https://gitea.com/gitea/tea>."
+        "description": "A command-line tool to interact with Gitea servers.\nMore information: <https://gitea.com/gitea/tea>."
     },
     {
         "description": "Log into a Gitea server:",
@@ -31713,7 +31913,7 @@
     },
     {
         "command": "fdroid",
-        "description": "F-Droid build tool.\nF-Droid is an installable catalogue of FOSS (Free and Open Source Software) applications for the Android platform.\nMore information: <https://f-droid.org/>."
+        "description": "F-Droid build tool.\nF-Droid is an installable catalog of FOSS (Free and Open Source Software) applications for the Android platform.\nMore information: <https://f-droid.org/>."
     },
     {
         "description": "Build a specific app:",
@@ -31793,7 +31993,7 @@
     },
     {
         "command": "svn",
-        "description": "Subversion command line client tool.\nMore information: <https://subversion.apache.org>."
+        "description": "Subversion command-line client tool.\nMore information: <https://subversion.apache.org>."
     },
     {
         "description": "Check out a working copy from a repository:",
@@ -32193,7 +32393,7 @@
     },
     {
         "command": "meshlabserver",
-        "description": "Command line interface for the MeshLab 3D mesh processing software."
+        "description": "Command-line interface for the MeshLab 3D mesh processing software."
     },
     {
         "description": "Convert an STL file to an OBJ file:",
@@ -32240,7 +32440,7 @@
         "description": "`tail` for RSS feeds.\nMore information: <https://github.com/gvalkov/rsstail.py>."
     },
     {
-        "description": "Show the feed of a given url and wait for new entries appearing at the bottom:",
+        "description": "Show the feed of a given URL and wait for new entries appearing at the bottom:",
         "command": "rsstail -u {{url}}"
     },
     {
@@ -32301,7 +32501,7 @@
     },
     {
         "command": "khal",
-        "description": "A text-based calendar and scheduling application for the command line.\nMore information: <https://lostpackets.de/khal>."
+        "description": "A text-based calendar and scheduling application for the command-line.\nMore information: <https://lostpackets.de/khal>."
     },
     {
         "description": "Start khal on interactive mode:",
@@ -32437,7 +32637,7 @@
     },
     {
         "command": "vela",
-        "description": "Command line tools for the Vela pipeline.\nMore information: <https://go-vela.github.io/docs/cli/>."
+        "description": "Command-line tools for the Vela pipeline.\nMore information: <https://go-vela.github.io/docs/cli/>."
     },
     {
         "description": "Trigger a pipeline to run from a Git branch, commit or tag:",
@@ -32657,7 +32857,7 @@
     },
     {
         "command": "html5validator",
-        "description": "A command line tool for testing HTML5 validity.\nMore information: <https://github.com/svenkreiss/html5validator>."
+        "description": "A command-line tool for testing HTML5 validity.\nMore information: <https://github.com/svenkreiss/html5validator>."
     },
     {
         "description": "Validate a specific file:",
@@ -32729,7 +32929,7 @@
     },
     {
         "command": "gh pr",
-        "description": "Manage GitHub pull requests from the command line.\nMore information: <https://cli.github.com/manual/gh_pr>."
+        "description": "Manage GitHub pull requests from the command-line.\nMore information: <https://cli.github.com/manual/gh_pr>."
     },
     {
         "description": "Create a pull request:",
@@ -32865,15 +33065,15 @@
     },
     {
         "description": "Only output the first 5 entries of the result:",
-        "command": "shuf -n {{5}} {{filename}}"
+        "command": "shuf --head-count={{5}} {{filename}}"
     },
     {
         "description": "Write the output to another file:",
-        "command": "shuf {{filename}} -o {{output_filename}}"
+        "command": "shuf {{filename}} --output={{output_filename}}"
     },
     {
         "command": "web-ext",
-        "description": "A command line tool for managing web extension development.\nMore information: <https://www.npmjs.com/package/web-ext>."
+        "description": "A command-line tool for managing web extension development.\nMore information: <https://www.npmjs.com/package/web-ext>."
     },
     {
         "description": "Run the web extension in the current directory in Firefox:",
@@ -33064,7 +33264,7 @@
         "command": "scrapy fetch {{url}}"
     },
     {
-        "description": "Open a webpage in the default browser as scrapy sees it (disable javascript for extra fidelity):",
+        "description": "Open a webpage in the default browser as scrapy sees it (disable JavaScript for extra fidelity):",
         "command": "scrapy view {{url}}"
     },
     {
@@ -33097,7 +33297,7 @@
     },
     {
         "command": "couchdb",
-        "description": "Command line interface for Apache CouchDB database server.\nMore information: <https://couchdb.apache.org>."
+        "description": "Command-line interface for Apache CouchDB database server.\nMore information: <https://couchdb.apache.org>."
     },
     {
         "description": "Start couchdb:",
@@ -33153,7 +33353,7 @@
     },
     {
         "command": "mr",
-        "description": "Myrepos manages all your version control repositories at once.\nMore information: <https://myrepos.branchable.com>."
+        "description": "Manage all of your version control repositories at once.\nMore information: <https://myrepos.branchable.com>."
     },
     {
         "description": "Register a repository:",
@@ -33253,7 +33453,7 @@
     },
     {
         "command": "zsh",
-        "description": "Z SHell, a Bash-compatible command line interpreter.\nSee also `histexpand` for history expansion.\nMore information: <https://www.zsh.org>."
+        "description": "Z SHell, a Bash-compatible command-line interpreter.\nSee also `histexpand` for history expansion.\nMore information: <https://www.zsh.org>."
     },
     {
         "description": "Start an interactive shell session:",
@@ -33501,7 +33701,7 @@
     },
     {
         "command": "hg",
-        "description": "A command line interface for Mercurial, a distributed source control management system.\nSee `hg-add`, `hg-commit` and other pages for additional information.\nMore information: <https://www.mercurial-scm.org>."
+        "description": "A command-line interface for Mercurial, a distributed source control management system.\nSee `hg-add`, `hg-commit` and other pages for additional information.\nMore information: <https://www.mercurial-scm.org>."
     },
     {
         "description": "Execute Mercurial command:",
@@ -33613,10 +33813,10 @@
     },
     {
         "command": "calibre-server",
-        "description": "A server application that can be used to distribute ebooks over a network.\nEbooks must be imported into the library using the GUI or calibredb before.\nPart of the Calibre ebook library.\nMore information: <https://manual.calibre-ebook.com/generated/en/calibre-server.html>."
+        "description": "A server application that can be used to distribute e-books over a network.\nNote: e-books must already be imported into the library using the GUI or the `calibredb` CLI.\nMore information: <https://manual.calibre-ebook.com/generated/en/calibre-server.html>."
     },
     {
-        "description": "Start a server to distribute ebooks. Access at http://localhost:8080:",
+        "description": "Start a server to distribute e-books. Access at http://localhost:8080:",
         "command": "calibre-server"
     },
     {
@@ -33669,7 +33869,7 @@
     },
     {
         "command": "laravel-zero",
-        "description": "A command line installer for the Laravel Zero framework.\nMore information: <https://laravel-zero.com>."
+        "description": "A command-line installer for the Laravel Zero framework.\nMore information: <https://laravel-zero.com>."
     },
     {
         "description": "Create a new Laravel Zero application:",
@@ -33729,7 +33929,7 @@
     },
     {
         "command": "webtorrent",
-        "description": "The command line interface for WebTorrent.\nSupports magnets, urls, info hashes and .torrent files.\nMore information: <https://github.com/webtorrent/webtorrent-cli>."
+        "description": "The command-line interface for WebTorrent.\nSupports magnets, urls, info hashes and .torrent files.\nMore information: <https://github.com/webtorrent/webtorrent-cli>."
     },
     {
         "description": "Download a torrent:",
@@ -33801,7 +34001,7 @@
     },
     {
         "command": "gh issue",
-        "description": "Manage GitHub issues from the command line.\nMore information: <https://cli.github.com/manual/gh_issue>."
+        "description": "Manage GitHub issues from the command-line.\nMore information: <https://cli.github.com/manual/gh_issue>."
     },
     {
         "description": "Print out the issue:",
@@ -34032,6 +34232,14 @@
         "command": "eval \"$(thefuck --alias)\""
     },
     {
+        "command": "git browse",
+        "description": "View an upstream repository in the default browser.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-browse>."
+    },
+    {
+        "description": "Open the first upstream in the default browser:",
+        "command": "git browse"
+    },
+    {
         "command": "mitmdump",
         "description": "View, record, and programmatically transform HTTP traffic.\nThe command-line counterpart to mitmproxy.\nMore information: <https://docs.mitmproxy.org/stable/overview-tools/#mitmdump>."
     },
@@ -34173,7 +34381,7 @@
     },
     {
         "command": "meteor",
-        "description": "Full-stack javascript platform for building web applications.\nMore information: <https://meteor.com>."
+        "description": "Full-stack JavaScript platform for building web applications.\nMore information: <https://meteor.com>."
     },
     {
         "description": "Run a meteor project from its root directory in development mode:",
@@ -34368,7 +34576,7 @@
         "description": "Converts CommonMark Markdown formatted text to other formats.\nMore information: <https://github.com/commonmark/cmark>."
     },
     {
-        "description": "Render a Commonmark Markdown file to HTML:",
+        "description": "Render a CommonMark Markdown file to HTML:",
         "command": "cmark --to html {{filename.md}}"
     },
     {
@@ -34378,6 +34586,10 @@
     {
         "description": "Convert straight quotes to smart quotes:",
         "command": "cmark --smart --to html {{filename.md}}"
+    },
+    {
+        "command": "git archive-file",
+        "description": "Export all the files of the current Git branch into a zip archive.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-archive-file>."
     },
     {
         "command": "zipalign",
@@ -34596,19 +34808,19 @@
         "description": "HTTP loadtesting and benchmarking tool.\nMore information: <https://www.joedog.org/siege-manual/>."
     },
     {
-        "description": "Test a url with default settings:",
+        "description": "Test a URL with default settings:",
         "command": "siege {{https://example.com}}"
     },
     {
-        "description": "Test a list of urls:",
+        "description": "Test a list of URLs:",
         "command": "siege --file {{path/to/url_list.txt}}"
     },
     {
-        "description": "Test list of urls in a random order (Simulates internet traffic):",
+        "description": "Test list of URLs in a random order (Simulates internet traffic):",
         "command": "siege --internet --file {{path/to/url_list.txt}}"
     },
     {
-        "description": "Benchmark a list of urls (Dont wait between requests):",
+        "description": "Benchmark a list of URLs (without waiting between requests):",
         "command": "siege --benchmark --file {{path/to/url_list.txt}}"
     },
     {
@@ -34757,7 +34969,7 @@
     },
     {
         "command": "kops",
-        "description": "Create, destroy, upgrade and maintain Kubernetes clusters from the command line.\nMore information: <https://github.com/kubernetes/kops/>."
+        "description": "Create, destroy, upgrade and maintain Kubernetes clusters from the command-line.\nMore information: <https://github.com/kubernetes/kops/>."
     },
     {
         "description": "Create a cluster from the configuration specification:",
@@ -34893,7 +35105,7 @@
     },
     {
         "command": "trash-cli",
-        "description": "A command line interface to the trashcan APIs.\nMore information: <https://github.com/andreafrancia/trash-cli>."
+        "description": "A command-line interface to the trashcan APIs.\nMore information: <https://github.com/andreafrancia/trash-cli>."
     },
     {
         "description": "Trash files and directories:",
@@ -35392,6 +35604,14 @@
         "command": "kind get {{clusters|nodes|kubeconfig}}"
     },
     {
+        "command": "git undo",
+        "description": "Undo recent commits.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-undo>."
+    },
+    {
+        "description": "Remove the most recent commit:",
+        "command": "git undo"
+    },
+    {
         "command": "nvm",
         "description": "Install, uninstall or switch between Node.js versions.\nSupports version numbers like \"0.12\" or \"v4.2\", and labels like \"stable\", \"system\", etc.\nMore information: <https://github.com/creationix/nvm>."
     },
@@ -35601,7 +35821,7 @@
     },
     {
         "command": "electron-packager",
-        "description": "A tool used to build Electron app executables for Windows, Linux and MacOS.\nRequires a valid package.json in the application directory.\nMore information: <https://github.com/electron/electron-packager>."
+        "description": "A tool used to build Electron app executables for Windows, Linux and macOS.\nRequires a valid package.json in the application directory.\nMore information: <https://github.com/electron/electron-packager>."
     },
     {
         "description": "Package an application for the current architecture and platform:",
@@ -35737,7 +35957,7 @@
     },
     {
         "command": "gitmoji",
-        "description": "An interactive command line tool for using emojis on commits.\nMore information: <https://github.com/carloscuesta/gitmoji-cli>."
+        "description": "An interactive command-line tool for using emojis on commits.\nMore information: <https://github.com/carloscuesta/gitmoji-cli>."
     },
     {
         "description": "Start the commit wizard:",
@@ -35989,7 +36209,7 @@
     },
     {
         "command": "cf",
-        "description": "Command line tool to manage apps and services on Cloud Foundry.\nMore information: <https://docs.cloudfoundry.org>."
+        "description": "Command-line tool to manage apps and services on Cloud Foundry.\nMore information: <https://docs.cloudfoundry.org>."
     },
     {
         "description": "Push an app using the default settings:",
@@ -36133,7 +36353,7 @@
     },
     {
         "command": "play",
-        "description": "Audio player of SoX - Sound eXchange.\nPlays any audio from the command line, with audio formats identified by the extension.\nMore information: <http://sox.sourceforge.net>."
+        "description": "Audio player of SoX - Sound eXchange.\nPlays any audio from the command-line, with audio formats identified by the extension.\nMore information: <http://sox.sourceforge.net>."
     },
     {
         "description": "Play the given audio file:",
@@ -36161,7 +36381,7 @@
     },
     {
         "command": "asdf",
-        "description": "Command line interface for managing versions of different packages.\nMore information: <https://asdf-vm.com>."
+        "description": "Command-line interface for managing versions of different packages.\nMore information: <https://asdf-vm.com>."
     },
     {
         "description": "List all available plugins:",
@@ -36440,7 +36660,7 @@
         "command": "git ls-remote --tags"
     },
     {
-        "description": "Show all references from a remote repository based on name or url:",
+        "description": "Show all references from a remote repository based on name or URL:",
         "command": "git ls-remote {{repository_url}}"
     },
     {
@@ -36677,7 +36897,7 @@
     },
     {
         "command": "pio account",
-        "description": "Manage your PlatformIO account in the command line.\nMore information: <https://docs.platformio.org/en/latest/core/userguide/account/>."
+        "description": "Manage your PlatformIO account in the command-line.\nMore information: <https://docs.platformio.org/en/latest/core/userguide/account/>."
     },
     {
         "description": "Register a new PlatformIO account:",
@@ -36932,11 +37152,11 @@
         "description": "Compile LaTeX source files into finished documents.\nAutomatically does multiple runs when needed.\nMore information: <https://mg.readthedocs.io/latexmk.html>."
     },
     {
-        "description": "Compile a dvi (DeVice Independent file) document from every source:",
+        "description": "Compile a DVI (Device Independent file) document from every source:",
         "command": "latexmk"
     },
     {
-        "description": "Compile a dvi document from a specific source file:",
+        "description": "Compile a DVI document from a specific source file:",
         "command": "latexmk {{source.tex}}"
     },
     {
@@ -37345,7 +37565,7 @@
     },
     {
         "command": "gh repo",
-        "description": "Work with GitHub repositories on the command line.\nMore information: <https://cli.github.com/manual/gh_repo>."
+        "description": "Work with GitHub repositories on the command-line.\nMore information: <https://cli.github.com/manual/gh_repo>."
     },
     {
         "description": "Create a new repository (if the repository name is not set, the default name will be the name of the current directory):",
@@ -37489,23 +37709,27 @@
     },
     {
         "command": "cowsay",
-        "description": "Generate an ASCII character (by default a cow) saying or thinking something.\nMore information: <https://github.com/tnalpgge/rank-amateur-cowsay>."
+        "description": "Print ASCII art (by default a cow) saying or thinking something.\nMore information: <https://github.com/tnalpgge/rank-amateur-cowsay>."
     },
     {
-        "description": "Print an ASCII cow saying \"Hello world\":",
-        "command": "cowsay \"Hello world\""
+        "description": "Print an ASCII cow saying \"hello, world\":",
+        "command": "cowsay \"{{hello, world}}\""
     },
     {
-        "description": "Read text from stdin for the balloon:",
-        "command": "echo \"Hello\" | cowsay"
+        "description": "Print an ASCII cow saying text from stdin:",
+        "command": "echo \"{{hello, world}}\" | cowsay"
     },
     {
-        "description": "List all available characters:",
+        "description": "List all available art types:",
         "command": "cowsay -l"
     },
     {
-        "description": "Print an ASCII dragon saying \"Hello\":",
-        "command": "cowsay -f dragon \"Hello\""
+        "description": "Print the specified ASCII art saying \"hello, world\":",
+        "command": "cowsay -f {{art}} \"{{hello, world}}\""
+    },
+    {
+        "description": "Print a dead thinking ASCII cow:",
+        "command": "cowthink -d \"{{I'm just a cow, not a great thinker...}}\""
     },
     {
         "command": "sails",
@@ -37625,7 +37849,7 @@
     },
     {
         "command": "piactl",
-        "description": "The command line tool for Private Internet Access, a commercial VPN provider.\nMore information: <https://privateinternetaccess.com/helpdesk/kb/articles/pia-desktop-command-line-interface>."
+        "description": "The command-line tool for Private Internet Access, a commercial VPN provider.\nMore information: <https://privateinternetaccess.com/helpdesk/kb/articles/pia-desktop-command-line-interface>."
     },
     {
         "description": "Log in to Private Internet Access:",
@@ -37820,7 +38044,7 @@
         "description": "Cross platform IDE for C#, F# and more.\nMore information: <https://www.monodevelop.com/>."
     },
     {
-        "description": "Start Monodevelop:",
+        "description": "Start MonoDevelop:",
         "command": "monodevelop"
     },
     {
@@ -37940,6 +38164,10 @@
         "command": "git init"
     },
     {
+        "description": "Initialize a repository with the specified name for the initial branch:",
+        "command": "git init --initial-branch={{branch_name}}"
+    },
+    {
         "description": "Initialize a repository using SHA256 for object hashes (requires Git version 2.29+):",
         "command": "git init --object-format={{sha256}}"
     },
@@ -37988,7 +38216,7 @@
         "command": "etcd"
     },
     {
-        "description": "Start a single-node etcd cluster, listening for client requests on a custom url:",
+        "description": "Start a single-node etcd cluster, listening for client requests on a custom URL:",
         "command": "etcd --advertise-client-urls {{http://127.0.0.1:1234}} --listen-client-urls {{http://127.0.0.1:1234}}"
     },
     {
@@ -38681,7 +38909,7 @@
     },
     {
         "command": "gh",
-        "description": "Work seamlessly with GitHub from the command line.\nMore information: <https://cli.github.com/>."
+        "description": "Work seamlessly with GitHub from the command-line.\nMore information: <https://cli.github.com/>."
     },
     {
         "description": "Clone a GitHub repository locally:",
@@ -38713,7 +38941,7 @@
     },
     {
         "command": "spark",
-        "description": "The Laravel Spark command line tool.\nMore information: <https://spark.laravel.com>."
+        "description": "The Laravel Spark command-line tool.\nMore information: <https://spark.laravel.com>."
     },
     {
         "description": "Register your API token:",
@@ -39213,7 +39441,7 @@
     },
     {
         "command": "bosh",
-        "description": "Command line tool to deploy and manage the bosh director.\nMore information: <https://bosh.io/docs/cli-v2/>."
+        "description": "Command-line tool to deploy and manage the bosh director.\nMore information: <https://bosh.io/docs/cli-v2/>."
     },
     {
         "description": "Create local alias for director:",
@@ -39345,7 +39573,7 @@
     },
     {
         "command": "nms",
-        "description": "Command line tool that recreates the famous data decryption effect seen in the 1992 movie Sneakers from stdin.\nMore information: <https://github.com/bartobri/no-more-secrets>."
+        "description": "Command-line tool that recreates the famous data decryption effect seen in the 1992 movie Sneakers from stdin.\nMore information: <https://github.com/bartobri/no-more-secrets>."
     },
     {
         "description": "Decrypt text after a keystroke:",
@@ -39609,7 +39837,7 @@
     },
     {
         "command": "github-label-sync",
-        "description": "A command line interface for synchronising GitHub labels.\nMore information: <https://npmjs.com/package/github-label-sync>."
+        "description": "A command-line interface for synchronising GitHub labels.\nMore information: <https://npmjs.com/package/github-label-sync>."
     },
     {
         "description": "Synchronise labels using a local `labels.json` file:",
@@ -39985,7 +40213,7 @@
     },
     {
         "command": "react-native start",
-        "description": "Command line tools to start the React Native server.\nMore information: <https://github.com/react-native-community/cli/blob/master/docs/commands.md#start>."
+        "description": "Command-line tools to start the React Native server.\nMore information: <https://github.com/react-native-community/cli/blob/master/docs/commands.md#start>."
     },
     {
         "description": "Start the server that communicates with connected devices:",
@@ -40152,6 +40380,30 @@
         "command": "chars {{10}}"
     },
     {
+        "command": "pdfjam",
+        "description": "Shell frontend for the LaTeX pdfpages package for mingling PDFs.\nMore information: <https://github.com/rrthomas/pdfjam>."
+    },
+    {
+        "description": "Merge two (or more) PDFs:",
+        "command": "pdfjam {{path/to/file1.pdf}} {{path/to/file2.pdf}} --outfile {{path/to/output_file.pdf}}"
+    },
+    {
+        "description": "Merge the first page of each file together:",
+        "command": "pdfjam {{files...}} 1 --outfile {{path/to/output_file.pdf}}"
+    },
+    {
+        "description": "Merge subranges from two PDFs:",
+        "command": "pdfjam {{path/to/file1.pdf 3-5,1}} {{path/to/file2.pdf 4-6}} --outfile {{path/to/output_file.pdf}}"
+    },
+    {
+        "description": "Sign an A4 page (adjust delta to height for other formats) with a scanned signature by overlaying them:",
+        "command": "pdfjam {{path/to/file.pdf}} {{path/to/signature}} --fitpaper true --outfile {{path/to/signed.pdf}} --nup \"{{1x2}}\" --delta \"{{0 -842pt}}\""
+    },
+    {
+        "description": "Arrange the pages from the input file into a fancy 2x2 grid:",
+        "command": "pdfjam {{path/to/file.pdf}} --nup {{2x2}} --suffix {{4up}} --preamble '{{\\usepackage{fancyhdr} \\pagestyle{fancy}}}'"
+    },
+    {
         "command": "qcp",
         "description": "Copy files using the default text editor to define the filenames.\nMore information: <https://www.nongnu.org/renameutils/>."
     },
@@ -40241,7 +40493,7 @@
     },
     {
         "command": "fly",
-        "description": "Command line tool for concourse-ci.\nMore information: <https://concourse-ci.org/fly.html>."
+        "description": "Command-line tool for concourse-ci.\nMore information: <https://concourse-ci.org/fly.html>."
     },
     {
         "description": "Authenticate with and save concourse target:",
@@ -40405,7 +40657,7 @@
     },
     {
         "command": "ng",
-        "description": "Command Line Interface (CLI) for creating and managing Angular applications.\nMore information: <https://angular.io/cli>."
+        "description": "Command-line Interface (CLI) for creating and managing Angular applications.\nMore information: <https://angular.io/cli>."
     },
     {
         "description": "Create a new Angular application inside a directory:",
@@ -40604,7 +40856,7 @@
         "description": "Measure the latency and throughput of a web server.\nMore information: <https://www.vanheusden.com/httping>."
     },
     {
-        "description": "Ping the specified url:",
+        "description": "Ping the specified URL:",
         "command": "httping -g {{url}}"
     },
     {
@@ -40841,7 +41093,7 @@
     },
     {
         "command": "sendmail",
-        "description": "Send email from the command line."
+        "description": "Send email from the command-line."
     },
     {
         "description": "Send a message with the content of `message.txt` to the mail directory of local user `username`:",
@@ -41024,7 +41276,7 @@
         "command": "subfinder --silent -d {{example.com}}"
     },
     {
-        "description": "Use bruteforcing to find subdomains:",
+        "description": "Use a brute-force attack to find subdomains:",
         "command": "subfinder -d {{example.com}} -b"
     },
     {
@@ -41101,7 +41353,7 @@
     },
     {
         "command": "dotnet",
-        "description": "Cross platform .NET command line tools for .NET Core.\nMore information: <https://docs.microsoft.com/dotnet/core/tools>."
+        "description": "Cross platform .NET command-line tools for .NET Core.\nMore information: <https://docs.microsoft.com/dotnet/core/tools>."
     },
     {
         "description": "Initialize a new .NET project:",
@@ -41161,7 +41413,7 @@
     },
     {
         "command": "fzf",
-        "description": "Command line fuzzy finder.\nMore information: <https://github.com/junegunn/fzf>."
+        "description": "Command-line fuzzy finder.\nMore information: <https://github.com/junegunn/fzf>."
     },
     {
         "description": "Start finder on all files from arbitrary locations:",
@@ -41205,7 +41457,7 @@
     },
     {
         "command": "googler",
-        "description": "Search Google from command line.\nMore information: <https://github.com/jarun/googler>."
+        "description": "Search Google from command-line.\nMore information: <https://github.com/jarun/googler>."
     },
     {
         "description": "Search Google for a keyword:",
@@ -41273,7 +41525,7 @@
     },
     {
         "command": "gh secret",
-        "description": "Manage GitHub secrets from the command line.\nMore information: <https://cli.github.com/manual/gh_secret>."
+        "description": "Manage GitHub secrets from the command-line.\nMore information: <https://cli.github.com/manual/gh_secret>."
     },
     {
         "description": "List secret keys for the current repository:",
@@ -41704,7 +41956,7 @@
         "command": "rails server -p \"{{port}}\""
     },
     {
-        "description": "Open console to interact with application from command line:",
+        "description": "Open console to interact with application from command-line:",
         "command": "rails console"
     },
     {
@@ -41729,7 +41981,7 @@
     },
     {
         "command": "gh alias",
-        "description": "Manage GitHub CLI command aliases from the command line.\nMore information: <https://cli.github.com/manual/gh_alias>."
+        "description": "Manage GitHub CLI command aliases from the command-line.\nMore information: <https://cli.github.com/manual/gh_alias>."
     },
     {
         "description": "Display the subcommand help:",
@@ -41756,8 +42008,20 @@
         "command": "git blame {{file}}"
     },
     {
+        "command": "git create-branch",
+        "description": "Create a Git branch in a repository.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-create-branch>."
+    },
+    {
+        "description": "Create a local branch:",
+        "command": "git create-branch {{branch_name}}"
+    },
+    {
+        "description": "Create a branch locally and on origin:",
+        "command": "git create-branch --remote {{branch_name}}"
+    },
+    {
         "command": "vegeta",
-        "description": "A command line utility and a library for HTTP load testing.\nSee also `ab`.\nMore information: <https://github.com/tsenart/vegeta>."
+        "description": "A command-line utility and a library for HTTP load testing.\nSee also `ab`.\nMore information: <https://github.com/tsenart/vegeta>."
     },
     {
         "description": "Launch an attack lasting 30 seconds:",
@@ -41778,6 +42042,10 @@
     {
         "description": "Launch an attack and plot the results on a graph (latency over time):",
         "command": "echo \"{{GET https://example.com}}\" | vegeta attack -duration={{30s}} | vegeta plot > {{path/to/results.html}}"
+    },
+    {
+        "command": "git brv",
+        "description": "Print a list of branches, sorted by last commit date.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-brv>."
     },
     {
         "command": "pr",
@@ -41885,7 +42153,7 @@
     },
     {
         "command": "awslogs",
-        "description": "Queries groups, streams and events from Amazon Cloudwatch logs.\nMore information: <https://github.com/jorgebastida/awslogs>."
+        "description": "Queries groups, streams and events from Amazon CloudWatch logs.\nMore information: <https://github.com/jorgebastida/awslogs>."
     },
     {
         "description": "List log groups:",
@@ -41900,7 +42168,7 @@
         "command": "awslogs get {{/var/log/syslog}} --start='{{2h ago}}' --end='{{1h ago}}'"
     },
     {
-        "description": "Get logs that match a specific Cloudwatch Logs Filter pattern:",
+        "description": "Get logs that match a specific CloudWatch Logs Filter pattern:",
         "command": "awslogs get {{/aws/lambda/my_lambda_group}} --filter-pattern='{{ERROR}}'"
     },
     {
@@ -41981,7 +42249,7 @@
     },
     {
         "command": "logstash",
-        "description": "An ETL (extract, transform and load) tool.\nCommonly used to load data from various sources, like databases and log files, into elasticsearch.\nMore information: <https://www.elastic.co/products/logstash>."
+        "description": "An Elasticsearch ETL (extract, transform and load) tool.\nCommonly used to load data from various sources (such as databases and log files) into Elasticsearch.\nMore information: <https://www.elastic.co/products/logstash>."
     },
     {
         "description": "Check validity of a logstash configuration:",
@@ -41993,7 +42261,7 @@
     },
     {
         "command": "laravel",
-        "description": "A command line installer for the Laravel framework.\nMore information: <https://laravel.com>."
+        "description": "A command-line installer for the Laravel framework.\nMore information: <https://laravel.com>."
     },
     {
         "description": "Create a new Laravel application:",
@@ -42073,7 +42341,7 @@
     },
     {
         "command": "sonar-scanner",
-        "description": "SonarScanner is a generic scanner for SonarQube for projects do not use any specific build tool like maven, gradle , etc.\nMore information: <https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/>."
+        "description": "SonarScanner is a generic scanner for SonarQube projects that do not use build tools such as Maven, Gradle, or Ant.\nMore information: <https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/>."
     },
     {
         "description": "Scan a project with configuration file in your project's root directory named `sonar-project.properties`:",
@@ -42284,7 +42552,7 @@
         "description": "The command operates on the user's mailbox if no argument is given.\nTo send an email the message body is built from standard input."
     },
     {
-        "description": "Send a typed email message. The command line below continues after pressing Enter key. Input CC email-id (optional) press Enter key. Input message text (can be multi-line). Press Ctrl-D key to complete the message text:",
+        "description": "Send a typed email message. The command-line below continues after pressing Enter key. Input CC email-id (optional) press Enter key. Input message text (can be multiline). Press Ctrl-D key to complete the message text:",
         "command": "mail --subject=\"{{subject line}}\" {{to_user@example.com}}"
     },
     {
@@ -42621,7 +42889,7 @@
     },
     {
         "command": "ncmpcpp",
-        "description": "A command line music player client for the Music Player Daemon.\nMore information: <https://rybczak.net/ncmpcpp>."
+        "description": "A command-line music player client for the Music Player Daemon.\nMore information: <https://rybczak.net/ncmpcpp>."
     },
     {
         "description": "Connect to a music player daemon on a given host and port:",
@@ -42857,10 +43125,10 @@
     },
     {
         "command": "odps",
-        "description": "Aliyun ODPS (Open Data Processing Service) command line tool."
+        "description": "Aliyun ODPS (Open Data Processing Service) command-line tool."
     },
     {
-        "description": "Start the command line with a custom configuration file:",
+        "description": "Start the command-line with a custom configuration file:",
         "command": "odpscmd --config={{odps_config.ini}}"
     },
     {
@@ -43065,7 +43333,7 @@
     },
     {
         "command": "kube-fzf",
-        "description": "Shell commands for command line fuzzy searching of Kubernetes Pods.\nSee also `kubectl` for related commands.\nMore information: <https://github.com/thecasualcoder/kube-fzf>."
+        "description": "Shell commands for command-line fuzzy searching of Kubernetes Pods.\nSee also `kubectl` for related commands.\nMore information: <https://github.com/thecasualcoder/kube-fzf>."
     },
     {
         "description": "Get pod details (from current namespace):",
@@ -43261,7 +43529,7 @@
     },
     {
         "command": "surge",
-        "description": "Simple command line web publishing.\nMore information: <https://surge.sh>."
+        "description": "Simple command-line web publishing.\nMore information: <https://surge.sh>."
     },
     {
         "description": "Upload a new site to surge.sh:",
@@ -43293,7 +43561,7 @@
     },
     {
         "command": "fin",
-        "description": "Docksal command line utility.\nMore information: <https://docs.docksal.io/fin/fin/>."
+        "description": "Docksal command-line utility.\nMore information: <https://docs.docksal.io/fin/fin/>."
     },
     {
         "description": "Start the project in the current directory:",
@@ -43393,14 +43661,14 @@
     },
     {
         "command": "xed",
-        "description": "Opens files for editing in XCode."
+        "description": "Opens files for editing in Xcode."
     },
     {
-        "description": "Open file in XCode:",
+        "description": "Open file in Xcode:",
         "command": "xed {{file1}}"
     },
     {
-        "description": "Open file(s) in XCode, create if it doesn't exist:",
+        "description": "Open file(s) in Xcode, create if it doesn't exist:",
         "command": "xed -c {{filename1}}"
     },
     {
@@ -43437,7 +43705,7 @@
     },
     {
         "command": "mas",
-        "description": "Command line interface for the Mac App Store.\nMore information: <https://github.com/mas-cli/mas>."
+        "description": "Command-line interface for the Mac App Store.\nMore information: <https://github.com/mas-cli/mas>."
     },
     {
         "description": "Sign into the Mac App Store for the first time:",
@@ -43565,7 +43833,7 @@
     },
     {
         "description": "Display the current date in UTC and ISO 8601 format:",
-        "command": "date -u +\"%Y-%m-%dT%H:%M:%S%Z\""
+        "command": "date -u +\"%Y-%m-%dT%H:%M:%SZ\""
     },
     {
         "description": "Display the current date as a Unix timestamp (seconds since the Unix epoch):",
@@ -43877,7 +44145,7 @@
     },
     {
         "command": "bless",
-        "description": "Set volume bootability and startup disk options.\nMore information: <https://ss64.com/osx/bless.html>."
+        "description": "Set volume boot capability and startup disk options.\nMore information: <https://ss64.com/osx/bless.html>."
     },
     {
         "description": "Bless a volume with only Mac OS X or Darwin, and create the BootX and `boot.efi` files as needed:",
@@ -44121,7 +44389,7 @@
     },
     {
         "command": "csshX",
-        "description": "Cluster SSH tool for MacOS.\nMore information: <https://github.com/brockgr/csshx>."
+        "description": "Cluster SSH tool for macOS.\nMore information: <https://github.com/brockgr/csshx>."
     },
     {
         "description": "Connect to multiple hosts:",
@@ -44197,7 +44465,7 @@
     },
     {
         "command": "imgcat",
-        "description": "A utility to display images directly on the command line.\nRequires a compatible terminal such as iTerm2."
+        "description": "A utility to display images directly on the command-line.\nRequires a compatible terminal such as iTerm2."
     },
     {
         "command": "sips",
@@ -44257,7 +44525,7 @@
     },
     {
         "command": "osascript",
-        "description": "Run AppleScript or JavaScript for Automation (JXA) from the command line."
+        "description": "Run AppleScript or JavaScript for Automation (JXA) from the command-line."
     },
     {
         "description": "Run an AppleScript command:",
@@ -44641,7 +44909,7 @@
     },
     {
         "command": "softwareupdate",
-        "description": "A tool for updating MacOS App Store apps via the command line."
+        "description": "A tool for updating macOS App Store apps via the command-line."
     },
     {
         "description": "List all available updates:",
