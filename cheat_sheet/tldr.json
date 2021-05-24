@@ -2209,7 +2209,7 @@
     },
     {
         "command": "wm",
-        "description": "Show information about the screen of an Android device.\nThis command can only be used through `adb shell`."
+        "description": "Show information about the screen of an Android device.\nThis command can only be used through `adb shell`.\nMore information: <https://adbinstaller.com/commands/adb-shell-wm-5b672b17e7958178a2955538>."
     },
     {
         "description": "Display the physical size of an Android device's screen:",
@@ -10104,6 +10104,34 @@
         "command": "fdisk -l"
     },
     {
+        "command": "screenkey",
+        "description": "A screencast tool to display keys pressed.\nMore information: <https://www.thregr.org/~wavexx/software/screenkey/>."
+    },
+    {
+        "description": "Display keys which are currently being pressed on the screen:",
+        "command": "screenkey"
+    },
+    {
+        "description": "Display keys and mouse buttons which are currently being pressed on the screen:",
+        "command": "screenkey --mouse"
+    },
+    {
+        "description": "Launch the settings menu of screenkey:",
+        "command": "screenkey --show-settings"
+    },
+    {
+        "description": "Launch screenkey at a specific position:",
+        "command": "screenkey --position {{top|center|bottom|fixed}}"
+    },
+    {
+        "description": "Change the format of the key modifiers displayed on screen:",
+        "command": "screenkey --mods-mode {{normal|emacs|mac|win|tux}}"
+    },
+    {
+        "description": "Change the appearance of screenkey:",
+        "command": "screenkey --bg-color \"{{#a1b2c3}}\" --font {{Hack}} --font-color {{yellow}} --opacity {{0.8}}"
+    },
+    {
         "command": "fcrackzip",
         "description": "ZIP archive password cracking utility."
     },
@@ -15656,6 +15684,26 @@
         "command": "glances -c {{hostname}}"
     },
     {
+        "command": "stl2gts",
+        "description": "Convert STL files into the GTS (GNU triangulated surface library) file format.\nMore information: <https://manned.org/stl2gts>."
+    },
+    {
+        "description": "Convert an STL file to a GTS file:",
+        "command": "stl2gts < {{path/to/file.stl}} > {{path/to/file.gts}}"
+    },
+    {
+        "description": "Convert an STL file to a GTS file and revert face normals:",
+        "command": "stl2gts --revert < {{path/to/file.stl}} > {{path/to/file.gts}}"
+    },
+    {
+        "description": "Convert an STL file to a GTS file and do not merge vertices:",
+        "command": "stl2gts --nomerge < {{path/to/file.stl}} > {{path/to/file.gts}}"
+    },
+    {
+        "description": "Convert an STL file to a GTS file and display surface statistics:",
+        "command": "stl2gts --verbose < {{path/to/file.stl}} > {{path/to/file.gts}}"
+    },
+    {
         "command": "id",
         "description": "Display current user and group identity.\nMore information: <https://www.gnu.org/software/coreutils/id>."
     },
@@ -18904,6 +18952,10 @@
         "command": "gcc -S {{source.c}}"
     },
     {
+        "command": "git touch",
+        "description": "Create new files and add them to the index.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-touch>."
+    },
+    {
         "command": "diskonaut",
         "description": "Terminal disk space navigator, written in Rust.\nMore information: <https://github.com/imsnif/diskonaut>."
     },
@@ -18924,8 +18976,12 @@
         "description": "Move or rename files and directories.\nMore information: <https://www.gnu.org/software/coreutils/mv>."
     },
     {
-        "description": "Move files in arbitrary locations:",
+        "description": "Move a file to an arbitrary location:",
         "command": "mv {{source}} {{target}}"
+    },
+    {
+        "description": "Move files into another directory, keeping the filenames:",
+        "command": "mv {{source1}} {{source2}} {{source3}} {{target_directory}}"
     },
     {
         "description": "Do not prompt for confirmation before overwriting existing files:",
@@ -19482,6 +19538,34 @@
     {
         "description": "Hard drop the current piece:",
         "command": "Spacebar"
+    },
+    {
+        "command": "josm",
+        "description": "Extensible OpenStreetMap editor for Java 8+.\nMore information: <https://josm.openstreetmap.de/>."
+    },
+    {
+        "description": "Launch JOSM:",
+        "command": "josm"
+    },
+    {
+        "description": "Launch JOSM in maximized mode:",
+        "command": "josm --maximize"
+    },
+    {
+        "description": "Launch JOSM and set a specific language:",
+        "command": "josm --language {{de}}"
+    },
+    {
+        "description": "Launch JOSM and reset all preferences to their default values:",
+        "command": "josm --reset-preferences"
+    },
+    {
+        "description": "Launch JOSM and download a specific bounding box:",
+        "command": "josm --download {{minlat,minlon,maxlat,maxlon}}"
+    },
+    {
+        "description": "Launch JOSM and download a specific bounding box as raw GPS:",
+        "command": "josm --downloadgps {{minlat,minlon,maxlat,maxlon}}"
     },
     {
         "command": "git authors",
@@ -21100,6 +21184,14 @@
         "command": "du -h --max-depth=N {{path/to/directory}}"
     },
     {
+        "command": "git reset-file",
+        "description": "Revert a file to HEAD or a specific commit.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-reset-file>."
+    },
+    {
+        "description": "Reset a file to HEAD:",
+        "command": "git reset-file {{path/to/file}}"
+    },
+    {
         "command": "lein",
         "description": "Manage Clojure projects with declarative configuration.\nMore information: <https://leiningen.org>."
     },
@@ -21466,6 +21558,14 @@
     {
         "description": "Apply a custom indent using spaces. Choose between 2 and 20 spaces:",
         "command": "astyle --indent=spaces={{number_of_spaces}} {{path/to/file}}"
+    },
+    {
+        "command": "git delta",
+        "description": "List files that differ from another branch.\nPart of git-extras.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-delta>."
+    },
+    {
+        "description": "List files from the current checked out branch that differ from the `main` branch:",
+        "command": "git delta {{main}}"
     },
     {
         "command": "host",
@@ -24118,6 +24218,14 @@
     {
         "description": "Check the value of a specific attribute on files:",
         "command": "git check-attr --all {{path/to/file1}} {{path/to/file2}}"
+    },
+    {
+        "command": "git root",
+        "description": "Print the root directory of the current Git repository.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-root>."
+    },
+    {
+        "description": "Print the absolute path of the current Git repository:",
+        "command": "git root"
     },
     {
         "command": "ctest",
@@ -28406,6 +28514,30 @@
     {
         "command": "aria2",
         "description": "This command is an alias of `aria2c`."
+    },
+    {
+        "command": "git effort",
+        "description": "Display how much activity a file has had, showing commits per file and \"active days\" i.e. total number of days that contributed to the file.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-effort>."
+    },
+    {
+        "description": "Display each file in the repository, showing commits and active days:",
+        "command": "git effort"
+    },
+    {
+        "description": "Display files modified by a specific number of commits or more, showing commits and active days:",
+        "command": "git effort --above {{5}}"
+    },
+    {
+        "description": "Display files modified by a specific author, showing commits and active days:",
+        "command": "git effort -- --author=\"{{username}}\""
+    },
+    {
+        "description": "Display files modified since a specific time/date, showing commits and active days:",
+        "command": "git effort -- --since=\"{{last month}}\""
+    },
+    {
+        "description": "Display only the specified files or directories, showing commits and active days:",
+        "command": "git effort {{path/to/file_or_directory1 path/to/file_or_directory2 ...}}"
     },
     {
         "command": "speedtest-cli",
@@ -34105,7 +34237,7 @@
     },
     {
         "command": "jps",
-        "description": "Show JVM Process Status of current user."
+        "description": "Show JVM Process Status of current user.\nMore information: <https://docs.oracle.com/en/java/javase/11/tools/jps.html>."
     },
     {
         "description": "List all JVM processes:",
@@ -38580,6 +38712,18 @@
         "command": "az aks"
     },
     {
+        "command": "git mailinfo",
+        "description": "Extract patch and authorship information from a single email message.\nMore information: <https://git-scm.com/docs/git-mailinfo>."
+    },
+    {
+        "description": "Extract the patch and author data from an email message:",
+        "command": "git mailinfo {{message|patch}}"
+    },
+    {
+        "description": "Extract but remove leading and trailing whitespace:",
+        "command": "git mailinfo -k {{message|patch}}"
+    },
+    {
         "command": "true",
         "description": "Returns a successful exit status code of 0.\nUse this with the || operator to make a command always exit with 0.\nMore information: <https://www.gnu.org/software/coreutils/true>."
     },
@@ -39550,6 +39694,26 @@
     {
         "description": "Force the output images to be progressive:",
         "command": "jpegoptim --all-progressive {{image1.jpeg}} {{image2.jpeg}} {{imageN.jpeg}}"
+    },
+    {
+        "command": "gh secret set",
+        "description": "Create or update GitHub secrets from the command line.\nMore information: <https://cli.github.com/manual/gh_secret_set>."
+    },
+    {
+        "description": "Set a secret for the current repository (user will be prompted for the value):",
+        "command": "gh secret set {{name}}"
+    },
+    {
+        "description": "Set a secret from a file for the current repository:",
+        "command": "gh secret set {{name}} < {{path/to/file}}"
+    },
+    {
+        "description": "Set a secret for a specific repository:",
+        "command": "gh secret set {{name}} --body {{value}} --repo {{owner}}/{{repository}}"
+    },
+    {
+        "description": "Set an organization secret for specific repositories:",
+        "command": "gh secret set {{name}} --org {{organization}} --repos \"{{repository1,repository2,...}}\""
     },
     {
         "command": "pprof",
@@ -41540,12 +41704,12 @@
         "command": "gh secret list --repo {{owner}}/{{repository}}"
     },
     {
-        "description": "Set a secret from a file for the current repository:",
-        "command": "gh secret set {{name}} < {{path/to/file}}"
+        "description": "Set a secret for the current repository (user will be prompted for the value):",
+        "command": "gh secret set {{name}}"
     },
     {
-        "description": "Set a secret for a specific repository:",
-        "command": "gh secret set {{name}} --body {{value}} --repo {{owner}}/{{repository}}"
+        "description": "Set a secret from a file for the current repository:",
+        "command": "gh secret set {{name}} < {{path/to/file}}"
     },
     {
         "description": "Set an organization secret for specific repositories:",
@@ -42260,6 +42424,34 @@
         "command": "sudo logstash --config {{logstash_config.conf}}"
     },
     {
+        "command": "pio remote",
+        "description": "Helper command for PlatformIO Remote Development.\n`pio remote [command]` takes the same arguments as its locally executing counterpart `pio [command]`.\nMore information: <https://docs.platformio.org/en/latest/core/userguide/remote/index.html>."
+    },
+    {
+        "description": "List all active Remote Agents:",
+        "command": "pio remote agent list"
+    },
+    {
+        "description": "Start a new Remote Agent with a specific name and share it with friends:",
+        "command": "pio remote agent start --name {{agent_name}} --share {{example1@example.com}} --share {{example2@example.com}}"
+    },
+    {
+        "description": "List devices from specified Agents (omit `--agent` to specify all Agents):",
+        "command": "pio remote --agent {{agent_name1}} --agent {{agent_name2}} device list"
+    },
+    {
+        "description": "Connect to the serial port of a remote device:",
+        "command": "pio remote --agent {{agent_name}} device monitor"
+    },
+    {
+        "description": "Run all targets on a specified Agent:",
+        "command": "pio remote --agent {{agent_name}} run"
+    },
+    {
+        "description": "Update installed core packages, development platforms and global libraries on a specific Agent:",
+        "command": "pio remote --agent {{agent_name}} update"
+    },
+    {
         "command": "laravel",
         "description": "A command-line installer for the Laravel framework.\nMore information: <https://laravel.com>."
     },
@@ -42394,6 +42586,14 @@
     {
         "description": "Syntax highlight a json file:",
         "command": "bat --language json {{file.json}}"
+    },
+    {
+        "command": "git fork",
+        "description": "Fork the given GitHub repo. Like `git clone` but forks first.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-fork>."
+    },
+    {
+        "description": "Fork and clone a GitHub repository by its URL:",
+        "command": "git fork {{https://github.com/tldr-pages/tldr}}"
     },
     {
         "command": "hakyll-init",
