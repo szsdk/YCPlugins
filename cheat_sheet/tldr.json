@@ -1081,7 +1081,7 @@
     },
     {
         "command": "explorer",
-        "description": "The Windows File Explorer."
+        "description": "The Windows File Explorer.\nMore information: <https://ss64.com/nt/explorer.html>."
     },
     {
         "description": "Open Windows Explorer:",
@@ -1122,10 +1122,6 @@
     {
         "description": "Terminate a process by its process identifier:",
         "command": "tskill {{process_id}}"
-    },
-    {
-        "command": "sigverif",
-        "description": "A GUI signature verification tool for checking system files."
     },
     {
         "command": "scoop bucket",
@@ -1797,7 +1793,7 @@
     },
     {
         "command": "iscc",
-        "description": "Compiler for Inno Setup installers.\nIt compiles an Inno Setup scripts into an Windows installer executable."
+        "description": "Compiler for Inno Setup installers.\nIt compiles an Inno Setup scripts into an Windows installer executable.\nMore information: <https://jrsoftware.org/isinfo.php>."
     },
     {
         "description": "Compile an Inno Setup script:",
@@ -5901,7 +5897,7 @@
     },
     {
         "command": "xfce4-terminal",
-        "description": "The XFCE4 terminal emulator."
+        "description": "The XFCE4 terminal emulator.\nMore information: <https://docs.xfce.org/apps/xfce4-terminal/start>."
     },
     {
         "description": "Open a new terminal window:",
@@ -6536,6 +6532,26 @@
         "command": "sudo photorec {{/dev/sdb}}"
     },
     {
+        "command": "lxterminal",
+        "description": "Terminal emulator for LXDE.\nMore information: <https://wiki.lxde.org/en/LXTerminal>."
+    },
+    {
+        "description": "Open an LXTerminal window:",
+        "command": "lxterminal"
+    },
+    {
+        "description": "Open an LXTerminal window, run a command, and then exit:",
+        "command": "lxterminal -e \"{{command}}\""
+    },
+    {
+        "description": "Open an LXTerminal window with multiple tabs:",
+        "command": "lxterminal --tabs={{tab_name1,tab_name2,...}}"
+    },
+    {
+        "description": "Open an LXTerminal window with a specific title:",
+        "command": "lxterminal --title={{title_name}}"
+    },
+    {
         "command": "dumpe2fs",
         "description": "Print the super block and blocks group information for ext2/ext3/ext4 filesystems.\nUnmount the partition before running this command using `umount {{device}}`.\nMore information: <https://manned.org/dumpe2fs>."
     },
@@ -6593,31 +6609,31 @@
     },
     {
         "description": "Synchronize and update all packages:",
-        "command": "pacman -Syu"
+        "command": "pacman --sync --refresh --sysupgrade"
     },
     {
         "description": "Install a new package:",
-        "command": "pacman -S {{package_name}}"
+        "command": "pacman --sync {{package_name}}"
     },
     {
         "description": "Remove a package and its dependencies:",
-        "command": "pacman -Rs {{package_name}}"
+        "command": "pacman --remove --recursive {{package_name}}"
     },
     {
         "description": "Search the package database for a regular expression or keyword:",
-        "command": "pacman -Ss \"{{search_pattern}}\""
+        "command": "pacman --sync --search \"{{search_pattern}}\""
     },
     {
         "description": "List installed packages and versions:",
-        "command": "pacman -Q"
+        "command": "pacman --query"
     },
     {
         "description": "List only the explicitly installed packages and versions:",
-        "command": "pacman -Qe"
+        "command": "pacman --query --explicit"
     },
     {
-        "description": "Find which package owns a certain file:",
-        "command": "pacman -Qo {{filename}}"
+        "description": "List orphan packages (installed as dependencies but not actually required by any package):",
+        "command": "pacman --query --unrequired --deps --quiet"
     },
     {
         "command": "netselect-apt",
@@ -8821,7 +8837,7 @@
     },
     {
         "description": "Halt the system (same as `halt`):",
-        "command": "rebooot --halt"
+        "command": "reboot --halt"
     },
     {
         "description": "Reboot immediately without contacting the system manager:",
@@ -9650,6 +9666,30 @@
     {
         "description": "Choose the output format (default format is text):",
         "command": "asciiart --format {{text|html}} {{path/to/image.jpg}}"
+    },
+    {
+        "command": "kdocker",
+        "description": "Easily dock applications to the system tray.\nMore information: <https://github.com/user-none/KDocker>."
+    },
+    {
+        "description": "Display a cursor to send a window to the system tray when pressing the left mouse button (press any other mouse button to cancel):",
+        "command": "kdocker"
+    },
+    {
+        "description": "Open an application and send it to the system tray:",
+        "command": "kdocker {{application}}"
+    },
+    {
+        "description": "Send focused window to the system tray:",
+        "command": "kdocker -f"
+    },
+    {
+        "description": "Display a cursor to send a window to the system tray with a custom icon when pressing the left mouse button:",
+        "command": "kdocker -i {{/path/to/icon}}"
+    },
+    {
+        "description": "Open an application, send it to the system tray and if focus is lost, minimize it:",
+        "command": "kdocker -l {{application}}"
     },
     {
         "command": "lvm",
@@ -11588,6 +11628,10 @@
         "command": "snap refresh {{package_name}}"
     },
     {
+        "description": "Update a package to another channel (track, risk, or branch):",
+        "command": "snap refresh {{package_name}} --channel={{channel}}"
+    },
+    {
         "description": "Update all packages:",
         "command": "snap refresh"
     },
@@ -11698,6 +11742,26 @@
     {
         "description": "Start an interactive shell with in a specific chroot as a specific user:",
         "command": "schroot --chroot {{chroot}} --user {{user}}"
+    },
+    {
+        "command": "qtchooser",
+        "description": "A wrapper used to select between Qt development binary versions.\nMore information: <https://manned.org/qtchooser>."
+    },
+    {
+        "description": "List available Qt versions from the configuration files:",
+        "command": "qtchooser --list-versions"
+    },
+    {
+        "description": "Print environment information:",
+        "command": "qtchooser --print-env"
+    },
+    {
+        "description": "Run the specified tool using the specified Qt version:",
+        "command": "qtchooser --run-tool={{tool}} --qt={{version_name}}"
+    },
+    {
+        "description": "Add a Qt version entry to be able to choose from:",
+        "command": "qtchooser --install {{version_name}} {{path/to/qmake}}"
     },
     {
         "command": "daemonize",
@@ -11965,7 +12029,7 @@
     },
     {
         "command": "pulseaudio",
-        "description": "The pulseaudio sound system daemon and manager."
+        "description": "The pulseaudio sound system daemon and manager.\nMore information: <https://www.freedesktop.org/wiki/Software/PulseAudio/>."
     },
     {
         "description": "Check if pulseaudio is running (a non-zero exit code means it is not running):",
@@ -12121,7 +12185,7 @@
     },
     {
         "command": "xfce4-screenshooter",
-        "description": "The XFCE4 screenshot tool."
+        "description": "The XFCE4 screenshot tool.\nMore information: <https://docs.xfce.org/apps/xfce4-screenshooter/start>."
     },
     {
         "description": "Launch the screenshooter GUI:",
@@ -12214,6 +12278,26 @@
     {
         "description": "Unset the default Java environment:",
         "command": "archlinux-java unset"
+    },
+    {
+        "command": "flatpak-builder",
+        "description": "Help build application dependencies.\nMore information: <https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html>."
+    },
+    {
+        "description": "Build a Flatpak and export it to a new repository:",
+        "command": "flatpak-builder {{path/to/build_directory}} {{path/to/manifest}}"
+    },
+    {
+        "description": "Build a Flatpak and export it to the specified repository:",
+        "command": "flatpak-builder --repo={{repository_name}} {{path/to/build_directory}} {{path/to/manifest}}"
+    },
+    {
+        "description": "Build a Flatpak and install it locally:",
+        "command": "flatpak-builder --install {{path/to/build_directory}} {{path/to/manifest}}"
+    },
+    {
+        "description": "Build and sign a Flatpak and export it to the specified repository:",
+        "command": "flatpak-builder --gpg-sign={{key_id}} --repo={{repository_name}} {{path/to/manifest}}"
     },
     {
         "command": "conky",
@@ -17080,6 +17164,30 @@
         "command": "lolcat -a {{path/to/file}}"
     },
     {
+        "command": "mongoimport",
+        "description": "Imports content from a JSON, CSV, or TSV file into a MongoDB database.\nMore information: <https://docs.mongodb.com/database-tools/mongoimport/>."
+    },
+    {
+        "description": "Import a JSON file into a specific collection:",
+        "command": "mongoimport --file={{path/to/file.json}} --uri={{mongodb_uri}} --collection={{collection_name}}"
+    },
+    {
+        "description": "Import a CSV file, using the first line of the file to determine field names:",
+        "command": "mongoimport --type={{csv}} --file={{path/to/file.csv}} --db={{database_name}} --collection={{collection_name}}"
+    },
+    {
+        "description": "Import a JSON array, using each element as a separate document:",
+        "command": "mongoimport --jsonArray --file={{path/to/file.json}}"
+    },
+    {
+        "description": "Import a JSON file using a specific mode and a query to match existing documents:",
+        "command": "mongoimport --file={{path/to/file.json}} --mode={{delete|merge|upsert}} --upsertFields=\"{{field1,field2,...}}\""
+    },
+    {
+        "description": "Import a CSV file, reading field names from a separate CSV file and ignoring fields with empty values:",
+        "command": "mongoimport --type={{csv}} --file={{path/to/file.csv}} --fieldFile={{path/to/field_file.csv}} --ignoreBlanks"
+    },
+    {
         "command": "salt-key",
         "description": "Manages salt minion keys on the salt master.\nNeeds to be run on the salt master, likely as root or with sudo.\nMore information: <https://docs.saltstack.com/ref/cli/salt-key.html>."
     },
@@ -17460,6 +17568,14 @@
         "command": "samtools merge {{output}} {{input1 input2 \u2026}}"
     },
     {
+        "command": "git info",
+        "description": "Display Git repository information.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-info>."
+    },
+    {
+        "description": "Display remote locations, remote and local branches, most recent commit data and `.git/config` settings:",
+        "command": "git info"
+    },
+    {
         "command": "sort",
         "description": "Sort lines of text files.\nMore information: <https://www.gnu.org/software/coreutils/sort>."
     },
@@ -17733,7 +17849,7 @@
     },
     {
         "description": "Show the tldr page for `cd`, overriding the default platform:",
-        "command": "tldr -p {{windows}} {{cd}}"
+        "command": "tldr -p {{android|linux|osx|sunos|windows}} {{cd}}"
     },
     {
         "description": "Show the tldr page for a subcommand:",
@@ -17962,6 +18078,14 @@
     {
         "description": "Benchmark the write performance of a disk:",
         "command": "dd if=/dev/zero of={{file_1GB}} bs=1024 count=1000000"
+    },
+    {
+        "description": "Generate a system backup into an IMG file and show the progress:",
+        "command": "dd if=/dev/{{drive_device}} of={{path/to/file.img}} status=progress"
+    },
+    {
+        "description": "Restore a drive from an IMG file and show the progress:",
+        "command": "dd if={{path/to/file.img}} of=/dev/{{drive_device}} status=progress"
     },
     {
         "command": "strings",
@@ -18728,10 +18852,6 @@
         "command": "pm2 save"
     },
     {
-        "description": "Resurrect previously dumped processes:",
-        "command": "pm2 resurrect"
-    },
-    {
         "command": "subliminal",
         "description": "Python-based subtitle downloader.\nMore information: <https://github.com/Diaoul/subliminal>."
     },
@@ -18753,11 +18873,19 @@
     },
     {
         "command": "git ignore",
-        "description": "Generate .gitignore files from predefined templates.\nMore information: <https://docs.gitignore.io/install/command-line>."
+        "description": "Show/update `.gitignore` files.\nPart of `git-extras`. See also `git ignore-io`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-ignore>."
     },
     {
-        "description": "List available templates:",
-        "command": "git ignore list"
+        "description": "Show the content of all global and local `.gitignore` files:",
+        "command": "git ignore"
+    },
+    {
+        "description": "Ignore file(s) privately, updating `.git/info/exclude` file:",
+        "command": "git ignore {{file_pattern}} --private"
+    },
+    {
+        "description": "Ignore file(s) locally, updating local `.gitignore` file:",
+        "command": "git ignore {{file_pattern}}"
     },
     {
         "command": "exenv",
@@ -19520,6 +19648,18 @@
         "command": "dc -e \"7 k 5 _3 / p\""
     },
     {
+        "command": "conda create",
+        "description": "Create new conda environments.\nMore information: <https://docs.conda.io/projects/conda/en/latest/commands/create.html>."
+    },
+    {
+        "description": "Create a new environment named `py39`, and install Python 3.9 and numpy v1.11 or above in it:",
+        "command": "conda create --yes --name {{py39}} python={{3.9}} \"{{numpy>=1.11}}\""
+    },
+    {
+        "description": "Make exact copy of an environment:",
+        "command": "conda create --clone {{py39}} --name {{py39-copy}}"
+    },
+    {
         "command": "blockout2",
         "description": "Tetris like game in 3D.\nMore information: <http://www.blockout.net/blockout2/>."
     },
@@ -19569,15 +19709,15 @@
     },
     {
         "command": "git authors",
-        "description": "Display a log or list of committers of a Git repository. Everything except `--list` will create a new file called `AUTHORS`.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-authors>."
+        "description": "Generate a list of committers of a Git repository.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-authors>."
     },
     {
-        "description": "Create or replace the `AUTHORS` file with a list of committers and open it in the default editor:",
-        "command": "git authors"
-    },
-    {
-        "description": "Print a full list of committers:",
+        "description": "Print a full list of committers to stdout instead of to the `AUTHORS` file:",
         "command": "git authors --list"
+    },
+    {
+        "description": "Append the list of committers to the the `AUTHORS` file and open it in the default editor:",
+        "command": "git authors"
     },
     {
         "command": "axel",
@@ -20066,6 +20206,18 @@
     {
         "description": "Show the help:",
         "command": "meson --help"
+    },
+    {
+        "command": "git extras",
+        "description": "Git extension pack.\nMore information: <https://github.com/tj/git-extras>."
+    },
+    {
+        "description": "Install or upgrade `git-extras` commands:",
+        "command": "git extras update"
+    },
+    {
+        "description": "Display help and subcommands:",
+        "command": "git extras --help"
     },
     {
         "command": "uname",
@@ -22148,6 +22300,34 @@
         "command": "q \"SELECT * FROM {{path/to/file}} f1 JOIN {{path/to/other_file}} f2 ON (f1.c1 = f2.c1)\""
     },
     {
+        "command": "gh issue",
+        "description": "Create GitHub issues on a repository from the command-line.\nMore information: <https://cli.github.com/manual/gh_issue_create>."
+    },
+    {
+        "description": "Create a new issue against the current repository interactively:",
+        "command": "gh issue create"
+    },
+    {
+        "description": "Create a new issue with the `bug` label interactively:",
+        "command": "gh issue create --label \"{{bug}}\""
+    },
+    {
+        "description": "Create a new issue interactively and assign it to the specified users:",
+        "command": "gh issue create --assignee {{user1,user2,...}}"
+    },
+    {
+        "description": "Create a new issue with a title, body and assign it to the current user:",
+        "command": "gh issue create --title \"{{title}}\" --body \"{{body}}\" --assignee \"{{@me}}\""
+    },
+    {
+        "description": "Create a new issue interactively, reading the body text from a file:",
+        "command": "gh issue create --body-file {{path/to/file}}"
+    },
+    {
+        "description": "Create a new issue in the default web browser:",
+        "command": "gh issue create --web"
+    },
+    {
         "command": "amass db",
         "description": "Interact with an Amass database.\nMore information: <https://github.com/OWASP/Amass/blob/master/doc/user_guide.md#the-db-subcommand>."
     },
@@ -23828,6 +24008,18 @@
         "command": "Ctrl + A, K"
     },
     {
+        "command": "git range-diff",
+        "description": "Compare two commit ranges (e.g. two versions of a branch).\nMore information: <https://git-scm.com/docs/git-range-diff>."
+    },
+    {
+        "description": "Diff the changes of two individual commits:",
+        "command": "git range-diff {{commit_1}}^! {{commit_2}}^!"
+    },
+    {
+        "description": "Diff the changes of ours and theirs from their common ancestor, e.g. after an interactive rebase:",
+        "command": "git range-diff {{theirs}}...{{ours}}"
+    },
+    {
         "command": "keepass2",
         "description": "A light-weight password manager.\nMore information: <https://keepass.info>."
     },
@@ -24032,8 +24224,8 @@
         "command": "git reset {{path/to/file(s)}}"
     },
     {
-        "description": "Unstage portions of a file:",
-        "command": "git reset -p {{path/to/file}}"
+        "description": "Interactively unstage portions of a file:",
+        "command": "git reset --patch {{path/to/file}}"
     },
     {
         "description": "Undo the last commit, keeping its changes (and any further uncommitted changes) in the filesystem:",
@@ -24605,11 +24797,11 @@
     },
     {
         "description": "Create a symbolic link to a file or directory:",
-        "command": "ln -s {{path/to/file_or_directory}} {{path/to/symlink}}"
+        "command": "ln -s {{/path/to/file_or_directory}} {{path/to/symlink}}"
     },
     {
         "description": "Overwrite an existing symbolic link to point to a different file:",
-        "command": "ln -sf {{path/to/new_file}} {{path/to/symlink}}"
+        "command": "ln -sf {{/path/to/new_file}} {{path/to/symlink}}"
     },
     {
         "command": "at",
@@ -26688,6 +26880,14 @@
         "command": "{{command}} | slackcat --channel {{channel_name}} --filename={{snippet_name}}"
     },
     {
+        "command": "git setup",
+        "description": "Create a Git repository in a specific directory and commit all files.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-setup>."
+    },
+    {
+        "description": "Create a Git repository in the current directory and commit all files:",
+        "command": "git setup"
+    },
+    {
         "command": "bssh",
         "description": "A GUI tool for browsing for SSH/VNC servers on the local network.\nSee also: `bvnc` and `bshell`.\nMore information: <https://linux.extremeoverclocking.com/man/1/bssh>."
     },
@@ -26961,15 +27161,19 @@
     },
     {
         "description": "Set a size of 10 GB to an existing file, or create a new file with the specified size:",
-        "command": "truncate -s {{10G}} {{filename}}"
+        "command": "truncate --size {{10G}} {{filename}}"
     },
     {
         "description": "Extend the file size by 50M, fill with holes (which reads as zero bytes):",
-        "command": "truncate -s +{{50M}} {{filename}}"
+        "command": "truncate --size +{{50M}} {{filename}}"
     },
     {
         "description": "Shrink the file by 2GiB, by removing data from the end of file:",
-        "command": "truncate -s -{{2G}} {{filename}}"
+        "command": "truncate --size -{{2G}} {{filename}}"
+    },
+    {
+        "description": "Empty the file's content:",
+        "command": "truncate --size 0 {{filename}}"
     },
     {
         "command": "guacd",
@@ -27265,23 +27469,23 @@
     },
     {
         "description": "Create a new environment, installing named packages into it:",
-        "command": "conda create --name {{environment_name}} {{python=2.7 matplotlib}}"
+        "command": "conda create --name {{environment_name}} {{python=3.9 matplotlib}}"
     },
     {
         "description": "List all environments:",
         "command": "conda info --envs"
     },
     {
-        "description": "Load or unload an environment:",
-        "command": "conda {{activate|deactivate}} {{environment_name}}"
+        "description": "Load an environment:",
+        "command": "conda {{activate environment_name}}"
+    },
+    {
+        "description": "Unload an environment:",
+        "command": "conda {{deactivate}}"
     },
     {
         "description": "Delete an environment (remove all packages):",
         "command": "conda remove --name {{environment_name}} --all"
-    },
-    {
-        "description": "Search conda channels for a package by name:",
-        "command": "conda search {{package_name}}"
     },
     {
         "description": "Install packages into the current environment:",
@@ -27792,6 +27996,22 @@
         "command": "gifsicle {{anim.gif}} '#0' > {{firstframe.gif}}"
     },
     {
+        "command": "git summary",
+        "description": "Display information about a Git repository.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-summary>."
+    },
+    {
+        "description": "Display data about a Git repository:",
+        "command": "git summary"
+    },
+    {
+        "description": "Display data about a Git repository since a commit-ish:",
+        "command": "git summary {{commit|branch_name|tag_name}}"
+    },
+    {
+        "description": "Display data about a Git repository, merging committers using different emails into 1 statistic for each author:",
+        "command": "git summary --dedup-by-email"
+    },
+    {
         "command": "nix-build",
         "description": "Build a Nix expression.\nMore information: <https://nixos.org/releases/nix/latest/manual#sec-nix-build>."
     },
@@ -28058,6 +28278,10 @@
     {
         "description": "Generate a new Eloquent model class with a migration, factory and resource controller:",
         "command": "php artisan make:model {{ModelName}} --all"
+    },
+    {
+        "command": "git rename-tag",
+        "description": "Rename a Git tag.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-rename-tag>."
     },
     {
         "command": "diffstat",
@@ -29390,6 +29614,14 @@
     {
         "description": "Parse using a specific encoding:",
         "command": "nokogiri {{url|path/to/file}} --encoding {{encoding}}"
+    },
+    {
+        "command": "git delete-branch",
+        "description": "Delete local and remote Git branches.\nPart of `git-extras`. If deleting the checked out branch, only the remote branch will be deleted.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-delete-branch>."
+    },
+    {
+        "description": "Delete a local and remote Git branch:",
+        "command": "git delete-branch {{branch_name}}"
     },
     {
         "command": "brew",
@@ -32253,7 +32485,7 @@
     },
     {
         "description": "Get the actual transfer speed of a device:",
-        "command": "stty -f {{path/to/device_file}} speed"
+        "command": "stty -F {{path/to/device_file}} speed"
     },
     {
         "command": "hadolint",
@@ -35688,6 +35920,10 @@
         "command": "git pr {{url}}"
     },
     {
+        "command": "git graft",
+        "description": "Merge commits from a specific branch into another branch and delete the source branch.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-graft>."
+    },
+    {
         "command": "7za",
         "description": "File archiver with a high compression ratio.\nSimilar to `7z` except that it supports fewer file types but is cross-platform.\nMore information: <https://www.7-zip.org>."
     },
@@ -36448,6 +36684,18 @@
         "command": "phpcpd --exclude {{path/to/excluded_directory}} {{path/to/file_or_directory}}"
     },
     {
+        "command": "git release",
+        "description": "Create a Git tag for a release.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-release>."
+    },
+    {
+        "description": "Create and push a release:",
+        "command": "git release {{tag_name}}"
+    },
+    {
+        "description": "Create and push a signed release:",
+        "command": "git release {{tag_name}} -s"
+    },
+    {
         "command": "box",
         "description": "A PHP application for building and managing Phars.\nMore information: <https://github.com/box-project/box>."
     },
@@ -37020,6 +37268,14 @@
         "command": "infection --show-mutations"
     },
     {
+        "command": "git ignore-io",
+        "description": "Generate .gitignore files from predefined templates.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-ignore-io>."
+    },
+    {
+        "description": "List available templates:",
+        "command": "git ignore-io list"
+    },
+    {
         "command": "w",
         "description": "Show who is logged on and what they are doing.\nPrint user login, TTY, remote host, login time, idle time, current process."
     },
@@ -37370,6 +37626,10 @@
     {
         "description": "Merge the current pull request with the specified merge strategy:",
         "command": "gh pr merge --{{merge|squash|rebase}}"
+    },
+    {
+        "description": "Squash the current pull request into one commit with the message body and merge:",
+        "command": "gh pr merge --squash --body=\"{{commit_message_body}}\""
     },
     {
         "command": "virsh-list",
@@ -38304,6 +38564,10 @@
         "command": "git init --object-format={{sha256}}"
     },
     {
+        "command": "git contrib",
+        "description": "Display commits from a specific author.\nPart of `git-extras`.\nMore information: <https://github.com/tj/git-extras/blob/master/Commands.md#git-contrib>."
+    },
+    {
         "command": "interdiff",
         "description": "Show differences between two diff files.\nMore information: <http://freshmeat.sourceforge.net/projects/patchutils>."
     },
@@ -38338,6 +38602,18 @@
     {
         "description": "Set the maximum number of tasks allowed to run in parallel, in the default group:",
         "command": "pueue parallel {{max_number_of_parallel_tasks}}"
+    },
+    {
+        "command": "llvm-dis",
+        "description": "Converts LLVM bitcode files into human-readable LLVM Intermediate Representation (IR).\nMore information: <https://www.llvm.org/docs/CommandGuide/llvm-dis.html>."
+    },
+    {
+        "description": "Convert a bitcode file as LLVM IR and write the result to stdout:",
+        "command": "llvm-dis {{path/to/input.bc}} -o -"
+    },
+    {
+        "description": "Convert a bitcode file to an LLVM IR file with the same filename:",
+        "command": "llvm-dis {{path/to/file.bc}}"
     },
     {
         "command": "etcd",
@@ -39780,6 +40056,38 @@
         "command": "rector levels"
     },
     {
+        "command": "git fame",
+        "description": "Pretty-print Git repository contributions.\nMore information: <https://github.com/casperdcl/git-fame>."
+    },
+    {
+        "description": "Calculate contributions for the current Git repository:",
+        "command": "git fame"
+    },
+    {
+        "description": "Exclude files/directories that match the specified regular expression:",
+        "command": "git fame --excl \"{{regular_expression}}\""
+    },
+    {
+        "description": "Calculate contributions made after the specified date:",
+        "command": "git fame --since \"{{3 weeks ago|2021-05-13}}\""
+    },
+    {
+        "description": "Display contributions in the specified format:",
+        "command": "git fame --format {{pipe|yaml|json|csv|tsv}}"
+    },
+    {
+        "description": "Display contributions per file extension:",
+        "command": "git fame --bytype"
+    },
+    {
+        "description": "Ignore whitespace changes:",
+        "command": "git fame --ignore-whitespace"
+    },
+    {
+        "description": "Detect inter-file line moves and copies:",
+        "command": "git fame -C"
+    },
+    {
         "command": "pdftex",
         "description": "Compile a PDF document from TeX source files.\nMore information: <https://www.tug.org/applications/pdftex/>."
     },
@@ -39834,6 +40142,18 @@
     {
         "description": "Show only tags references:",
         "command": "git show-ref --tags"
+    },
+    {
+        "command": "offlineimap",
+        "description": "Synchronize a remote IMAP server with local Maildir folders.\nMore information: <http://www.offlineimap.org>."
+    },
+    {
+        "description": "Synchronize once, without enabling autorefresh:",
+        "command": "offlineimap -o"
+    },
+    {
+        "description": "Synchronize a specific account:",
+        "command": "offlineimap -a {{account}}"
     },
     {
         "command": "dolt branch",
@@ -40578,6 +40898,26 @@
     {
         "description": "Copy multiple JPG files:",
         "command": "qcp {{*.jpg}}"
+    },
+    {
+        "command": "idnits",
+        "description": "Check internet-drafts for submission nits.\nLooks for violations of Section 2.1 and 2.2 of the requirements listed on <https://www.ietf.org/id-info/checklist>.\nMore information: <https://tools.ietf.org/tools/idnits/>."
+    },
+    {
+        "description": "Check a file for nits:",
+        "command": "idnits {{path/to/file.txt}}"
+    },
+    {
+        "description": "Count nits without displaying them:",
+        "command": "idnits --nitcount {{path/to/file.txt}}"
+    },
+    {
+        "description": "Show extra information about offending lines:",
+        "command": "idnits --verbose {{path/to/file.txt}}"
+    },
+    {
+        "description": "Expect the specified year in the boilerplate instead of the current year:",
+        "command": "idnits --year {{2021}} {{path/to/file.txt}}"
     },
     {
         "command": "stow",
@@ -41809,15 +42149,19 @@
     },
     {
         "command": "pdfjoin",
-        "description": "PDF merging utility."
+        "description": "PDF merging utility based on pdfjam.\nMore information: <https://github.com/rrthomas/pdfjam-extras>."
     },
     {
-        "description": "Merge two PDFs:",
-        "command": "pdfjoin {{file1}} {{file2}} --outfile {{output_file}}"
+        "description": "Merge two PDFs into one with the default suffix \"joined\":",
+        "command": "pdfjoin {{path/to/file1.pdf}} {{path/to/file2.pdf}}"
     },
     {
-        "description": "Save pages 3 to 5 followed by page 1 to a new PDF:",
-        "command": "pdfjoin {{file 3-5,1}} --outfile {{output_file}}"
+        "description": "Merge the first page of each given file together:",
+        "command": "pdfjoin {{path/to/file1.pdf path/to/file2.pdf ...}} {{1}} --outfile {{output_file}}"
+    },
+    {
+        "description": "Save pages 3 to 5 followed by page 1 to a new PDF with custom suffix:",
+        "command": "pdfjoin {{path/to/file.pdf}} {{3-5,1}} --suffix {{rearranged}}"
     },
     {
         "command": "split",
@@ -42686,6 +43030,30 @@
     {
         "description": "Lis[t] the contents of a tar [f]ile [v]erbosely:",
         "command": "tar tvf {{source.tar}}"
+    },
+    {
+        "command": "okular",
+        "description": "A universal document viewer.\nMore information: <https://okular.kde.org/>."
+    },
+    {
+        "description": "Launch Okular:",
+        "command": "okular"
+    },
+    {
+        "description": "Open specific documents in Okular:",
+        "command": "okular {{path/to/file1 path/to/file2 ...}}"
+    },
+    {
+        "description": "Open a document at a specific page:",
+        "command": "okular --page {{page_number}} {{path/to/file}}"
+    },
+    {
+        "description": "Open a document in presentation mode:",
+        "command": "okular --presentation {{path/to/file}}"
+    },
+    {
+        "description": "Open a document and start the print dialog:",
+        "command": "okular --print {{path/to/file}}"
     },
     {
         "command": "transmission-remote",
@@ -44262,6 +44630,10 @@
     {
         "description": "Use a specific tag for every line logged. Default is the name of logged in user:",
         "command": "echo {{log_entry}} | logger -t {{tag}}"
+    },
+    {
+        "command": "readlink",
+        "description": "Follow symlinks and get symlink information.\nMore information: <https://www.gnu.org/software/coreutils/readlink>."
     },
     {
         "command": "pbcopy",
@@ -45874,6 +46246,22 @@
     {
         "description": "Same as above, but show all occurrences on command path (equivalent to the `where` builtin):",
         "command": "whence -ca {{command}}"
+    },
+    {
+        "command": "fileicon",
+        "description": "A macOS CLI to manage custom file and folder icons.\nMore information: <https://github.com/mklement0/fileicon>."
+    },
+    {
+        "description": "Set a custom icon for a specific file or directory:",
+        "command": "fileicon set {{path/to/file_or_directory}} {{path/to/icon.png}}"
+    },
+    {
+        "description": "Remove a custom icon from a specific file or directory:",
+        "command": "fileicon rm {{path/to/file_or_directory}}"
+    },
+    {
+        "description": "Save the custom icon of a file or directory as a `.icns` file into the current directory:",
+        "command": "fileicon get {{path/to/file_or_directory}}"
     },
     {
         "command": "mdutil",
