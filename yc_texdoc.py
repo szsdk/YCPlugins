@@ -8,7 +8,8 @@ cache = cache_path / "yescommander" / "texdoc.dat"
 
 
 def make_filelist(doc_folder):
-    os.system(f"mkdir {cache.parent}")
+    if not cache.parent.exists():
+        os.system(f"mkdir {cache.parent}")
     doc_files = [str(f) for f in Path(doc_folder).rglob("*.pdf")]
     with cache.open("w") as fp:
         print("\n".join(doc_files), file=fp)
