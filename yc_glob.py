@@ -7,10 +7,11 @@ from aiopath import AsyncPath
 class GlobCommander(yc.BaseAsyncCommander):
     markers = {"pdf": " "}
 
-    def __init__(self, num_candidates, score_cutoff, score_shift=0):
+    def __init__(self, num_candidates, score_cutoff, score_shift=0, path="."):
         self.num_candidates = num_candidates
         self.score_cutoff = score_cutoff
         self.score_shift = score_shift
+        self.path = path
 
     def _put_cmd(self, kw, cmds, queue):
         from rapidfuzz import fuzz, process
@@ -39,8 +40,8 @@ class GlobCommander(yc.BaseAsyncCommander):
         if len(kw) < 3:
             return
         cmds = []
-        async for path in AsyncPath().rglob("*"):
-            if keywords[0] in str(path):
+        async for path in AsyncPath(self.path).rglob("*"):
+            if keywords[0].lower() in str(path).lower():
                 cmds.append(str(path))
             if len(cmds) > 100:
                 self._put_cmd(kw, cmds, queue)
