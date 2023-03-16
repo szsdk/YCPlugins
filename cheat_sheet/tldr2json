@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import toml
 import json
 from pathlib import Path
 
@@ -80,8 +81,16 @@ def cli(folders, output):
     for folder in folders:
         for f in Path(folder).rglob("*.md"):
             ans.extend(cmd_list(f))
-    with open(output, "w") as fp:
-        json.dump(ans, fp, indent=4)
+    output = Path(output)
+    if output.suffix == ".json":
+        with open(output, "w") as fp:
+            json.dump(ans, fp, indent=4)
+    elif output.suffix == ".toml":
+        for c in ans:
+            c["icon"] = "𝙏𝙇"
+            c["keywords"] = ["tldr"]
+        with output.open("w") as fp:
+            toml.dump({"commands": ans}, fp)
 
 
 if __name__ == "__main__":
