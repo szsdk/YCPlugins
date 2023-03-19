@@ -89,8 +89,13 @@ def cli(folders, output):
         for c in ans:
             c["icon"] = "𝙏𝙇"
             c["keywords"] = ["tldr"]
+            c["kind"] = "shell"
         with output.open("w") as fp:
             toml.dump({"commands": ans}, fp)
+    elif output.suffix == ".txt":
+        with output.open("w") as fp:
+            for c in ans:
+                print(json.dumps([c['command'], c['description']]), file=fp)
 
 
 if __name__ == "__main__":
